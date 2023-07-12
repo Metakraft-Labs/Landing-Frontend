@@ -8,7 +8,7 @@ export const login = async ({ wallet }) => {
         return res.data;
     }
     catch (err) {
-        toast.error(err.response.data.message);
+        toast.error(err?.response?.data?.message || err?.message || "Something went wrong");
     }
 };
 
@@ -19,7 +19,7 @@ export const register = async ({ email, wallet, ref_code }) => {
         return res.data;
     }
     catch (err) {
-        toast.error(err.response.data.message);
+        toast.error(err?.response?.data?.message || err?.message || "Something went wrong");
     }
 };
 
@@ -30,6 +30,6 @@ export const status = async () => {
         return res.data;
     }
     catch (err) {
-        toast.error(err.response.data.message);
+        toast.error(err?.response?.data?.message || err?.message || "Something went wrong");
     }
 };

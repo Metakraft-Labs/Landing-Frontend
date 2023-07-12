@@ -10,6 +10,6 @@ export const update = async ({ wallet }) => {
         return res.data;
     }
     catch (err) {
-        toast.error(err.response.data.message);
+        toast.error(err?.response?.data?.message || err?.message || "Something went wrong");
     }
 };

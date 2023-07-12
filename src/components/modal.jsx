@@ -81,9 +81,32 @@ export function Modal1({ show, close }) {
 
 export function Modal2({ show, close }) {
     const { setToken, token, user, setUser, defaultAccount } = useContext(AppStore);
+    const lockIcon = (
+        <svg
+            width="1.389vw"
+            height="1.38vw"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <rect x="0.5" y="0.5" width="21" height="21" rx="10.5" fill="white" />
+            <g clipPath="url(#clip0_598_112)">
+                <path
+                    d="M14 9H13.5V8C13.5 6.62 12.38 5.5 11 5.5C9.62 5.5 8.5 6.62 8.5 8V9H8C7.45 9 7 9.45 7 10V15C7 15.55 7.45 16 8 16H14C14.55 16 15 15.55 15 15V10C15 9.45 14.55 9 14 9ZM11 13.5C10.45 13.5 10 13.05 10 12.5C10 11.95 10.45 11.5 11 11.5C11.55 11.5 12 11.95 12 12.5C12 13.05 11.55 13.5 11 13.5ZM9.5 9V8C9.5 7.17 10.17 6.5 11 6.5C11.83 6.5 12.5 7.17 12.5 8V9H9.5Z"
+                    fill="black"
+                />
+            </g>
+            <rect x="0.5" y="0.5" width="21" height="21" rx="10.5" stroke="black" />
+            <defs>
+                <clipPath id="clip0_598_112">
+                    <rect width="12" height="12" fill="white" transform="translate(5 5)" />
+                </clipPath>
+            </defs>
+        </svg>
+    );
 
     const getUser = useCallback(async () => {
-        if (token && !user) {
+        if (token) {
             const res = await status();
 
             const userResp = res?.data;
@@ -183,49 +206,10 @@ export function Modal2({ show, close }) {
                                         style={{
                                             display: "flex",
                                             gap: "0.6vw",
-                                            paddingLeft: "8vw",
+                                            paddingLeft: "4vw",
                                         }}
                                     >
-                                        <svg
-                                            width="1.389vw"
-                                            height="1.38vw"
-                                            viewBox="0 0 22 22"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <rect
-                                                x="0.5"
-                                                y="0.5"
-                                                width="21"
-                                                height="21"
-                                                rx="10.5"
-                                                fill="white"
-                                            />
-                                            <g clipPath="url(#clip0_598_112)">
-                                                <path
-                                                    d="M14 9H13.5V8C13.5 6.62 12.38 5.5 11 5.5C9.62 5.5 8.5 6.62 8.5 8V9H8C7.45 9 7 9.45 7 10V15C7 15.55 7.45 16 8 16H14C14.55 16 15 15.55 15 15V10C15 9.45 14.55 9 14 9ZM11 13.5C10.45 13.5 10 13.05 10 12.5C10 11.95 10.45 11.5 11 11.5C11.55 11.5 12 11.95 12 12.5C12 13.05 11.55 13.5 11 13.5ZM9.5 9V8C9.5 7.17 10.17 6.5 11 6.5C11.83 6.5 12.5 7.17 12.5 8V9H9.5Z"
-                                                    fill="black"
-                                                />
-                                            </g>
-                                            <rect
-                                                x="0.5"
-                                                y="0.5"
-                                                width="21"
-                                                height="21"
-                                                rx="10.5"
-                                                stroke="black"
-                                            />
-                                            <defs>
-                                                <clipPath id="clip0_598_112">
-                                                    <rect
-                                                        width="12"
-                                                        height="12"
-                                                        fill="white"
-                                                        transform="translate(5 5)"
-                                                    />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
+                                        {user?.referrals?.length < 10 ? lockIcon : ""}
                                         <div
                                             style={{
                                                 fontSize: "0.97vw",
@@ -240,49 +224,10 @@ export function Modal2({ show, close }) {
                                         style={{
                                             display: "flex",
                                             gap: "0.6vw",
-                                            paddingLeft: "4vw",
+                                            paddingLeft: "7vw",
                                         }}
                                     >
-                                        <svg
-                                            width="1.389vw"
-                                            height="1.38vw"
-                                            viewBox="0 0 22 22"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <rect
-                                                x="0.5"
-                                                y="0.5"
-                                                width="21"
-                                                height="21"
-                                                rx="10.5"
-                                                fill="white"
-                                            />
-                                            <g clipPath="url(#clip0_598_112)">
-                                                <path
-                                                    d="M14 9H13.5V8C13.5 6.62 12.38 5.5 11 5.5C9.62 5.5 8.5 6.62 8.5 8V9H8C7.45 9 7 9.45 7 10V15C7 15.55 7.45 16 8 16H14C14.55 16 15 15.55 15 15V10C15 9.45 14.55 9 14 9ZM11 13.5C10.45 13.5 10 13.05 10 12.5C10 11.95 10.45 11.5 11 11.5C11.55 11.5 12 11.95 12 12.5C12 13.05 11.55 13.5 11 13.5ZM9.5 9V8C9.5 7.17 10.17 6.5 11 6.5C11.83 6.5 12.5 7.17 12.5 8V9H9.5Z"
-                                                    fill="black"
-                                                />
-                                            </g>
-                                            <rect
-                                                x="0.5"
-                                                y="0.5"
-                                                width="21"
-                                                height="21"
-                                                rx="10.5"
-                                                stroke="black"
-                                            />
-                                            <defs>
-                                                <clipPath id="clip0_598_112">
-                                                    <rect
-                                                        width="12"
-                                                        height="12"
-                                                        fill="white"
-                                                        transform="translate(5 5)"
-                                                    />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
+                                        {user?.referrals?.length < 70 ? lockIcon : ""}
                                         <div
                                             style={{
                                                 fontSize: "0.97vw",
@@ -300,46 +245,7 @@ export function Modal2({ show, close }) {
                                             paddingLeft: "8vw",
                                         }}
                                     >
-                                        <svg
-                                            width="1.389vw"
-                                            height="1.38vw"
-                                            viewBox="0 0 22 22"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <rect
-                                                x="0.5"
-                                                y="0.5"
-                                                width="21"
-                                                height="21"
-                                                rx="10.5"
-                                                fill="white"
-                                            />
-                                            <g clipPath="url(#clip0_598_112)">
-                                                <path
-                                                    d="M14 9H13.5V8C13.5 6.62 12.38 5.5 11 5.5C9.62 5.5 8.5 6.62 8.5 8V9H8C7.45 9 7 9.45 7 10V15C7 15.55 7.45 16 8 16H14C14.55 16 15 15.55 15 15V10C15 9.45 14.55 9 14 9ZM11 13.5C10.45 13.5 10 13.05 10 12.5C10 11.95 10.45 11.5 11 11.5C11.55 11.5 12 11.95 12 12.5C12 13.05 11.55 13.5 11 13.5ZM9.5 9V8C9.5 7.17 10.17 6.5 11 6.5C11.83 6.5 12.5 7.17 12.5 8V9H9.5Z"
-                                                    fill="black"
-                                                />
-                                            </g>
-                                            <rect
-                                                x="0.5"
-                                                y="0.5"
-                                                width="21"
-                                                height="21"
-                                                rx="10.5"
-                                                stroke="black"
-                                            />
-                                            <defs>
-                                                <clipPath id="clip0_598_112">
-                                                    <rect
-                                                        width="12"
-                                                        height="12"
-                                                        fill="white"
-                                                        transform="translate(5 5)"
-                                                    />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
+                                        {user?.referrals?.length < 200 ? lockIcon : ""}
                                         <div
                                             style={{
                                                 fontSize: "0.97vw",
@@ -361,9 +267,9 @@ export function Modal2({ show, close }) {
                                     }}
                                 >
                                     <div>0</div>
-                                    <div style={{ paddingLeft: "12.7vw" }}>10</div>
-                                    <div style={{ paddingLeft: "8.8vw" }}>70</div>
-                                    <div style={{ paddingLeft: "12.5vw" }}>200</div>
+                                    <div style={{ paddingLeft: "8vw" }}>10</div>
+                                    <div style={{ paddingLeft: "13.1vw" }}>70</div>
+                                    <div style={{ paddingLeft: "12.7vw" }}>200</div>
                                 </div>
                                 <div
                                     style={{
@@ -373,7 +279,11 @@ export function Modal2({ show, close }) {
                                         width: "36.94vw",
                                         height: "0.69vw",
                                         borderRadius: "0.35vw",
-                                        background: "#D5D9E7",
+                                        background: `linear-gradient(to right, #FEC0CB 0% ${
+                                            ((user?.referrals?.length || 0) * 100) / 200
+                                        }%, #D5D9E7 ${
+                                            ((user?.referrals?.length || 0) * 100) / 200
+                                        }% ${100 - ((user?.referrals?.length || 0) * 100) / 200}%)`,
                                     }}
                                 >
                                     <div style={{ width: "0.27vw", background: "white" }}></div>
@@ -394,11 +304,33 @@ export function Modal2({ show, close }) {
                                         gap: "0.25vw",
                                     }}
                                 >
-                                    <span>You have 0 points </span>
-                                    <span style={{ fontWeight: "700" }}>Get 10</span>
                                     <span>
-                                        successfull referral points to become a Bronze member
+                                        You have {user?.referrals?.length || "0"} point
+                                        {user?.referrals?.length === 1 ? "" : "s"}{" "}
                                     </span>
+                                    {user?.referrals?.length >= 200 ? (
+                                        <></>
+                                    ) : (
+                                        <>
+                                            <span style={{ fontWeight: "700" }}>
+                                                Get{" "}
+                                                {user?.referrals?.length < 10
+                                                    ? "10"
+                                                    : user?.referrals?.length < 70
+                                                    ? "70"
+                                                    : "200"}
+                                            </span>
+                                            <span>
+                                                successfull referral points to become a{" "}
+                                                {user?.referrals?.length < 10
+                                                    ? "Bronze"
+                                                    : user?.referrals?.length < 70
+                                                    ? "Silver"
+                                                    : "Gold"}{" "}
+                                                member
+                                            </span>
+                                        </>
+                                    )}
                                 </div>
                             </div>
                             <div style={{ paddingLeft: "9vw", paddingTop: "5vw" }}>
