@@ -43,7 +43,7 @@ function App() {
   const [defaultAccount, setDefaultAccount] = useState(null);
 
   const getStatus = useCallback(async () => {
-    if (token && !user) {
+    if (localStorage.getItem("token") && !user) {
       const res = await status();
       setUser(res.data);
     }

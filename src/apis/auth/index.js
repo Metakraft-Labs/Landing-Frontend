@@ -30,6 +30,10 @@ export const status = async () => {
         return res.data;
     }
     catch (err) {
+        if (err?.response?.data?.message === "Invalid auth token provided") {
+            localStorage.removeItem("token");
+            return;
+        }
         toast.error(err?.response?.data?.message || err?.message || "Something went wrong");
     }
 };
