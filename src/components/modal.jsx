@@ -1,4 +1,3 @@
-import { useConnectWallet } from "@web3-onboard/react";
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -81,7 +80,6 @@ export function Modal1({ show, close }) {
 }
 
 export function Modal2({ show, close }) {
-    const [{ wallet, connecting }] = useConnectWallet();
     const { setToken, token, user, setUser, defaultAccount } = useContext(AppStore);
 
     const getUser = useCallback(async () => {
