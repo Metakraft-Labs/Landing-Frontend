@@ -6,19 +6,15 @@ import "../Style/modal.css";
 import { login, register, status } from "../apis/auth";
 import { update } from "../apis/user";
 import AppStore from "../contexts/AppStore";
-import { useWallet } from "../hooks/useWallet";
 
 export function Modal1({ show, close }) {
     const location = useLocation();
     const [mail, setMail] = useState("");
-    const { connectWalletHandler } = useWallet();
     const { setToken, defaultAccount } = useContext(AppStore);
 
     const handleReferal = async event => {
         event.target.classList.add("home-head-3-11");
         event.target.classList.remove("home-head-3-12");
-
-        await connectWalletHandler();
 
         const params = new URLSearchParams(location.search);
         const ref_code = params.get("ref") || localStorage.getItem("ref_code");
@@ -85,7 +81,6 @@ export function Modal1({ show, close }) {
 }
 
 export function Modal2({ show, close }) {
-    const { connectWalletHandler } = useWallet();
     const [{ wallet, connecting }] = useConnectWallet();
     const { setToken, token, user, setUser, defaultAccount } = useContext(AppStore);
 
@@ -106,57 +101,53 @@ export function Modal2({ show, close }) {
     const handleReferal = async event => {
         event.target.classList.add("home-head-3-11");
         event.target.classList.remove("home-head-3-12");
-        await connectWalletHandler(true);
 
-        console.log(user);
-        if (defaultAccount?.address && defaultAccount?.address?.length > 0) {
-            let ref_code;
+        let ref_code;
 
-            if (!user) {
-                let userResp;
-                if (!token) {
-                    const resp = await login({ wallet: defaultAccount?.address });
-                    const resp1 = resp.data;
-                    event.target.classList.add("home-head-3-12");
-                    event.target.classList.remove("home-head-3-11");
-                    close();
-                    if (resp1 == null) {
-                        toast.warn("Signup First");
-                        return;
-                    } else {
-                        setToken(resp1);
-                        localStorage.setItem("token", resp1);
-                        const res2 = await status();
-                        userResp = res2.data;
-                        setUser(userResp);
-                    }
+        if (!user) {
+            let userResp;
+            if (!token) {
+                const resp = await login({ wallet: defaultAccount?.address });
+                const resp1 = resp.data;
+                event.target.classList.add("home-head-3-12");
+                event.target.classList.remove("home-head-3-11");
+                close();
+                if (resp1 == null) {
+                    toast.warn("Signup First");
+                    return;
                 } else {
+                    setToken(resp1);
+                    localStorage.setItem("token", resp1);
                     const res2 = await status();
                     userResp = res2.data;
                     setUser(userResp);
                 }
-
-                ref_code = userResp.referrer_code;
             } else {
-                ref_code = user.referrer_code;
+                const res2 = await status();
+                userResp = res2.data;
+                setUser(userResp);
             }
 
-            if (!user?.wallet) {
-                const res = await update({ wallet: defaultAccount?.address });
+            ref_code = userResp.referrer_code;
+        } else {
+            ref_code = user.referrer_code;
+        }
 
-                if (res?.success && res?.data) {
-                    setUser(res.data);
-                }
-            }
+        if (!user?.wallet && defaultAccount?.address && defaultAccount?.address?.length > 0) {
+            const res = await update({ wallet: defaultAccount?.address });
 
-            if (ref_code) {
-                navigator.clipboard.writeText(window.location.origin + "?ref=" + ref_code);
-                toast.success("Referral link copied!");
-            } else {
-                toast.error(
-                    "Something went wrong while getting referral code. Please trying again in some time or contact support.",
-                );
+            if (res?.success && res?.data) {
+                setUser(res.data);
             }
+        }
+
+        if (ref_code) {
+            navigator.clipboard.writeText(window.location.origin + "?ref=" + ref_code);
+            toast.success("Referral link copied!");
+        } else {
+            toast.error(
+                "Something went wrong while getting referral code. Please trying again in some time or contact support.",
+            );
         }
     };
     return (
