@@ -564,11 +564,7 @@ export function Modal2({ show, close }) {
                         </main>
                         <footer className="modal_footer">
                             <button className="submit home-head-3-12" onClick={handleReferal}>
-                                {connecting
-                                    ? "Connecting wallet..."
-                                    : wallet
-                                    ? "Refer & Win"
-                                    : "Connect wallet to refer"}
+                                Refer & Win
                             </button>
                         </footer>
                     </div>
