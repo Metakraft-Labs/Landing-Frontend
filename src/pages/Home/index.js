@@ -5,16 +5,9 @@ import Slider from 'react-slick';
 import InfiniteSpace from '../../Animation/Infinitespace';
 import Aiverse from '../../Assets/Aiverse.png';
 import Animate from '../../Assets/Animated.mp4';
-import Logo14 from '../../Assets/Binance.png';
-import Logo3 from '../../Assets/Black_Transparent.png';
-import Logo5 from '../../Assets/Iamal.jpg';
 import Metamask from '../../Assets/Metamask.png';
-import Logo7 from '../../Assets/chain.png';
-import Logo8 from '../../Assets/gt.jpeg';
 import Ipad_Mini from '../../Assets/iPad Mini.png';
 import Ipad_Mini1 from '../../Assets/iPad_Mini.png';
-import Logo9 from '../../Assets/nvidia.png';
-import Logo10 from '../../Assets/ricge.jpg';
 import AVA from '../../Assets/AVA.png';
 import BI from '../../Assets/BI.png';
 import BNB from '../../Assets/BNB.png';
@@ -42,10 +35,7 @@ import Spheron from '../../Assets/Spheron.png';
 import STCKOS from '../../Assets/STCKOS.png';
 import TL from '../../Assets/TL.png';
 import WH from '../../Assets/WH.png';
-import Logo11 from '../../Assets/rov.jpg';
 import Solana from '../../Assets/solana.png';
-import Logo12 from '../../Assets/th.jpeg';
-import Logo13 from '../../Assets/wirh.jpg';
 import '../../Style/home.css';
 import { Logo1, Logo2, Logo4, Logo6 } from '../../components/Logo.jsx';
 import Title from '../../shared/Title';
@@ -106,12 +96,6 @@ function Home() {
                     <div style={{ display: 'flex' }}>
                         <div id="slideshow" style={{ padding: "1.5vw", paddingTop: "4vw", width: "100%", background: 'transparent' }}>
                             <Slider {...settings}>
-                                <div className="explore-logo-slide"><Logo1 /></div>
-                                <div className="explore-logo-slide"><Logo2 /></div>
-                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1", backgroundColor: 'white' }} src={Logo3} alt="logo-1" /></div>
-                                <div className="explore-logo-slide"><Logo4 /></div>
-                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo5} alt="logo-1" /></div>
-                                <div className="explore-logo-slide"><Logo6 /></div>
                                 <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={AVA} alt="logo-1" /></div>
                                 <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={BI} alt="logo-1" /></div>
                                 <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={BNB} alt="logo-1" /></div>
@@ -139,14 +123,6 @@ function Home() {
                                 <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={STCKOS} alt="stackos" /></div>
                                 <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={TL} alt="telos" /></div>
                                 <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={WH} alt="wormhole" /></div>
-                                <div className="explore-logo-slide"><img style={{ width: "6.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo7} alt="logo-1" /></div>
-                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo8} alt="logo-1" /></div>
-                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo9} alt="logo-1" /></div>
-                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo10} alt="logo-1" /></div>
-                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo11} alt="logo-1" /></div>
-                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo12} alt="logo-1" /></div>
-                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo13} alt="logo-1" /></div>
-                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo14} alt="logo-1" /></div>
                             </Slider>
                         </div>
                     </div>
