@@ -15,33 +15,33 @@ import Ipad_Mini from '../../Assets/iPad Mini.png';
 import Ipad_Mini1 from '../../Assets/iPad_Mini.png';
 import Logo9 from '../../Assets/nvidia.png';
 import Logo10 from '../../Assets/ricge.jpg';
-import Logo10 from '../../Assets/AVA.png';
-import Logo10 from '../../Assets/BI.png';
-import Logo10 from '../../Assets/BNB.png';
-import Logo10 from '../../Assets/CELO.png';
-import Logo10 from '../../Assets/Chain99.png';
-import Logo10 from '../../Assets/Conquest.png';
-import Logo10 from '../../Assets/FANTOM.png';
-import Logo10 from '../../Assets/FILECOIN.png';
-import Logo10 from '../../Assets/GT.png';
-import Logo10 from '../../Assets/GTH.png';
-import Logo10 from '../../Assets/IAMAI.png';
-import Logo10 from '../../Assets/Immerse.png';
-import Logo10 from '../../Assets/INCEPTION.png';
-import Logo10 from '../../Assets/Octan.png';
-import Logo10 from '../../Assets/POLKA.png';
-import Logo10 from '../../Assets/Polygon.png';
-import Logo10 from '../../Assets/QUAI.png';
-import Logo10 from '../../Assets/RARIKO.png';
-import Logo10 from '../../Assets/Router.png';
-import Logo10 from '../../Assets/RPM.png';
-import Logo10 from '../../Assets/SEI.png';
-import Logo10 from '../../Assets/Shard.png';
-import Logo10 from '../../Assets/SOCIAL3.png';
-import Logo10 from '../../Assets/Spheron.png';
-import Logo10 from '../../Assets/STCKOS.png';
-import Logo10 from '../../Assets/TL.png';
-import Logo10 from '../../Assets/WH.png';
+import AVA from '../../Assets/AVA.png';
+import BI from '../../Assets/BI.png';
+import BNB from '../../Assets/BNB.png';
+import CELO from '../../Assets/CELO.png';
+import Chain99 from '../../Assets/Chain99.png';
+import Conquest from '../../Assets/Conquest.png';
+import FANTOM from '../../Assets/FANTOM.png';
+import FILECOIN from '../../Assets/FILECOIN.png';
+import GT from '../../Assets/GT.png';
+import GTH from '../../Assets/GTH.png';
+import IAMAI from '../../Assets/IAMAI.png';
+import Immerse from '../../Assets/Immerse.png';
+import INCEPTION from '../../Assets/INCEPTION.png';
+import Octan from '../../Assets/Octan.png';
+import POLKA from '../../Assets/POLKA.png';
+import Polygon from '../../Assets/Polygon.png';
+import QUAI from '../../Assets/QUAI.png';
+import RARIKO from '../../Assets/RARIKO.png';
+import Router from '../../Assets/Router.png';
+import RPM from '../../Assets/RPM.png';
+import SEI from '../../Assets/SEI.png';
+import Shard from '../../Assets/Shard.png';
+import SOCIAL3 from '../../Assets/SOCIAL3.png';
+import Spheron from '../../Assets/Spheron.png';
+import STCKOS from '../../Assets/STCKOS.png';
+import TL from '../../Assets/TL.png';
+import WH from '../../Assets/WH.png';
 import Logo11 from '../../Assets/rov.jpg';
 import Solana from '../../Assets/solana.png';
 import Logo12 from '../../Assets/th.jpeg';
@@ -119,7 +119,6 @@ function Home() {
                                 <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo11} alt="logo-1" /></div>
                                 <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo12} alt="logo-1" /></div>
                                 <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo13} alt="logo-1" /></div>
-                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo14} alt="logo-1" /></div>
                                 <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo14} alt="logo-1" /></div>
                             </Slider>
                         </div>
