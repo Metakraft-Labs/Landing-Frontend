@@ -314,31 +314,31 @@ function About() {
                             <Marquee>
                                 <div className="carouselAbout">
                                     <img
-                                        style={{ width: "17vw", height: "25vw" }}
+                                        style={{ width: "18.7vw", height: "24.7vw" }}
                                         src={frame1}
                                         alt="Slide 1"
                                         className="slideAbout"
                                     />
                                     <img
-                                        style={{ width: "17vw", height: "25vw" }}
+                                        style={{ width: "18.7vw", height: "24.7vw" }}
                                         src={frame2}
                                         alt="Slide 2"
                                         className="slideAbout"
                                     />
                                     <img
-                                        style={{ width: "17vw", height: "25vw" }}
+                                        style={{ width: "18.7vw", height: "24.7vw" }}
                                         src={frame3}
                                         alt="Slide 3"
                                         className="slideAbout"
                                     />
                                     <img
-                                        style={{ width: "17vw", height: "25vw" }}
+                                        style={{ width: "18.7vw", height: "24.7vw" }}
                                         src={frame4}
                                         alt="Slide 4"
                                         className="slideAbout"
                                     />
                                     <img
-                                        style={{ width: "17vw", height: "25vw", marginRight: "7vw" }}
+                                        style={{ width: "18.7vw", height: "24.7vw", marginRight: "7vw" }}
                                         src={frame5}
                                         alt="Slide 10"
                                         className="slideAbout"
