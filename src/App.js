@@ -51,15 +51,12 @@ function App() {
   }, [token]);
 
   const resize = () => {
-    setSmallScreen(window.innerWidth <= 1121)
+    setSmallScreen(window.innerWidth/window.innerHeight < 1)
   }
 
   useState(() => {
     window.addEventListener("resize", resize);
     resize();
-    return () => {
-      window.removeEventListener("resize", resize);
-    }
   }, []);
 
   useState(() => {
