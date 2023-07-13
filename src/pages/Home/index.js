@@ -112,6 +112,33 @@ function Home() {
                                 <div className="explore-logo-slide"><Logo4 /></div>
                                 <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo5} alt="logo-1" /></div>
                                 <div className="explore-logo-slide"><Logo6 /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={AVA} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={BI} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={BNB} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={CELO} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Chain99} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Conquest} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={FANTOM} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={FILECOIN} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={GT} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={GTH} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={IAMAI} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Immerse} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={INCEPTION} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Octan} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={POLKA} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Polygon} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={QUAI} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={RARIKO} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Router} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={RPM} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={SEI} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Shard} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={SOCIAL3} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Spheron} alt="logo-1" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={STCKOS} alt="stackos" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={TL} alt="telos" /></div>
+                                <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={WH} alt="wormhole" /></div>
                                 <div className="explore-logo-slide"><img style={{ width: "6.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo7} alt="logo-1" /></div>
                                 <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo8} alt="logo-1" /></div>
                                 <div className="explore-logo-slide"><img style={{ width: "4.5vw", height: "4.5vw", position: "relative", zIndex: "1" }} src={Logo9} alt="logo-1" /></div>
