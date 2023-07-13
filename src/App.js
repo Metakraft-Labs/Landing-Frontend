@@ -41,6 +41,7 @@ function App() {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(localStorage.getItem("token") || null);
   const [defaultAccount, setDefaultAccount] = useState(null);
+  const [smallScreen, setSmallScreen] = useState(false);
 
   const getStatus = useCallback(async () => {
     if (localStorage.getItem("token") && !user) {
@@ -48,6 +49,18 @@ function App() {
       setUser(res.data);
     }
   }, [token]);
+
+  const resize = () => {
+    setSmallScreen(window.innerWidth <= 1121)
+  }
+
+  useState(() => {
+    window.addEventListener("resize", resize);
+    resize();
+    return () => {
+      window.removeEventListener("resize", resize);
+    }
+  }, []);
 
   useState(() => {
     getStatus();
@@ -60,33 +73,36 @@ function App() {
   }, []);
 
   return (
-    <Web3OnboardProvider web3Onboard={web3Onboard}>
-      <AppStore.Provider value={{ user, setUser, token, setToken, defaultAccount, setDefaultAccount }}>
-        <div className="App">
-          <BrowserRouter>
-            <Routes>
-              <Route exact path="/explore" element={<><Explore /></>} />
-              <Route exact path="/feature" element={<><Header /><Feature /><Footer /></>} />
-              <Route exact path="/" element={<><Header /><Home /><Footer /></>} />
-              <Route exact path="/about" element={<><Header /><About /><Footer /></>} />
-              <Route exact path="/contact" element={<><Header /><Contact /><Footer /></>} />
-            </Routes>
-            <ToastContainer
-              style={{ zIndex: 99 }}
-              position="top-right"
-              autoClose={5000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-            />
-          </BrowserRouter>
-        </div>
-      </AppStore.Provider>
-    </Web3OnboardProvider>
+    smallScreen ?
+      <p style={{ fontWeight: "600", color: "black", textAlign: "center" }}>We do not support this screen size yet. Please open in a larger screen.</p>
+      :
+      <Web3OnboardProvider web3Onboard={web3Onboard}>
+        <AppStore.Provider value={{ user, setUser, token, setToken, defaultAccount, setDefaultAccount }}>
+          <div className="App">
+            <BrowserRouter>
+              <Routes>
+                <Route exact path="/explore" element={<><Explore /></>} />
+                <Route exact path="/feature" element={<><Header /><Feature /><Footer /></>} />
+                <Route exact path="/" element={<><Header /><Home /><Footer /></>} />
+                <Route exact path="/about" element={<><Header /><About /><Footer /></>} />
+                <Route exact path="/contact" element={<><Header /><Contact /><Footer /></>} />
+              </Routes>
+              <ToastContainer
+                style={{ zIndex: 99 }}
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+              />
+            </BrowserRouter>
+          </div>
+        </AppStore.Provider>
+      </Web3OnboardProvider>
   );
 }
 
