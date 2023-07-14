@@ -1,6 +1,10 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import frame from "../../Assets/9.png";
+import frame1 from "../../Assets/frame1-a.png";
+import frame2 from "../../Assets/frame2-r.png";
+import frame3 from "../../Assets/frame3-as.png";
+import frame4 from "../../Assets/frame4-ar.png";
+import frame5 from "../../Assets/frame5-gm.png";
 import Logo7_1 from "../../Assets/Untitled design (38) 1.png";
 import Logo8_1 from "../../Assets/comes with payment (6).png";
 import Cube from "../../Assets/cube.82f18a4d.gif";
@@ -310,32 +314,32 @@ function About() {
                             <Marquee>
                                 <div className="carouselAbout">
                                     <img
-                                        style={{ width: "17vw", height: "25vw" }}
-                                        src={frame}
+                                        style={{ width: "18.7vw", height: "24.7vw" }}
+                                        src={frame1}
                                         alt="Slide 1"
                                         className="slideAbout"
                                     />
                                     <img
-                                        style={{ width: "17vw", height: "25vw" }}
-                                        src={frame}
+                                        style={{ width: "18.7vw", height: "24.7vw" }}
+                                        src={frame2}
                                         alt="Slide 2"
                                         className="slideAbout"
                                     />
                                     <img
-                                        style={{ width: "17vw", height: "25vw" }}
-                                        src={frame}
+                                        style={{ width: "18.7vw", height: "24.7vw" }}
+                                        src={frame3}
                                         alt="Slide 3"
                                         className="slideAbout"
                                     />
                                     <img
-                                        style={{ width: "17vw", height: "25vw" }}
-                                        src={frame}
+                                        style={{ width: "18.7vw", height: "24.7vw" }}
+                                        src={frame4}
                                         alt="Slide 4"
                                         className="slideAbout"
                                     />
                                     <img
-                                        style={{ width: "17vw", height: "25vw", marginRight: "7vw" }}
-                                        src={frame}
+                                        style={{ width: "18.7vw", height: "24.7vw", marginRight: "7vw" }}
+                                        src={frame5}
                                         alt="Slide 10"
                                         className="slideAbout"
                                     />
