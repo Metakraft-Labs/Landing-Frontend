@@ -1,7 +1,8 @@
 {
-    "name": "myapp",
+    "name": "metakraft",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://metakraft.live",
     "dependencies": {
         "@arcana/auth": "^1.0.5",
         "@fortawesome/fontawesome": "^1.1.8",

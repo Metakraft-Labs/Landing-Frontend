@@ -1,7 +1,8 @@
 import Axios from "axios";
+import { Config } from "../config";
 
 export const nonAuth = Axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: Config.API_URL,
     headers: {
         "Content-Type": "application/json"
     }
@@ -10,7 +11,7 @@ export const nonAuth = Axios.create({
 export const auth = () => {
     const token = localStorage.getItem('token');
     return Axios.create({
-        baseURL: process.env.REACT_APP_API_URL,
+        baseURL: Config.API_URL,
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`
