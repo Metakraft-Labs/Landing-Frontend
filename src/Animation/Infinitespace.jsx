@@ -109,6 +109,7 @@ const InfiniteSpace = () => {
                         left: "0",
                         right: "0",
                         zIndex: "-1",
+                        height: "1000",
                     }}
                 />
             </div>
@@ -116,7 +117,7 @@ const InfiniteSpace = () => {
                 <div className="home-head-1">Making Internet</div>
                 <div className="home-head-2">Super Fun!</div>
                 <div className="home-head-3">
-                    {token ? (
+                    {/* {token ? (
                         <button className="home-head-3-2 home-head-3-12" onClick={handleShow1}>
                             Refer & Win
                         </button>
@@ -124,7 +125,7 @@ const InfiniteSpace = () => {
                         <button className="home-head-3-1 home-head-3-12" onClick={handleShow}>
                             Early Access
                         </button>
-                    )}
+                    )} */}
                 </div>
             </div>
             <Modal1 show={show} close={handleClose} />

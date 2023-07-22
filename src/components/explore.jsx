@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import React, { useEffect, useState } from "react";
+// import { Carousel } from "react-responsive-carousel";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "react-slick";
 import Fly from "../Assets/Fly.png";
 import METAKRAFT from "../Assets/METAKRAFT.jpeg";
@@ -37,7 +37,7 @@ function Explore() {
         autoplaySpeed: 1000,
     };
     const [activeIndex, setActiveIndex] = useState(0);
-    const carouselRef = useRef(null);
+    // const carouselRef = useRef(null);
     const handlePrev = () => {
         if (activeIndex > 0) setActiveIndex(prevIndex => (prevIndex === 0 ? 10 : prevIndex - 1));
     };
@@ -46,9 +46,9 @@ function Explore() {
         if (activeIndex < 9) setActiveIndex(prevIndex => (prevIndex === 10 ? 0 : prevIndex + 1));
     };
 
-    const handleSlideChange = index => {
-        setActiveIndex(index);
-    };
+    // const handleSlideChange = index => {
+    //     setActiveIndex(index);
+    // };
     useEffect(() => {}, []);
     return (
         <div className="explore">
@@ -212,7 +212,7 @@ function Explore() {
                     </div>
                 </div>
 
-                <Carousel
+                {/* <Carousel
                     ref={carouselRef}
                     showStatus={false}
                     showThumbs={false}
@@ -222,63 +222,19 @@ function Explore() {
                     centerMode
                     centerSlidePercentage={25}
                     className="carouselSlide"
-                >
-                    <div
-                        key={0}
-                        style={{ width: "20vw", height: "15vw" }}
-                        className="slide-exp"
-                    ></div>
-                    <div
-                        key={1}
-                        style={{ width: "20vw", height: "15vw" }}
-                        className="slide-exp"
-                    ></div>
-                    <div
-                        key={2}
-                        style={{ width: "20vw", height: "15vw" }}
-                        className="slide-exp"
-                    ></div>
-                    <div
-                        key={3}
-                        style={{ width: "20vw", height: "15vw" }}
-                        className="slide-exp"
-                    ></div>
-                    <div
-                        key={4}
-                        style={{ width: "20vw", height: "15vw" }}
-                        className="slide-exp"
-                    ></div>
-                    <div
-                        key={5}
-                        style={{ width: "20vw", height: "15vw" }}
-                        className="slide-exp"
-                    ></div>
-                    <div
-                        key={6}
-                        style={{ width: "20vw", height: "15vw" }}
-                        className="slide-exp"
-                    ></div>
-                    <div
-                        key={7}
-                        style={{ width: "20vw", height: "15vw" }}
-                        className="slide-exp"
-                    ></div>
-                    <div
-                        key={8}
-                        style={{ width: "20vw", height: "15vw" }}
-                        className="slide-exp"
-                    ></div>
-                    <div
-                        key={9}
-                        style={{ width: "20vw", height: "15vw" }}
-                        className="slide-exp"
-                    ></div>
-                    <div
-                        key={10}
-                        style={{ width: "20vw", height: "15vw" }}
-                        className="slide-exp"
-                    ></div>
-                </Carousel>
+                > */}
+                <div key={0} style={{ width: "20vw", height: "15vw" }} className="slide-exp"></div>
+                <div key={1} style={{ width: "20vw", height: "15vw" }} className="slide-exp"></div>
+                <div key={2} style={{ width: "20vw", height: "15vw" }} className="slide-exp"></div>
+                <div key={3} style={{ width: "20vw", height: "15vw" }} className="slide-exp"></div>
+                <div key={4} style={{ width: "20vw", height: "15vw" }} className="slide-exp"></div>
+                <div key={5} style={{ width: "20vw", height: "15vw" }} className="slide-exp"></div>
+                <div key={6} style={{ width: "20vw", height: "15vw" }} className="slide-exp"></div>
+                <div key={7} style={{ width: "20vw", height: "15vw" }} className="slide-exp"></div>
+                <div key={8} style={{ width: "20vw", height: "15vw" }} className="slide-exp"></div>
+                <div key={9} style={{ width: "20vw", height: "15vw" }} className="slide-exp"></div>
+                <div key={10} style={{ width: "20vw", height: "15vw" }} className="slide-exp"></div>
+                {/* </Carousel> */}
                 <div
                     style={{
                         padding: "1.5vw",

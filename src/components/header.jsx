@@ -70,7 +70,7 @@ function Header() {
     return (
         <>
             <div
-                className="navBar"
+                className="flex justify-between items-center"
                 style={{
                     position: "fixed",
                     zIndex: "4",
@@ -238,7 +238,7 @@ function Header() {
                             onClick={() =>
                                 wallet ? disconnectWalletHandler() : connectWalletHandler()
                             }
-                            className="btn btn-light"
+                            className="btn bg-white text-black"
                             style={{
                                 height: "2.5vw",
                                 border: "0.125vw solid #01C5BA",

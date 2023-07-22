@@ -1,13 +1,13 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
+import Logo7_1 from "../../Assets/Untitled design (38) 1.png";
+import Logo8_1 from "../../Assets/comes with payment (6).png";
+import Cube from "../../Assets/cube.82f18a4d.gif";
 import frame1 from "../../Assets/frame1-a.png";
 import frame2 from "../../Assets/frame2-r.png";
 import frame3 from "../../Assets/frame3-as.png";
 import frame4 from "../../Assets/frame4-ar.png";
 import frame5 from "../../Assets/frame5-gm.png";
-import Logo7_1 from "../../Assets/Untitled design (38) 1.png";
-import Logo8_1 from "../../Assets/comes with payment (6).png";
-import Cube from "../../Assets/cube.82f18a4d.gif";
 import "../../Style/about.css";
 import Comp from "../../components/Comp.jsx";
 import Galactic from "../../components/Galactic";
@@ -49,12 +49,11 @@ function About() {
                         Metakraft is a passion that was born out of a simple idea - to make
                         communication interactive and to give life to people’s creativity. Our
                         journey began with a small project to make virtual spaces for a small
-                        community to come together and have fun. And with one year of effort
-                        and Bootstrapping, we have created an ecosystem that supports the
-                        needs of creators and metaverse enthusiasts.We understand, creation is
-                        not just the stopping point but enabling people with the ownership and
-                        easy monetization keeps people engaged and motivated to be part of a
-                        bigger revolution
+                        community to come together and have fun. And with one year of effort and
+                        Bootstrapping, we have created an ecosystem that supports the needs of
+                        creators and metaverse enthusiasts.We understand, creation is not just the
+                        stopping point but enabling people with the ownership and easy monetization
+                        keeps people engaged and motivated to be part of a bigger revolution
                     </div>
                     <h4
                         className="aboutMissionHead"
@@ -185,8 +184,8 @@ function About() {
                                     lineHeight: "1.07",
                                 }}
                             >
-                                Marketplace for Aspiring 3D Designers and Creators to Monetize
-                                with Freedom and total Control.
+                                Marketplace for Aspiring 3D Designers and Creators to Monetize with
+                                Freedom and total Control.
                             </div>
                         </div>
                         <div
@@ -237,8 +236,8 @@ function About() {
                             lineHeight: "104%",
                         }}
                     >
-                        Interested in knowing more? Or, think our synergies is matching, we
-                        would love to get on a call for the same, and talk about it.
+                        Interested in knowing more? Or, think our synergies is matching, we would
+                        love to get on a call for the same, and talk about it.
                     </h5>
                     <button
                         className="contactUsButton"
@@ -271,9 +270,7 @@ function About() {
                                 paddingTop: "9vw",
                             }}
                         >
-                            <h5
-                                style={{ color: "#E6E6EB", fontSize: "1.67vw", height: "1.67vw" }}
-                            >
+                            <h5 style={{ color: "#E6E6EB", fontSize: "1.67vw", height: "1.67vw" }}>
                                 Vision
                             </h5>
                             <h1
@@ -293,21 +290,17 @@ function About() {
                                     lineHeight: "107%",
                                 }}
                             >
-                                No More Tension of giving ownership of your assets to some 3rd
-                                party platform or pay 10-30% in comissions. You hold the ownership
-                                of your assets you create with the help of decentralization
+                                No More Tension of giving ownership of your assets to some 3rd party
+                                platform or pay 10-30% in comissions. You hold the ownership of your
+                                assets you create with the help of decentralization
                             </div>
                         </div>
                     </div>
                     <div className="aboutCarousel">
-                        <div
-                            style={{ color: "#E6E6EB", fontSize: "1.5vw", fontWeight: "700" }}
-                        >
+                        <div style={{ color: "#E6E6EB", fontSize: "1.5vw", fontWeight: "700" }}>
                             The Masterminds Behind the Magic
                         </div>
-                        <h1
-                            style={{ color: "#6C6A6A", fontSize: "5.5vw", fontWeight: "600" }}
-                        >
+                        <h1 style={{ color: "#6C6A6A", fontSize: "5.5vw", fontWeight: "600" }}>
                             Say Hello to Team!
                         </h1>
                         <div className="carousel-container">
@@ -338,7 +331,11 @@ function About() {
                                         className="slideAbout"
                                     />
                                     <img
-                                        style={{ width: "18.7vw", height: "24.7vw", marginRight: "7vw" }}
+                                        style={{
+                                            width: "18.7vw",
+                                            height: "24.7vw",
+                                            marginRight: "7vw",
+                                        }}
                                         src={frame5}
                                         alt="Slide 10"
                                         className="slideAbout"
