@@ -189,7 +189,6 @@ function Home() {
                                 platform. Build, customize, and connect in a secure
                             </div>
                             <div className="home-partner-4-3">
-                                {" "}
                                 environment, exploring endless possibilities and redefining
                             </div>
                             <div className="home-partner-4-3">the virtual realm effortlessly.</div>
