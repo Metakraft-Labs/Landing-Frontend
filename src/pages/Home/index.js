@@ -1,13 +1,18 @@
 import React, { useRef, useState } from "react";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
-import Slider from "react-slick";
 // import AppStore from "../../contexts/AppStore";
 // import Header from "../../components/Header.jsx";
 // import InfiniteSpace from "../../Animation/Infinitespace";
 import Animate from "../../Assets/Animated.mp4";
-import Ipad_Mini from "../../Assets/iPad Mini.png";
-import Ipad_Mini1 from "../../Assets/iPad_Mini.png";
+import disney from "../../Assets/feedback/disney.svg";
+import mani from "../../Assets/feedback/mani.svg";
+import nandit from "../../Assets/feedback/nandit.svg";
+import navmeet from "../../Assets/feedback/navmeet.svg";
+import prasanna from "../../Assets/feedback/prasanna.svg";
+import rye from "../../Assets/feedback/rye.svg";
+import Ipad_Mini from "../../Assets/iPad Mini.svg";
+import Ipad_Mini1 from "../../Assets/iPad_Mini.svg";
 import metakraft from "../../Assets/metakraft.png";
 import Solana from "../../Assets/solana.png";
 import "../../Style/home.css";
@@ -60,19 +65,19 @@ function Home() {
     //     autoplaySpeed: 3000,
     //     arrows: false,
     // };
-    const settings2 = {
-        dots: false,
-        vertical: true,
-        verticalSwiping: true,
-        infinite: true, // Enable infinite loop
-        speed: 2000,
-        slidesToShow: 2, // Number of slides to show at once
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        // focusOnSelect: true,
-        arrows: false,
-    };
+    // const settings2 = {
+    //     dots: false,
+    //     vertical: true,
+    //     verticalSwiping: true,
+    //     infinite: true, // Enable infinite loop
+    //     speed: 2000,
+    //     slidesToShow: 2, // Number of slides to show at once
+    //     slidesToScroll: 1,
+    //     autoplay: true,
+    //     autoplaySpeed: 2000,
+    //     // focusOnSelect: true,
+    //     arrows: false,
+    // };
 
     return (
         <>
@@ -126,7 +131,7 @@ function Home() {
                     <div className="home-partner-1">Ecosystem &</div>
                     <div className="home-partner-2">Strategic Partners</div>
 
-                    <div className="flex mt-16">
+                    <div className="flex mt-8">
                         <div
                             id="slideshow"
                             className="mt-16"
@@ -174,10 +179,9 @@ function Home() {
                             Watch Demo
                         </button>
                     </div>
-                    <div className="home-partner-4">
-                        <div style={{ paddingTop: "4vw" }}>
+                    <div className="home-partner-4 mt-10 px-20">
+                        <div style={{ paddingTop: "4vw" }} className="basis-[60%]">
                             <div className="home-partner-4-2">Seamless Experience!</div>
-                            <div className="home-partner-4-2">Explore, Create, Connect</div>
                             <div className="home-partner-4-3" style={{ marginTop: "2vw" }}>
                                 Unleash your imagination with an AI-driven, browser-based
                             </div>
@@ -190,25 +194,29 @@ function Home() {
                             </div>
                             <div className="home-partner-4-3">the virtual realm effortlessly.</div>
                         </div>
-                        <div>
-                            <img className="home-partner-4-1" src={Ipad_Mini} alt="partner-4" />
+                        <div className="">
+                            <img
+                                className="w-[864px] h-[830px] top-0 relative z-[1] -rotate-3    "
+                                src={Ipad_Mini1}
+                                alt="partner-4"
+                            />
                         </div>
                     </div>
-                    <div className="home-partner-5">
-                        <div>
-                            <img className="home-partner-4-1" src={Ipad_Mini1} alt="partner-5" />
+                    <div className="home-partner-5 flex ">
+                        <div className="basis-[30%]">
+                            <img className="home-partner-4-1 " src={Ipad_Mini} alt="partner-5" />
                         </div>
-                        <div style={{ paddingTop: "8vw" }}>
-                            <div className="home-partner-4-2">Designed to Scale as</div>
-                            <div className="home-partner-4-2">your need Grows</div>
-                            <div className="home-partner-4-3" style={{ marginTop: "2vw" }}>
-                                Metakraft is designed to scale with your business, creating
+                        <div style={{ paddingTop: "8vw" }} className="basis-[50%]">
+                            <div className="home-partner-4-2 text-right">
+                                Designed to Scale with your need
                             </div>
-                            <div className="home-partner-4-3">
-                                engaging virtual environments that can attract and retain as
-                            </div>
-                            <div className="home-partner-4-3">
-                                users grows while generating revenue.
+                            <div
+                                className="home-partner-4-3 text-right"
+                                style={{ marginTop: "2vw" }}
+                            >
+                                Metakraft is designed to scale with your business, creating engaging
+                                virtual environments that can attract and retain as users grows
+                                while generating revenue.
                             </div>
                         </div>
                     </div>
@@ -237,110 +245,129 @@ function Home() {
                             </div>
                         </div>
 
-                        <div>
-                            <div className=" flex flex-row justify-between overflow-hidden relative h-[691px] w-[695px] border-white border-[4px] rounded-[2vh]">
-                                {/* --------------------------first column--------------------------- */}
-                                <div className=" -ml-9  w-full mx-4 ">
-                                    <Slider {...settings2}>
-                                        <div>
-                                            <div className=" flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
-                                                <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
-                                                <div className="flex flex-row my-2">
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div className=" flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
-                                                <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
-                                                <div className="flex flex-row my-2">
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div className=" flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
-                                                <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
-                                                <div className="flex flex-row my-2">
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Slider>
-                                </div>
-                                {/* --------------------------Second column--------------------------- */}
+                        <div className=" flex flex-row justify-between overflow-hidden relative h-[691px] w-[695px] border-white border-[4px] rounded-[2vh]">
+                            {/* --------------------------first column--------------------------- */}
 
-                                <div className="carousel carousel-vertical w-[200%] mx-4 ">
-                                    <Slider {...settings2} className="slider2">
-                                        <div className="">
-                                            <div className="carousel-item flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
-                                                <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
-                                                <div className="flex flex-row my-2">
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div className="carousel-item flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
-                                                <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
-                                                <div className="flex flex-row my-2">
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div className="carousel-item flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
-                                                <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
-                                                <div className="flex flex-row my-2">
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
-                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Slider>
-                                </div>
-                                {/* --------------------------Third column--------------------------- */}
+                            <Marquee
+                                direction="up"
+                                style={{
+                                    height: "100%",
+                                    width: "120%",
+                                    display: "flex",
+                                    position: "absolute",
+                                    left: "-390px",
+                                    top: "0",
+                                    bottom: "0",
+                                }}
+                            >
+                                {/* In marquee, here we are using vertical sliding. So you height instead of width and vice versa */}
 
-                                <div className="carousel carousel-vertical -mr-9 w-[130%] mx-4 ">
-                                    <Slider {...settings2}>
-                                        <div className="carousel-item flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
-                                            <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
-                                            <div className="flex flex-row my-2">
-                                                <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
-                                                <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
-                                                <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
-                                            </div>
-                                        </div>
-                                        <div className="carousel-item flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
-                                            <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
-                                            <div className="flex flex-row my-2">
-                                                <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
-                                                <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
-                                                <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
-                                            </div>
-                                        </div>
-                                        <div className="carousel-item flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
-                                            <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
-                                            <div className="flex flex-row my-2">
-                                                <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
-                                                <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
-                                                <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
-                                            </div>
-                                        </div>
-                                    </Slider>
+                                <div className=" flex flex-col p-4 w-[306px] mr-4 rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]"></div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
                                 </div>
-                            </div>
+                                <div className=" flex flex-col p-4 w-[306px] mr-4 rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]"></div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                                <div className=" flex flex-col p-4 w-[306px] mr-4 rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]"></div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                            </Marquee>
+
+                            {/* --------------------------Second column--------------------------- */}
+                            <Marquee
+                                direction="down"
+                                style={{
+                                    height: "100%",
+                                    width: "120%",
+                                    display: "flex",
+                                    position: "absolute",
+                                    left: "-50px",
+                                    top: "0",
+                                    bottom: "0",
+                                }}
+                            >
+                                {/* In marquee, here we are using vertical sliding. So you height instead of width and vice versa */}
+
+                                <div className=" flex flex-col p-4 w-[306px] mr-4 my-4 rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]"></div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                                <div className=" flex flex-col p-4 w-[306px] mr-4 my-4 rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]"></div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                                <div className=" flex flex-col p-4 w-[306px] mr-4 my-4 rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]"></div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                            </Marquee>
+                            {/* --------------------------Third column--------------------------- */}
+                            <Marquee
+                                direction="up"
+                                style={{
+                                    height: "100%",
+                                    width: "120%",
+                                    display: "flex",
+                                    position: "absolute",
+                                    right: "-400px",
+                                    top: "0",
+                                    bottom: "0",
+                                }}
+                            >
+                                {/* In marquee, here we are using vertical sliding. So you height instead of width and vice versa */}
+
+                                <div className=" flex flex-col p-4 w-[306px] mr-4 rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]"></div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                                <div className=" flex flex-col p-4 w-[306px] mr-4 rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]"></div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                                <div className=" flex flex-col p-4 w-[306px] mr-4 rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]"></div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                            </Marquee>
                         </div>
                     </div>
                     <div className="pt-28 feature-bg">
@@ -352,166 +379,141 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className="home-slide relative grid grid-cols-3 justify-between place-items-center  mx-20 ">
+                        <div className="home-slide grid grid-cols-2  place-items-center  mx-20 ">
                             {/* -------------------------First Column------------------------------ */}
 
-                            <div className="flex flex-col justify-start">
-                                <div className=""></div>
-                                <div className=" home-slide-3-1 w-[380px] h-[295px] mb-8 flex flex-col justify-center items-start">
-                                    <div
-                                        style={{
-                                            lineHeight: "120%",
-                                            fontSize: "1.2vw",
-                                            paddingTop: "0.7vw",
-                                        }}
-                                    >
-                                        Though I am building @rariko_info and I’m super bullish
-                                        about it, I have my bets on our fellow Indian startup
-                                        @AIVerse_Dai
+                            <div className=" flex flex-col justify-end">
+                                <div className="py-10"></div>
+                                <div className=" home-slide-3-1 box w-[485px] p-6 pr-16 h-[333px] mb-8 flex flex-row justify-center items-start">
+                                    <div className="w-[170px] mr-4">
+                                        <img src={navmeet} className="w-full" alt="" />
                                     </div>
-                                    <div
-                                        style={{
-                                            fontSize: "1.1vw",
-                                            fontWeight: "600",
-                                            paddingTop: "0.7vw",
-                                        }}
-                                    >
-                                        Mani Kumar
+                                    <div className="text-white">
+                                        <div>
+                                            <h3 className="text-[24px] font-bold">
+                                                Navneet Mishra
+                                            </h3>
+                                            <p className="text-[14px] text-[#B9B9B9]">
+                                                @Navneet93632479
+                                            </p>
+                                            <br />
+                                        </div>
+                                        <div className="text-[14px]">
+                                            I am excited to share with you all that @TheMetakraft is
+                                            going to launch their game editor soon.
+                                            <br />
+                                            <br />
+                                            The first very exciting thing i liked about them was
+                                            their user friendly layout of the interface of the
+                                            editor where things are quiet easy and understandable to
+                                            newbies.
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div className=" home-slide-3-1 w-[380px] h-[355px] flex flex-col justify-center items-start">
-                                    <div
-                                        style={{
-                                            lineHeight: "120%",
-                                            fontSize: "1.2vw",
-                                            paddingTop: "0.7vw",
-                                        }}
-                                    >
-                                        I’m holding out hope they’ll soon introduce extra cool and
-                                        amazing capabilities.
+                                <div className=" home-slide-3-1 box w-[485px] h-[197px]  p-6 pr-16 mb-8 flex flex-row justify-center items-start">
+                                    <div className="w-[100px] mr-4">
+                                        <img src={disney} className="w-full" alt="" />
                                     </div>
-                                    <div
-                                        style={{
-                                            fontSize: "1.1vw",
-                                            fontWeight: "600",
-                                            paddingTop: "0.7vw",
-                                        }}
-                                    >
-                                        Jayson Caves
+                                    <div className="text-white">
+                                        <div>
+                                            <h3 className="text-[24px] font-bold">Disney</h3>
+                                            <p className="text-[14px] text-[#B9B9B9]">
+                                                @Disney_1519
+                                            </p>
+                                            <br />
+                                        </div>
+                                        <div className="text-[14px]">
+                                            Excellent! Bringing opportunity to all users with a lot
+                                            of helping features that can helps us!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className=" home-slide-3-1 box w-[485px] h-[194px]  p-6 pr-16 flex flex-row justify-center items-start">
+                                    <div className="w-[100px] mr-4">
+                                        <img src={rye} className="w-full" alt="" />
+                                    </div>
+                                    <div className="text-white">
+                                        <div>
+                                            <h3 className="text-[24px] font-bold">rye</h3>
+                                            <p className="text-[14px] text-[#B9B9B9]">
+                                                @ryemarvs__
+                                            </p>
+                                            <br />
+                                        </div>
+                                        <div className="text-[14px]">
+                                            I am all in with this!!! Loving this new taste in the
+                                            metaverse #Metakraft
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             {/* -------------------------Second Column------------------------------ */}
 
-                            <div className="flex flex-col justify-end">
-                                <div className="py-32  "></div>
-                                <div className=" home-slide-3-1 w-[380px]  h-[365px]  mb-8 flex flex-col justify-center items-start">
-                                    <div
-                                        style={{
-                                            lineHeight: "120%",
-                                            fontSize: "1.2vw",
-                                            paddingTop: "0.7vw",
-                                        }}
-                                    >
-                                        Very interesting project with energetic founders. Looking
-                                        forward to Great things from Aiverse! Good luck
+                            <div className="flex flex-col justify-start">
+                                <div className=" home-slide-3-1 box w-[485px]  h-[210px]  mb-8  p-6 pr-16 flex flex-row justify-center items-start">
+                                    <div className="w-[140px] mr-4">
+                                        <img src={mani} className="w-full" alt="" />
                                     </div>
-                                    <div
-                                        style={{
-                                            fontSize: "1.1vw",
-                                            fontWeight: "600",
-                                            paddingTop: "0.7vw",
-                                        }}
-                                    >
-                                        Prasanna Kondapaneni
+                                    <div className="text-white">
+                                        <div>
+                                            <h3 className="text-[24px] font-bold">mani.wagmi</h3>
+                                            <p className="text-[14px] text-[#B9B9B9]">@wokeblunt</p>
+                                            <br />
+                                        </div>
+                                        <div className="text-[14px]">
+                                            Though I am building @rariko_info and I am super bullish
+                                            about it, I have my bets on our fellow Indian startup
+                                            @AIVerse_Dai
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div className=" home-slide-3-1 w-[380px]  h-[365px] flex flex-col justify-center items-start">
-                                    <div
-                                        style={{
-                                            lineHeight: "120%",
-                                            fontSize: "1.2vw",
-                                            paddingTop: "0.7vw",
-                                        }}
-                                    >
-                                        Great to see Aiverse’s integrations with lighthouse, Very
-                                        Excited for their product!
+                                <div className=" home-slide-3-1 box w-[485px]  h-[333px] mb-8  p-6 pr-16 flex flex-row justify-center items-start">
+                                    <div className="w-[190px] mr-4">
+                                        <img src={nandit} className="w-full" alt="" />
                                     </div>
-                                    <div
-                                        style={{
-                                            fontSize: "1.1vw",
-                                            fontWeight: "600",
-                                            paddingTop: "0.7vw",
-                                        }}
-                                    >
-                                        Nandit Mehra
-                                    </div>
-                                </div>
-                            </div>
-                            {/* -------------------------Third Column------------------------------ */}
-                            <div className="flex flex-col justify-start">
-                                <div className=" home-slide-3-1 w-[380px]  h-[370px]  mb-8 flex flex-col justify-center items-start">
-                                    <div
-                                        style={{
-                                            lineHeight: "120%",
-                                            fontSize: "1.2vw",
-                                        }}
-                                    >
-                                        Excellent bringing opportunity to all users there’s a lot of
-                                        helping features that can helps us!
-                                    </div>
-                                    <div
-                                        style={{
-                                            fontSize: "1.1vw",
-                                            fontWeight: "600",
-                                            paddingTop: "0.7vw",
-                                        }}
-                                    >
-                                        Disney
+                                    <div className="text-white">
+                                        <div>
+                                            <h3 className="text-[24px] font-bold">Nandit Mehra</h3>
+                                            <p className="text-[14px] text-[#B9B9B9]">
+                                                @nanditmehra
+                                            </p>
+                                            <br />
+                                        </div>
+                                        <div className="text-[14px]">
+                                            Great to see successful integration of Metakraft
+                                            @TheMetakraft - a marketplace for AR, VR, AI/ML Models
+                                            and Assets with Lighthouse for permanent storage. Very
+                                            excited for their product
+                                            <br />
+                                            <br />
+                                            POWERED BY LIGHTHOUSE SDK @LighthouseWeb3
+                                            <br />
+                                            <br />
+                                            #web3 #lighthouse #crypto #ipfs #filecoin
+                                        </div>
                                     </div>
                                 </div>
-                                <div className=" home-slide-3-1  w-[380px]  h-[195px] mb-8 flex flex-col justify-center items-start">
-                                    <div
-                                        style={{
-                                            lineHeight: "120%",
-                                            fontSize: "1.2vw",
-                                            paddingTop: "0.7vw",
-                                        }}
-                                    >
-                                        Excited to see Aiverse making waves as an efficient tool for
-                                        developers and creators.
+
+                                <div className=" home-slide-3-1 box w-[485px]  h-[192px]  p-6 pr-16 flex flex-row justify-center items-start">
+                                    <div className="w-[100px] mr-4">
+                                        <img src={prasanna} className="w-full" alt="" />
                                     </div>
-                                    <div
-                                        style={{
-                                            fontSize: "1.1vw",
-                                            fontWeight: "600",
-                                            paddingTop: "0.7vw",
-                                        }}
-                                    >
-                                        Sarah Jones
-                                    </div>
-                                </div>
-                                <div className=" home-slide-3-1  w-[380px]  h-[195px] flex flex-col justify-center items-start">
-                                    <div
-                                        style={{
-                                            lineHeight: "120%",
-                                            fontSize: "1.2vw",
-                                            paddingTop: "0.7vw",
-                                        }}
-                                    >
-                                        Excited to see Aiverse making waves as an efficient tool for
-                                        developers and creators.
-                                    </div>
-                                    <div
-                                        style={{
-                                            fontSize: "1.1vw",
-                                            fontWeight: "600",
-                                            paddingTop: "0.7vw",
-                                        }}
-                                    >
-                                        Sarah Jones
+                                    <div className="text-white">
+                                        <div>
+                                            <h3 className="text-[24px] font-bold">
+                                                Prasanna Kondapaneni
+                                            </h3>
+                                            <p className="text-[14px] text-[#B9B9B9]">
+                                                @PrasannaKondap9
+                                            </p>
+                                            <br />
+                                        </div>
+                                        <div className="text-[14px]">
+                                            Excellent! Bringing opportunity to all users with a lot
+                                            of helping features that can helps us!
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -519,10 +521,40 @@ function Home() {
 
                         <div className="home-slide-4">
                             <Marquee>
-                                <div>1000+ Signups</div>
-                                <div>300+ Beta Users</div>
-                                <div>100+ Mints</div>
-                                <div>10+ Studio Partners</div>
+                                <div className="flex justify-between  items-center">
+                                    <div
+                                        style={{
+                                            marginRight: "100px",
+                                            textAlign: "center",
+                                        }}
+                                    >
+                                        1000+ Signups
+                                    </div>
+                                    <div
+                                        style={{
+                                            marginRight: "100px",
+                                            textAlign: "center",
+                                        }}
+                                    >
+                                        300+ Beta Users
+                                    </div>
+                                    <div
+                                        style={{
+                                            marginRight: "100px",
+                                            textAlign: "center",
+                                        }}
+                                    >
+                                        100+ Mints
+                                    </div>
+                                    <div
+                                        style={{
+                                            marginRight: "100px",
+                                            textAlign: "center",
+                                        }}
+                                    >
+                                        10+ Studio Partners
+                                    </div>
+                                </div>
                             </Marquee>
                         </div>
                     </div>

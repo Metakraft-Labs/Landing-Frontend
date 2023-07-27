@@ -166,8 +166,8 @@
     border: 1px solid #000;
     backdrop-filter: blur(25px);
     text-align: center;
-    margin: 3vw auto;
-    margin-top: 16vh;
+    margin: 2px auto;
+    margin-top: 12vh;
 }
 .home-demo-video {
     width: 100%;
@@ -198,7 +198,7 @@
 .home-partner-4 {
     display: flex;
     justify-content: center;
-    gap: 4vw;
+    /* gap: 4vw; */
 }
 .home-partner-5 {
     display: flex;
@@ -212,16 +212,18 @@
     z-index: 1;
 }
 .home-partner-4-2 {
-    font-size: 4.2vw;
-    height: 4.5vw;
+    font-size: 96px;
+    /* height: 4.5vw; */
     color: white;
     font-weight: 600;
+    line-height: normal;
 }
 .home-partner-4-3 {
-    font-size: 1.6vw;
-    height: 1.9vw;
+    font-size: 24px;
+    /* height: 1.9vw; */
     color: white;
-    font-weight: 350;
+    font-weight: 400;
+    line-height: normal;
 }
 .home-floor {
     display: flex;
@@ -390,7 +392,6 @@
 .home-slide-3-1 {
     color: #fff;
     border-radius: 0.78vw;
-    padding: 2% 2vw !important;
     background: #454352;
     text-align: left;
     border-radius: 3.85vh;
@@ -475,6 +476,12 @@ a {
 
     background-size: 200% 200%;
     animation: gradient 10s ease infinite;
+}
+
+.box {
+    border-radius: 17.798px;
+    background: linear-gradient(0deg, #454352 0%, #454352 100%), #fff;
+    box-shadow: -8px 8px 40px 5px rgba(0, 0, 0, 0.7);
 }
 
 @keyframes gradient {
