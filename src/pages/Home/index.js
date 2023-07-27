@@ -1,57 +1,43 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 // import AppStore from "../../contexts/AppStore";
 // import Header from "../../components/Header.jsx";
 // import InfiniteSpace from "../../Animation/Infinitespace";
-import AVA from "../../Assets/AVA.png";
-import Aiverse from "../../Assets/Aiverse.png";
 import Animate from "../../Assets/Animated.mp4";
-import BI from "../../Assets/BI.png";
-import BNB from "../../Assets/BNB.png";
-import CELO from "../../Assets/CELO.png";
-import Chain99 from "../../Assets/Chain99.png";
-import Conquest from "../../Assets/Conquest.png";
-import FANTOM from "../../Assets/FANTOM.png";
-import FILECOIN from "../../Assets/FILECOIN.png";
-import GT from "../../Assets/GT.png";
-import GTH from "../../Assets/GTH.png";
-import IAMAI from "../../Assets/IAMAI.png";
-import INCEPTION from "../../Assets/INCEPTION.png";
-import Immerse from "../../Assets/Immerse.png";
-import Metamask from "../../Assets/Metamask.png";
-import Octan from "../../Assets/Octan.png";
-import POLKA from "../../Assets/POLKA.png";
-import Polygon from "../../Assets/Polygon.png";
-import QUAI from "../../Assets/QUAI.png";
-import RARIKO from "../../Assets/RARIKO.png";
-import RPM from "../../Assets/RPM.png";
-import Router from "../../Assets/Router.png";
-import SEI from "../../Assets/SEI.png";
-import SOCIAL3 from "../../Assets/SOCIAL3.png";
-import STCKOS from "../../Assets/STCKOS.png";
-import Shard from "../../Assets/Shard.png";
-import Spheron from "../../Assets/Spheron.png";
-import TL from "../../Assets/TL.png";
-import WH from "../../Assets/WH.png";
 import Ipad_Mini from "../../Assets/iPad Mini.png";
 import Ipad_Mini1 from "../../Assets/iPad_Mini.png";
+import metakraft from "../../Assets/metakraft.png";
 import Solana from "../../Assets/solana.png";
 import "../../Style/home.css";
+import { slider1 } from "../../data";
 import Title from "../../shared/Title";
 
 function Home() {
+    // const settings = {
+    //     dots: true,
+    //     infinite: true,
+    //     speed: 500,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    // };
+
     // const { token } = useContext(AppStore);
     const [news, setNews] = useState("");
-    const handleShow = event => {
-        event.target.classList.add("home-head-3-11");
-        event.target.classList.remove("home-head-3-12");
-        setTimeout(() => {
-            event.target.classList.remove("home-head-3-11");
-            event.target.classList.add("home-head-3-12");
-        }, 2000);
+
+    const videoRef = useRef();
+    const [stop, setStop] = useState(false);
+
+    const handleVideo = () => {
+        setStop(!stop);
+        if (stop === true) {
+            videoRef.current.pause();
+        } else {
+            videoRef.current.play();
+        }
     };
+
     const subscribe = async () => {
         const crudresponse = await fetch("https://blog.metakraft.live/api/newsletter/subscribe", {
             method: "POST",
@@ -64,54 +50,58 @@ function Home() {
         setNews("");
         return await crudresponse.json();
     };
-    const settings = {
+    // const settings = {
+    //     dots: false,
+    //     infinite: true, // Enable infinite loop
+    //     speed: 3000,
+    //     slidesToShow: 9, // Number of slides to show at once
+    //     slidesToScroll: 1,
+    //     autoplay: true,
+    //     autoplaySpeed: 3000,
+    //     arrows: false,
+    // };
+    const settings2 = {
         dots: false,
+        vertical: true,
+        verticalSwiping: true,
         infinite: true, // Enable infinite loop
-        speed: 1000,
-        slidesToShow: 9, // Number of slides to show at once
+        speed: 2000,
+        slidesToShow: 2, // Number of slides to show at once
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 2000,
+        // focusOnSelect: true,
         arrows: false,
     };
+
     return (
         <>
             <Title title={"Home"} />
-            <div className={`w-full`} style={{ fontFamily: "Roboto" }}>
+            <div className={`w-full overflow-hidden`} style={{ fontFamily: "Roboto" }}>
                 {/* <InfiniteSpace /> */}
 
-                <div className={`bg-black px-32   h-[112.7vh] flex justify-start items-center`}>
+                <div
+                    className={`bg-black  bg-scroll  px-32 h-[732px] flex justify-start items-center`}
+                >
                     <div>
                         <div>
                             <h1
-                                className={`text-[#EAEAEA] leading-[107.5%] text-[19.7vh] font-extrabold`}
+                                className={`text-[#EAEAEA] leading-[107.5%] text-[128px] font-bold`}
                             >
                                 Making Internet <br />
                                 <span
                                     className={`text-transparent bg-clip-text bg-gradient-to-r from-[#016DB0] to-[#01FFCA]`}
                                 >
-                                    Super Fun!
+                                    Immersive!
                                 </span>
                             </h1>
                         </div>
-                        <div className={`my-6 text-[3.40vh] font-bold `}>
-                            <button
-                                className={` text-white bg-gradient-to-r p-[2px] from-[#2CD9FF] via-[#7EFFB2CF] to-[#FFD80E] rounded-[1.2vh] h-[12.17vh] w-[16.61vw] leading-[9.2vh]`}
-                            >
-                                <div
-                                    className={`bg-[#0E101C] rounded-[1.2vh] h-full flex items-center justify-center  w-full `}
-                                >
-                                    Early Access
-                                </div>
+                        <div className={`my-6  font-bold `}>
+                            <button className="home-partner-3 text-[22px] h-[79px] w-[277px] rounded-[8px]">
+                                Early Access
                             </button>
-                            <button
-                                className={` text-white bg-gradient-to-r ml-12 p-[2px] from-[#2CD9FF] via-[#7EFFB2CF] to-[#FFD80E] rounded-[1.2vh] h-[12.17vh] w-[16.61vw] leading-[9.2vh]`}
-                            >
-                                <div
-                                    className={`bg-[#0E101C] rounded-[1.2vh] h-full flex items-center justify-center  w-full `}
-                                >
-                                    Refer & Win
-                                </div>
+                            <button className="home-partner-3 text-[22px] h-[79px] w-[277px] rounded-[8px] ml-12">
+                                Refer & Win
                             </button>
                         </div>
                     </div>
@@ -120,366 +110,73 @@ function Home() {
                 <div className="punc2">#</div>
                 <div className="punc3">$</div>
 
-                <div className="home-live">
-                    <div>
-                        <img className="home-live-1" src={Aiverse} alt="home-live" />
+                <div className="home-live flex justify-center items-center h-[57px]">
+                    <div className="home-live-gradient">
+                        <img
+                            className="home-live-1 h-[42px] w-[44px]"
+                            src={metakraft}
+                            alt="home-live"
+                        />
                     </div>
-                    <div className="home-live-2">We are live! Learn More -&gt;</div>
+                    <div className="text-[20px] font-bold leading-[105.5%]">
+                        We are live! Learn More -&gt;
+                    </div>
                 </div>
-                <div className="home-partner">
+                <div className="home-partner  ">
                     <div className="home-partner-1">Ecosystem &</div>
                     <div className="home-partner-2">Strategic Partners</div>
-                    <div style={{ display: "flex" }}>
+
+                    <div className="flex mt-16">
                         <div
                             id="slideshow"
+                            className="mt-16"
                             style={{
-                                padding: "1.5vw",
-                                paddingTop: "4vw",
                                 width: "100%",
                                 background: "transparent",
                             }}
                         >
-                            <Slider {...settings}>
-                                <div className="explore-logo-slide">
-                                    <img
+                            <Marquee>
+                                {slider1.map(slide => (
+                                    <div
                                         style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
+                                            display: "flex",
+                                            justifyContent: "space-between",
+                                            alignItems: "center",
                                         }}
-                                        src={AVA}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={BI}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={BNB}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={CELO}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={Chain99}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={Conquest}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={FANTOM}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={FILECOIN}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={GT}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={GTH}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={IAMAI}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={Immerse}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={INCEPTION}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={Octan}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={POLKA}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={Polygon}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={QUAI}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={RARIKO}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={Router}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={RPM}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={SEI}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={Shard}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={SOCIAL3}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={Spheron}
-                                        alt="logo-1"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={STCKOS}
-                                        alt="stackos"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={TL}
-                                        alt="telos"
-                                    />
-                                </div>
-                                <div className="explore-logo-slide">
-                                    <img
-                                        style={{
-                                            width: "4.5vw",
-                                            height: "4.5vw",
-                                            position: "relative",
-                                            zIndex: "1",
-                                        }}
-                                        src={WH}
-                                        alt="wormhole"
-                                    />
-                                </div>
-                            </Slider>
+                                        key={slide.id}
+                                    >
+                                        <img
+                                            className="w-[56px] h-[56px]"
+                                            style={{
+                                                marginLeft: "72px",
+                                            }}
+                                            src={slide.img}
+                                            alt="logo-1"
+                                        />
+                                    </div>
+                                ))}
+                            </Marquee>
                         </div>
                     </div>
                     <div className="home-demo">
-                        <video className="home-demo-video" src={Animate}>
-                            Your browser does not support the video tag.
-                        </video>
+                        <video
+                            ref={videoRef}
+                            className="home-demo-video"
+                            src={Animate}
+                            type="video/mp4"
+                            autoPlay
+                            loop
+                            muted
+                        ></video>
                     </div>
                     <div style={{ width: "100%", textAlign: "center" }}>
-                        <button className="home-partner-3 home-head-3-12" onClick={handleShow}>
+                        <button className="home-partner-3 home-head-3-12" onClick={handleVideo}>
                             Watch Demo
                         </button>
                     </div>
                     <div className="home-partner-4">
                         <div style={{ paddingTop: "4vw" }}>
-                            <div className="home-partner-4-2">Explore Experience!</div>
+                            <div className="home-partner-4-2">Seamless Experience!</div>
                             <div className="home-partner-4-2">Explore, Create, Connect</div>
                             <div className="home-partner-4-3" style={{ marginTop: "2vw" }}>
                                 Unleash your imagination with an AI-driven, browser-based
@@ -516,19 +213,15 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="home-floor">
+                    <div className="home-floor flex flex-row items-center mx-20  ">
                         <div className="home-floor-1">
                             <div style={{ marginRight: "1.5vw" }}>
                                 <div className="home-floor-1-1">
-                                    <div className="home-floor-1-2" style={{ fontSize: "3.17vw" }}>
-                                        Browser
-                                    </div>
+                                    <div className="home-floor-1-2 text-[43px]">Browser</div>
                                     <div className="home-floor-1-3">Supported</div>
                                 </div>
                                 <div className="home-floor-1-1">
-                                    <div className="home-floor-1-2" style={{ fontSize: "3.17vw" }}>
-                                        AI Enabled
-                                    </div>
+                                    <div className="home-floor-1-2  text-[43px]">AI Enabled</div>
                                     <div className="home-floor-1-3">Asset Design</div>
                                 </div>
                             </div>
@@ -543,57 +236,128 @@ function Home() {
                                 </div>
                             </div>
                         </div>
+
                         <div>
-                            <img
-                                src={Metamask}
-                                alt="metamask"
-                                style={{ width: "20.96vw", height: "19.47vw" }}
-                            />
+                            <div className=" flex flex-row justify-between overflow-hidden relative h-[691px] w-[695px] border-white border-[4px] rounded-[2vh]">
+                                {/* --------------------------first column--------------------------- */}
+                                <div className=" -ml-9  w-full mx-4 ">
+                                    <Slider {...settings2}>
+                                        <div>
+                                            <div className=" flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
+                                                <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
+                                                <div className="flex flex-row my-2">
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className=" flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
+                                                <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
+                                                <div className="flex flex-row my-2">
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className=" flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
+                                                <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
+                                                <div className="flex flex-row my-2">
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Slider>
+                                </div>
+                                {/* --------------------------Second column--------------------------- */}
+
+                                <div className="carousel carousel-vertical w-[200%] mx-4 ">
+                                    <Slider {...settings2} className="slider2">
+                                        <div className="">
+                                            <div className="carousel-item flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
+                                                <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
+                                                <div className="flex flex-row my-2">
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="carousel-item flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
+                                                <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
+                                                <div className="flex flex-row my-2">
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="carousel-item flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
+                                                <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
+                                                <div className="flex flex-row my-2">
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                                    <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Slider>
+                                </div>
+                                {/* --------------------------Third column--------------------------- */}
+
+                                <div className="carousel carousel-vertical -mr-9 w-[130%] mx-4 ">
+                                    <Slider {...settings2}>
+                                        <div className="carousel-item flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
+                                            <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
+                                            <div className="flex flex-row my-2">
+                                                <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                                <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                                <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                            </div>
+                                        </div>
+                                        <div className="carousel-item flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
+                                            <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
+                                            <div className="flex flex-row my-2">
+                                                <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                                <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                                <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                            </div>
+                                        </div>
+                                        <div className="carousel-item flex flex-col p-4 h-[306px] my-4 rounded-[3.62vh] bg-white">
+                                            <div className="gradient1 h-[206px] w-full rounded-[2.1vh]"></div>
+                                            <div className="flex flex-row my-2">
+                                                <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                                <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                                <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                            </div>
+                                        </div>
+                                    </Slider>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="home-slide">
-                        <div className="home-slide-1">What Others Says</div>
-                        <div className="home-slide-2">
-                            Made by Builder&apos;s for the Builder&apos;s
+                    <div className="pt-28 feature-bg">
+                        {/* <div className=" bg-gradient-to-br from-red-500 to-red-800 blur-3xl rounded-full  h-64 w-96 "></div> */}
+                        <div className="flex justify-center items-center flex-col">
+                            <div className="home-slide-1">What Others Says</div>
+                            <div className="home-slide-2 mb-8">
+                                Made by Builder&apos;s for the Builder&apos;s
+                            </div>
                         </div>
-                        <Marquee>
-                            <div className="home-slide-3">
-                                <div className="homeslide home-slide-3-1">
-                                    <svg
-                                        width="5.347vw"
-                                        height="0.972vw"
-                                        viewBox="0 0 77 14"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g id="Group 2031">
-                                            <path
-                                                id="Star 1"
-                                                d="M70.5 0L71.9593 4.83688H76.6819L72.8613 7.82624L74.3206 12.6631L70.5 9.67376L66.6794 12.6631L68.1387 7.82624L64.3181 4.83688H69.0407L70.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 5"
-                                                d="M6.5 0L7.95934 4.83688H12.6819L8.86126 7.82624L10.3206 12.6631L6.5 9.67376L2.6794 12.6631L4.13874 7.82624L0.318133 4.83688H5.04066L6.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 2"
-                                                d="M54.5 0L55.9593 4.83688H60.6819L56.8613 7.82624L58.3206 12.6631L54.5 9.67376L50.6794 12.6631L52.1387 7.82624L48.3181 4.83688H53.0407L54.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 3"
-                                                d="M38.5 0L39.9593 4.83688H44.6819L40.8613 7.82624L42.3206 12.6631L38.5 9.67376L34.6794 12.6631L36.1387 7.82624L32.3181 4.83688H37.0407L38.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 4"
-                                                d="M22.5 0L23.9593 4.83688H28.6819L24.8613 7.82624L26.3206 12.6631L22.5 9.67376L18.6794 12.6631L20.1387 7.82624L16.3181 4.83688H21.0407L22.5 0Z"
-                                                fill="black"
-                                            />
-                                        </g>
-                                    </svg>
+
+                        <div className="home-slide relative grid grid-cols-3 justify-between place-items-center  mx-20 ">
+                            {/* -------------------------First Column------------------------------ */}
+
+                            <div className="flex flex-col justify-start">
+                                <div className=""></div>
+                                <div className=" home-slide-3-1 w-[380px] h-[295px] mb-8 flex flex-col justify-center items-start">
                                     <div
                                         style={{
                                             lineHeight: "120%",
@@ -615,42 +379,8 @@ function Home() {
                                         Mani Kumar
                                     </div>
                                 </div>
-                                <div className="homeslide home-slide-3-1">
-                                    <svg
-                                        width="5.347vw"
-                                        height="0.972vw"
-                                        viewBox="0 0 77 14"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g id="Group 2031">
-                                            <path
-                                                id="Star 1"
-                                                d="M70.5 0L71.9593 4.83688H76.6819L72.8613 7.82624L74.3206 12.6631L70.5 9.67376L66.6794 12.6631L68.1387 7.82624L64.3181 4.83688H69.0407L70.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 5"
-                                                d="M6.5 0L7.95934 4.83688H12.6819L8.86126 7.82624L10.3206 12.6631L6.5 9.67376L2.6794 12.6631L4.13874 7.82624L0.318133 4.83688H5.04066L6.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 2"
-                                                d="M54.5 0L55.9593 4.83688H60.6819L56.8613 7.82624L58.3206 12.6631L54.5 9.67376L50.6794 12.6631L52.1387 7.82624L48.3181 4.83688H53.0407L54.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 3"
-                                                d="M38.5 0L39.9593 4.83688H44.6819L40.8613 7.82624L42.3206 12.6631L38.5 9.67376L34.6794 12.6631L36.1387 7.82624L32.3181 4.83688H37.0407L38.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 4"
-                                                d="M22.5 0L23.9593 4.83688H28.6819L24.8613 7.82624L26.3206 12.6631L22.5 9.67376L18.6794 12.6631L20.1387 7.82624L16.3181 4.83688H21.0407L22.5 0Z"
-                                                fill="black"
-                                            />
-                                        </g>
-                                    </svg>
+
+                                <div className=" home-slide-3-1 w-[380px] h-[355px] flex flex-col justify-center items-start">
                                     <div
                                         style={{
                                             lineHeight: "120%",
@@ -671,42 +401,12 @@ function Home() {
                                         Jayson Caves
                                     </div>
                                 </div>
-                                <div className="home-slide-3-1">
-                                    <svg
-                                        width="5.347vw"
-                                        height="0.972vw"
-                                        viewBox="0 0 77 14"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g id="Group 2031">
-                                            <path
-                                                id="Star 1"
-                                                d="M70.5 0L71.9593 4.83688H76.6819L72.8613 7.82624L74.3206 12.6631L70.5 9.67376L66.6794 12.6631L68.1387 7.82624L64.3181 4.83688H69.0407L70.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 5"
-                                                d="M6.5 0L7.95934 4.83688H12.6819L8.86126 7.82624L10.3206 12.6631L6.5 9.67376L2.6794 12.6631L4.13874 7.82624L0.318133 4.83688H5.04066L6.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 2"
-                                                d="M54.5 0L55.9593 4.83688H60.6819L56.8613 7.82624L58.3206 12.6631L54.5 9.67376L50.6794 12.6631L52.1387 7.82624L48.3181 4.83688H53.0407L54.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 3"
-                                                d="M38.5 0L39.9593 4.83688H44.6819L40.8613 7.82624L42.3206 12.6631L38.5 9.67376L34.6794 12.6631L36.1387 7.82624L32.3181 4.83688H37.0407L38.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 4"
-                                                d="M22.5 0L23.9593 4.83688H28.6819L24.8613 7.82624L26.3206 12.6631L22.5 9.67376L18.6794 12.6631L20.1387 7.82624L16.3181 4.83688H21.0407L22.5 0Z"
-                                                fill="black"
-                                            />
-                                        </g>
-                                    </svg>
+                            </div>
+                            {/* -------------------------Second Column------------------------------ */}
+
+                            <div className="flex flex-col justify-end">
+                                <div className="py-32  "></div>
+                                <div className=" home-slide-3-1 w-[380px]  h-[365px]  mb-8 flex flex-col justify-center items-start">
                                     <div
                                         style={{
                                             lineHeight: "120%",
@@ -727,42 +427,8 @@ function Home() {
                                         Prasanna Kondapaneni
                                     </div>
                                 </div>
-                                <div className="home-slide-3-1">
-                                    <svg
-                                        width="5.347vw"
-                                        height="0.972vw"
-                                        viewBox="0 0 77 14"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g id="Group 2031">
-                                            <path
-                                                id="Star 1"
-                                                d="M70.5 0L71.9593 4.83688H76.6819L72.8613 7.82624L74.3206 12.6631L70.5 9.67376L66.6794 12.6631L68.1387 7.82624L64.3181 4.83688H69.0407L70.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 5"
-                                                d="M6.5 0L7.95934 4.83688H12.6819L8.86126 7.82624L10.3206 12.6631L6.5 9.67376L2.6794 12.6631L4.13874 7.82624L0.318133 4.83688H5.04066L6.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 2"
-                                                d="M54.5 0L55.9593 4.83688H60.6819L56.8613 7.82624L58.3206 12.6631L54.5 9.67376L50.6794 12.6631L52.1387 7.82624L48.3181 4.83688H53.0407L54.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 3"
-                                                d="M38.5 0L39.9593 4.83688H44.6819L40.8613 7.82624L42.3206 12.6631L38.5 9.67376L34.6794 12.6631L36.1387 7.82624L32.3181 4.83688H37.0407L38.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 4"
-                                                d="M22.5 0L23.9593 4.83688H28.6819L24.8613 7.82624L26.3206 12.6631L22.5 9.67376L18.6794 12.6631L20.1387 7.82624L16.3181 4.83688H21.0407L22.5 0Z"
-                                                fill="black"
-                                            />
-                                        </g>
-                                    </svg>
+
+                                <div className=" home-slide-3-1 w-[380px]  h-[365px] flex flex-col justify-center items-start">
                                     <div
                                         style={{
                                             lineHeight: "120%",
@@ -783,47 +449,14 @@ function Home() {
                                         Nandit Mehra
                                     </div>
                                 </div>
-                                <div className="home-slide-3-1">
-                                    <svg
-                                        width="5.347vw"
-                                        height="0.972vw"
-                                        viewBox="0 0 77 14"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g id="Group 2031">
-                                            <path
-                                                id="Star 1"
-                                                d="M70.5 0L71.9593 4.83688H76.6819L72.8613 7.82624L74.3206 12.6631L70.5 9.67376L66.6794 12.6631L68.1387 7.82624L64.3181 4.83688H69.0407L70.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 5"
-                                                d="M6.5 0L7.95934 4.83688H12.6819L8.86126 7.82624L10.3206 12.6631L6.5 9.67376L2.6794 12.6631L4.13874 7.82624L0.318133 4.83688H5.04066L6.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 2"
-                                                d="M54.5 0L55.9593 4.83688H60.6819L56.8613 7.82624L58.3206 12.6631L54.5 9.67376L50.6794 12.6631L52.1387 7.82624L48.3181 4.83688H53.0407L54.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 3"
-                                                d="M38.5 0L39.9593 4.83688H44.6819L40.8613 7.82624L42.3206 12.6631L38.5 9.67376L34.6794 12.6631L36.1387 7.82624L32.3181 4.83688H37.0407L38.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 4"
-                                                d="M22.5 0L23.9593 4.83688H28.6819L24.8613 7.82624L26.3206 12.6631L22.5 9.67376L18.6794 12.6631L20.1387 7.82624L16.3181 4.83688H21.0407L22.5 0Z"
-                                                fill="black"
-                                            />
-                                        </g>
-                                    </svg>
+                            </div>
+                            {/* -------------------------Third Column------------------------------ */}
+                            <div className="flex flex-col justify-start">
+                                <div className=" home-slide-3-1 w-[380px]  h-[370px]  mb-8 flex flex-col justify-center items-start">
                                     <div
                                         style={{
                                             lineHeight: "120%",
                                             fontSize: "1.2vw",
-                                            paddingTop: "0.7vw",
                                         }}
                                     >
                                         Excellent bringing opportunity to all users there’s a lot of
@@ -839,42 +472,28 @@ function Home() {
                                         Disney
                                     </div>
                                 </div>
-                                <div className="homeslide home-slide-3-1">
-                                    <svg
-                                        width="5.347vw"
-                                        height="0.972vw"
-                                        viewBox="0 0 77 14"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                <div className=" home-slide-3-1  w-[380px]  h-[195px] mb-8 flex flex-col justify-center items-start">
+                                    <div
+                                        style={{
+                                            lineHeight: "120%",
+                                            fontSize: "1.2vw",
+                                            paddingTop: "0.7vw",
+                                        }}
                                     >
-                                        <g id="Group 2031">
-                                            <path
-                                                id="Star 1"
-                                                d="M70.5 0L71.9593 4.83688H76.6819L72.8613 7.82624L74.3206 12.6631L70.5 9.67376L66.6794 12.6631L68.1387 7.82624L64.3181 4.83688H69.0407L70.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 5"
-                                                d="M6.5 0L7.95934 4.83688H12.6819L8.86126 7.82624L10.3206 12.6631L6.5 9.67376L2.6794 12.6631L4.13874 7.82624L0.318133 4.83688H5.04066L6.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 2"
-                                                d="M54.5 0L55.9593 4.83688H60.6819L56.8613 7.82624L58.3206 12.6631L54.5 9.67376L50.6794 12.6631L52.1387 7.82624L48.3181 4.83688H53.0407L54.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 3"
-                                                d="M38.5 0L39.9593 4.83688H44.6819L40.8613 7.82624L42.3206 12.6631L38.5 9.67376L34.6794 12.6631L36.1387 7.82624L32.3181 4.83688H37.0407L38.5 0Z"
-                                                fill="black"
-                                            />
-                                            <path
-                                                id="Star 4"
-                                                d="M22.5 0L23.9593 4.83688H28.6819L24.8613 7.82624L26.3206 12.6631L22.5 9.67376L18.6794 12.6631L20.1387 7.82624L16.3181 4.83688H21.0407L22.5 0Z"
-                                                fill="black"
-                                            />
-                                        </g>
-                                    </svg>
+                                        Excited to see Aiverse making waves as an efficient tool for
+                                        developers and creators.
+                                    </div>
+                                    <div
+                                        style={{
+                                            fontSize: "1.1vw",
+                                            fontWeight: "600",
+                                            paddingTop: "0.7vw",
+                                        }}
+                                    >
+                                        Sarah Jones
+                                    </div>
+                                </div>
+                                <div className=" home-slide-3-1  w-[380px]  h-[195px] flex flex-col justify-center items-start">
                                     <div
                                         style={{
                                             lineHeight: "120%",
@@ -896,9 +515,10 @@ function Home() {
                                     </div>
                                 </div>
                             </div>
-                        </Marquee>
+                        </div>
+
                         <div className="home-slide-4">
-                            <Marquee direction="right">
+                            <Marquee>
                                 <div>1000+ Signups</div>
                                 <div>300+ Beta Users</div>
                                 <div>100+ Mints</div>
@@ -906,9 +526,10 @@ function Home() {
                             </Marquee>
                         </div>
                     </div>
-                    <div className="home-browsing">
+
+                    <div className="home-browsing relative">
                         <div className="home-browsing-1">Go Beyond Browsing</div>
-                        <div className="home-browsing-2">
+                        <div className="home-browsing-2 py-6">
                             <div>Create new door of experience for your Friends, Fans & </div>
                             <div>Clients</div>
                         </div>
@@ -935,7 +556,7 @@ function Home() {
                                     onChange={event => {
                                         setNews(event.target.value);
                                     }}
-                                    className="home-browsing-6-2"
+                                    className="home-browsing-6-2 bg-black w-fit"
                                     placeholder="Enter Your Email"
                                 />
                             </div>

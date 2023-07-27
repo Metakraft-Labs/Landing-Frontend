@@ -1,7 +1,7 @@
 import { useConnectWallet } from "@web3-onboard/react";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Picture12 from "../Assets/Picture12.png";
+import aiverselogo from "../Assets/aiverselogo.svg";
 import "../Style/header.css";
 import { useWallet } from "../hooks/useWallet";
 
@@ -114,21 +114,17 @@ function Header() {
                     <div style={{ paddingTop: "1vw", cursor: "pointer" }}>Pine(Soon)</div>
                     <div style={{ paddingTop: "1vw", cursor: "pointer" }}>Lemon(Soon)</div>
                 </div>
-                {/* <div style={{position:'absolute',top:"5vw",left:"37vw",backgroundColor:"#1b1b1b",height:"30vw",width:"20vw",borderRadius:"0.7vw",display:`${panel[2]}`}}></div>
-  <div style={{position:'absolute',top:"5vw",left:"43vw",backgroundColor:"#1b1b1b",height:"30vw",width:"20vw",borderRadius:"0.7vw",display:`${panel[3]}`}}></div>
-  <div style={{position:'absolute',top:"5vw",left:"47vw",backgroundColor:"#1b1b1b",height:"30vw",width:"20vw",borderRadius:"0.7vw",display:`${panel[4]}`}}></div> */}
                 <div
-                    className="navi"
+                    className="navi w-full"
                     style={{
                         display: "flex",
                         flexDirection: "row",
-                        width: "100%",
                         justifyContent: "space-evenly",
                     }}
                 >
                     <img
                         style={{ marginTop: "0.5vw", height: "2.5vw", cursor: "pointer" }}
-                        src={Picture12}
+                        src={aiverselogo}
                         alt="not found"
                         onClick={() => navigate("/")}
                     />

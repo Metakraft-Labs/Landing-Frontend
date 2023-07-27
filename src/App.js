@@ -12,7 +12,6 @@ import Explore from "./components/explore";
 import Feature from "./components/feature.jsx";
 import Footer from "./components/footer.jsx";
 import AppStore from "./contexts/AppStore";
-import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 
@@ -78,7 +77,7 @@ function App() {
             <AppStore.Provider
                 value={{ user, setUser, token, setToken, defaultAccount, setDefaultAccount }}
             >
-                <div className="App">
+                <div className={`App`}>
                     <BrowserRouter>
                         <Routes>
                             <Route
@@ -112,7 +111,7 @@ function App() {
                                     </>
                                 }
                             />
-                            <Route
+                            {/* <Route
                                 exact
                                 path="/about"
                                 element={
@@ -122,7 +121,7 @@ function App() {
                                         <Footer />
                                     </>
                                 }
-                            />
+                            /> */}
                             <Route
                                 exact
                                 path="/contact"

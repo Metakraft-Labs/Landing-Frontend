@@ -46,29 +46,33 @@ function Feature() {
         arrows: false,
     };
     return (
-        <div className="feature">
+        <div className="w-full bg-black">
             <img className="feature-shadow" src={Shadow} alt="image" />
             <div style={{ display: "flex", borderBottom: "1px solid #393556" }}>
                 <div
+                    className="pt-[22vh] px-[5.1vw]"
                     style={{
-                        padding: "5.1vw 15vw 0 5.29vw",
                         fontSize: "7vw",
                         fontWeight: "800",
                         borderRight: "1px solid #393556",
                     }}
                 >
-                    <div className="featureFirstFirst">Build Metaverses</div>
-                    <div className="featureFirstSecond">With Zero Code</div>
+                    <div className="featureFirstFirst leading-[109%] pb-[7.72vh]">
+                        Build Metaverses <br /> with Zero Code
+                    </div>
                 </div>
             </div>
-            <div className="feature-2">
+
+            <div className="flex justify-between">
                 <img src={Feature1} alt="image" className="feature-2-1" />
-                <div className="feature-2-2">
-                    <div className="feature-2-2-1">Get Started for Free</div>
-                    <div className="feature-2-2-2">
-                        Build better metaverses effortlessly! For Your Client, Business or
+                <div className="feature-2-2 text-end">
+                    <div className="text-[13.30vh] pr-14 font-bold text-[#E3E3E3] leading-normal ">
+                        Get Started for Free
                     </div>
-                    <div className="feature-2-2-3">Employee Onboarding.</div>
+                    <div className=" py-6 pr-14 ">
+                        Build better metaverses effortlessly! For Your Client, Business or <br />
+                        Employee Onboarding.
+                    </div>
                     <div className="feature-browsing-6_1">
                         <div
                             className="feature-browsing-6-1"

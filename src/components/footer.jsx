@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Picture12 from "../Assets/Picture12.png";
+import aiverselogo from "../Assets/aiverselogo.svg";
 import "../Style/footer.css";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MetaForum from "../Assets/Meta_Forum.png";
@@ -9,21 +9,23 @@ function Footer() {
 
     return (
         <footer style={{ fontSize: "1vw" }}>
-            <div className="footer">
+            <div className="footer text-[#D0D0D0]">
                 <div className="left p-2">
                     <div style={{ paddingLeft: "0.5vw" }}>
                         <img
                             style={{ height: "2.5vw", cursor: "pointer" }}
-                            src={Picture12}
+                            src={aiverselogo}
                             onClick={() => navigate("/")}
                             alt="not found"
                         />
                     </div>
-                    <div style={{ paddingLeft: "1vw", paddingTop: "0.5vw" }}>
+                    <div className="pt-[4vh] text-[#E3E3E3] " style={{ paddingLeft: "1vw" }}>
                         Copy @ 2023 Metakraft.
                     </div>
-                    <div style={{ paddingLeft: "1vw" }}>All rights reserved.</div>
-                    <div style={{ paddingTop: "0.5vw" }}>
+                    <div className="text-[#E3E3E3] " style={{ paddingLeft: "1vw" }}>
+                        All rights reserved.
+                    </div>
+                    <div className="pt-[4vh]">
                         <img
                             src={MetaForum}
                             alt="image"
@@ -32,49 +34,53 @@ function Footer() {
                         />
                     </div>
                 </div>
-                <div className="center p-2">
+                <div className="center flex flex-row p-2">
                     <div className="first">
-                        <div>Company</div>
+                        <div className="text-[#E3E3E3] font-bold">Company</div>
                         <div
-                            style={{ color: "#686868", cursor: "pointer" }}
+                            className="pt-[4vh]"
+                            style={{ cursor: "pointer" }}
                             onClick={() => navigate("/about")}
                         >
                             About Us
                         </div>
-                        <div style={{ color: "#686868" }}>Branding Kit</div>
+                        <div className="pt-[4vh]">Branding Kit</div>
                         <div
-                            style={{ color: "#686868", cursor: "pointer" }}
+                            className="pt-[4vh]"
+                            style={{ cursor: "pointer" }}
                             onClick={() => navigate("/contact")}
                         >
                             Contact Us
                         </div>
                     </div>
                     <div className="second">
-                        <div>Resources</div>
+                        <div className="text-[#E3E3E3] font-bold">Resources</div>
                         <div
-                            style={{ color: "#686868", cursor: "pointer" }}
+                            className="pt-[4vh]"
+                            style={{ cursor: "pointer" }}
                             onClick={() => window.open("https://blog.metakraft.live", "_blank")}
                         >
                             Blog
                         </div>
                         <div
-                            style={{ color: "#686868", cursor: "pointer" }}
+                            className="pt-[4vh]"
+                            style={{ cursor: "pointer" }}
                             onClick={() =>
                                 window.open("https://blog.metakraft.live/newsletter", "_blank")
                             }
                         >
                             Newsletter
                         </div>
-                        <div style={{ color: "#686868" }}>How it works?</div>
+                        <div className="pt-[4vh]">How it works?</div>
                     </div>
                     <div className="third">
-                        <div>Legal</div>
-                        <div style={{ color: "#686868" }}>Terms & Conditions</div>
-                        <div style={{ color: "#686868" }}>Privacy Policy</div>
+                        <div className="text-[#E3E3E3] font-bold">Legal</div>
+                        <div className="pt-[4vh]">Terms & Conditions</div>
+                        <div className="pt-[4vh]">Privacy Policy</div>
                     </div>
                 </div>
                 <div className="right p-2">
-                    <div>Social</div>
+                    <div className="text-[#E3E3E3] font-bold">Social</div>
                     <div className="icons">
                         <div style={{ paddingLeft: "0" }}>
                             {" "}
