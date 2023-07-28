@@ -84,7 +84,6 @@ function Header() {
                     height: "3.8vw",
                 }}
             >
-                {/* <div style={{position:'absolute',top:"5vw",left:"26vw",backgroundColor:"#1b1b1b",height:"30vw",width:"20vw",borderRadius:"0.7vw",display:`${panel[0]}`}}></div> */}
                 <div
                     id="alpha"
                     style={{
@@ -103,7 +102,6 @@ function Header() {
                     }}
                 >
                     <div style={{ paddingTop: "1vw", cursor: "pointer" }}>
-                        {" "}
                         <a
                             href="https://linktr.ee/metakraft"
                             style={{ textDecoration: "none", color: "#9c9c9c" }}
