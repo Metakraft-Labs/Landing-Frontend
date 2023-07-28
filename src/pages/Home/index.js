@@ -65,19 +65,6 @@ function Home() {
     //     autoplaySpeed: 3000,
     //     arrows: false,
     // };
-    // const settings2 = {
-    //     dots: false,
-    //     vertical: true,
-    //     verticalSwiping: true,
-    //     infinite: true, // Enable infinite loop
-    //     speed: 2000,
-    //     slidesToShow: 2, // Number of slides to show at once
-    //     slidesToScroll: 1,
-    //     autoplay: true,
-    //     autoplaySpeed: 2000,
-    //     // focusOnSelect: true,
-    //     arrows: false,
-    // };
 
     return (
         <>
@@ -219,7 +206,6 @@ function Home() {
                             </div>
                         </div>
                     </div>
-
                     <div className="home-floor flex flex-row items-center mx-20  ">
                         <div className="home-floor-1">
                             <div style={{ marginRight: "1.5vw" }}>
