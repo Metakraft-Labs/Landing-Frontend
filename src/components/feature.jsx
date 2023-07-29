@@ -1,5 +1,5 @@
+// import Slider from "";
 import React, { useState } from "react";
-import Slider from "react-slick";
 import Shadow from "../Assets/Shadow.png";
 import Feature1 from "../Assets/feature-1.png";
 import Feature2 from "../Assets/feature-2.png";
@@ -124,58 +124,55 @@ function Feature() {
                 style={{ visibility: "hidden" }}
             ></progress>
             <div className="feature-slider">
-                <Slider {...settings}>
-                    <div>
-                        <div className="feature-3-11">
-                            Build Metaverse to Showcase Your Products
-                        </div>
-                        <div className="feature-3-12">
-                            Immersive shopping experiences are the next step in the evolution of
-                            e-commerce
-                        </div>
-                        <div className="feature-3-13">
-                            <img src={Feature3} alt="image" className="feature-3-13-1" />
-                        </div>
+                {/* <Slider {...settings}> */}
+                <div>
+                    <div className="feature-3-11">Build Metaverse to Showcase Your Products</div>
+                    <div className="feature-3-12">
+                        Immersive shopping experiences are the next step in the evolution of
+                        e-commerce
                     </div>
-                    <>
-                        <div className="feature-3-11">Redefine your Enterprise</div>
-                        <div className="feature-3-12" style={{ height: "2vw" }}>
-                            Immersive Employee Onboarding and Training in Digital Twins of your
-                            facilities, to Virtual
-                        </div>
-                        <div className="feature-3-12">
-                            Offices for better collaboration and remote work.
-                        </div>
-                        <div className="feature-3-13">
-                            <img src={Feature4} alt="image" className="feature-3-13-1" />
-                        </div>
-                    </>
-                    <>
-                        <div className="feature-3-11">Enhance Real Enhance Visualization</div>
-                        <div className="feature-3-12" style={{ height: "2vw" }}>
-                            With Virtual home designs, Metaverse transforms real estate
-                            visualization, allowing
-                        </div>
-                        <div className="feature-3-12">
-                            buyers to envision their dream homes with personalized layouts and
-                            decorated spaces
-                        </div>
-                        <div className="feature-3-13">
-                            <img src={Feature5} alt="image" className="feature-3-13-1" />
-                        </div>
-                    </>
-                    <>
-                        <div className="feature-3-11">Create in Minutes, not Months</div>
-                        <div className="feature-3-12" style={{ height: "2vw" }}>
-                            With one simple click, you can instantly publish and mint your
-                            creations,
-                        </div>
-                        <div className="feature-3-12">accelerating the development process.</div>
-                        <div className="feature-3-13">
-                            <img src={Feature6} alt="image" className="feature-3-13-1" />
-                        </div>
-                    </>
-                </Slider>
+                    <div className="feature-3-13">
+                        <img src={Feature3} alt="image" className="feature-3-13-1" />
+                    </div>
+                </div>
+                <>
+                    <div className="feature-3-11">Redefine your Enterprise</div>
+                    <div className="feature-3-12" style={{ height: "2vw" }}>
+                        Immersive Employee Onboarding and Training in Digital Twins of your
+                        facilities, to Virtual
+                    </div>
+                    <div className="feature-3-12">
+                        Offices for better collaboration and remote work.
+                    </div>
+                    <div className="feature-3-13">
+                        <img src={Feature4} alt="image" className="feature-3-13-1" />
+                    </div>
+                </>
+                <>
+                    <div className="feature-3-11">Enhance Real Enhance Visualization</div>
+                    <div className="feature-3-12" style={{ height: "2vw" }}>
+                        With Virtual home designs, Metaverse transforms real estate visualization,
+                        allowing
+                    </div>
+                    <div className="feature-3-12">
+                        buyers to envision their dream homes with personalized layouts and decorated
+                        spaces
+                    </div>
+                    <div className="feature-3-13">
+                        <img src={Feature5} alt="image" className="feature-3-13-1" />
+                    </div>
+                </>
+                <>
+                    <div className="feature-3-11">Create in Minutes, not Months</div>
+                    <div className="feature-3-12" style={{ height: "2vw" }}>
+                        With one simple click, you can instantly publish and mint your creations,
+                    </div>
+                    <div className="feature-3-12">accelerating the development process.</div>
+                    <div className="feature-3-13">
+                        <img src={Feature6} alt="image" className="feature-3-13-1" />
+                    </div>
+                </>
+                {/* </Slider> */}
             </div>
             <div className="feature-3-14">
                 <div className="feature-3-14-1">Metaverses</div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import { Carousel } from "react-responsive-carousel";
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import Fly from "../Assets/Fly.png";
 import METAKRAFT from "../Assets/METAKRAFT.jpeg";
 import Car from "../Assets/car_color.png";
@@ -243,6 +243,7 @@ function Explore() {
                         background: "rgb(224 249 240)",
                     }}
                 >
+                    //{" "}
                     <Slider {...settings}>
                         <div className="explore-logo-slide">
                             <img
@@ -388,6 +389,7 @@ function Explore() {
                                 alt="image"
                             />
                         </div>
+                        //{" "}
                     </Slider>
                 </div>
             </div>
