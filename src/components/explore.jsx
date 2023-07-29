@@ -27,15 +27,15 @@ import "../Style/explore.css";
 import FooterExplore from "./footerExplore.jsx";
 
 function Explore() {
-    const settings = {
-        dots: false,
-        infinite: true, // Enable infinite loop
-        speed: 1000,
-        slidesToShow: 9, // Number of slides to show at once
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1000,
-    };
+    // const settings = {
+    //     dots: false,
+    //     infinite: true, // Enable infinite loop
+    //     speed: 1000,
+    //     slidesToShow: 9, // Number of slides to show at once
+    //     slidesToScroll: 1,
+    //     autoplay: true,
+    //     autoplaySpeed: 1000,
+    // };
     const [activeIndex, setActiveIndex] = useState(0);
     // const carouselRef = useRef(null);
     const handlePrev = () => {
@@ -243,154 +243,151 @@ function Explore() {
                         background: "rgb(224 249 240)",
                     }}
                 >
+                    <div className="explore-logo-slide">
+                        <img
+                            style={{
+                                width: "4.5vw",
+                                height: "4.5vw",
+                                position: "relative",
+                                zIndex: "1",
+                            }}
+                            src={Logo1}
+                            alt="image"
+                        />
+                    </div>
+                    <div className="explore-logo-slide">
+                        <img
+                            style={{
+                                width: "4.5vw",
+                                height: "4.5vw",
+                                position: "relative",
+                                zIndex: "1",
+                            }}
+                            src={Logo2}
+                            alt="image"
+                        />
+                    </div>
+                    <div className="explore-logo-slide">
+                        <img
+                            style={{
+                                width: "4.5vw",
+                                height: "4.5vw",
+                                position: "relative",
+                                zIndex: "1",
+                            }}
+                            src={Logo1}
+                            alt="image"
+                        />
+                    </div>
+                    <div className="explore-logo-slide">
+                        <img
+                            style={{
+                                width: "4.5vw",
+                                height: "4.5vw",
+                                position: "relative",
+                                zIndex: "1",
+                            }}
+                            src={Logo2}
+                            alt="image"
+                        />
+                    </div>
+                    <div className="explore-logo-slide">
+                        <img
+                            style={{
+                                width: "4.5vw",
+                                height: "4.5vw",
+                                position: "relative",
+                                zIndex: "1",
+                            }}
+                            src={Logo3}
+                            alt="image"
+                        />
+                    </div>
+                    <div className="explore-logo-slide">
+                        <img
+                            style={{
+                                width: "4.5vw",
+                                height: "4.5vw",
+                                position: "relative",
+                                zIndex: "1",
+                            }}
+                            src={Logo4}
+                            alt="image"
+                        />
+                    </div>
+                    <div className="explore-logo-slide">
+                        <img
+                            style={{
+                                width: "4.5vw",
+                                height: "4.5vw",
+                                position: "relative",
+                                zIndex: "1",
+                            }}
+                            src={Logo5}
+                            alt="image"
+                        />
+                    </div>
+                    <div className="explore-logo-slide">
+                        <img
+                            style={{
+                                width: "4.5vw",
+                                height: "4.5vw",
+                                position: "relative",
+                                zIndex: "1",
+                            }}
+                            src={Logo6}
+                            alt="image"
+                        />
+                    </div>
+                    <div className="explore-logo-slide">
+                        <img
+                            style={{
+                                width: "4.5vw",
+                                height: "4.5vw",
+                                position: "relative",
+                                zIndex: "1",
+                            }}
+                            src={Logo7}
+                            alt="image"
+                        />
+                    </div>
+                    <div className="explore-logo-slide">
+                        <img
+                            style={{
+                                width: "4.5vw",
+                                height: "4.5vw",
+                                position: "relative",
+                                zIndex: "1",
+                            }}
+                            src={Logo8}
+                            alt="image"
+                        />
+                    </div>
+                    <div className="explore-logo-slide">
+                        <img
+                            style={{
+                                width: "4.5vw",
+                                height: "4.5vw",
+                                position: "relative",
+                                zIndex: "1",
+                            }}
+                            src={Logo7}
+                            alt="image"
+                        />
+                    </div>
+                    <div className="explore-logo-slide">
+                        <img
+                            style={{
+                                width: "4.5vw",
+                                height: "4.5vw",
+                                position: "relative",
+                                zIndex: "1",
+                            }}
+                            src={Logo8}
+                            alt="image"
+                        />
+                    </div>
                     //{" "}
-                    <Slider {...settings}>
-                        <div className="explore-logo-slide">
-                            <img
-                                style={{
-                                    width: "4.5vw",
-                                    height: "4.5vw",
-                                    position: "relative",
-                                    zIndex: "1",
-                                }}
-                                src={Logo1}
-                                alt="image"
-                            />
-                        </div>
-                        <div className="explore-logo-slide">
-                            <img
-                                style={{
-                                    width: "4.5vw",
-                                    height: "4.5vw",
-                                    position: "relative",
-                                    zIndex: "1",
-                                }}
-                                src={Logo2}
-                                alt="image"
-                            />
-                        </div>
-                        <div className="explore-logo-slide">
-                            <img
-                                style={{
-                                    width: "4.5vw",
-                                    height: "4.5vw",
-                                    position: "relative",
-                                    zIndex: "1",
-                                }}
-                                src={Logo1}
-                                alt="image"
-                            />
-                        </div>
-                        <div className="explore-logo-slide">
-                            <img
-                                style={{
-                                    width: "4.5vw",
-                                    height: "4.5vw",
-                                    position: "relative",
-                                    zIndex: "1",
-                                }}
-                                src={Logo2}
-                                alt="image"
-                            />
-                        </div>
-                        <div className="explore-logo-slide">
-                            <img
-                                style={{
-                                    width: "4.5vw",
-                                    height: "4.5vw",
-                                    position: "relative",
-                                    zIndex: "1",
-                                }}
-                                src={Logo3}
-                                alt="image"
-                            />
-                        </div>
-                        <div className="explore-logo-slide">
-                            <img
-                                style={{
-                                    width: "4.5vw",
-                                    height: "4.5vw",
-                                    position: "relative",
-                                    zIndex: "1",
-                                }}
-                                src={Logo4}
-                                alt="image"
-                            />
-                        </div>
-                        <div className="explore-logo-slide">
-                            <img
-                                style={{
-                                    width: "4.5vw",
-                                    height: "4.5vw",
-                                    position: "relative",
-                                    zIndex: "1",
-                                }}
-                                src={Logo5}
-                                alt="image"
-                            />
-                        </div>
-                        <div className="explore-logo-slide">
-                            <img
-                                style={{
-                                    width: "4.5vw",
-                                    height: "4.5vw",
-                                    position: "relative",
-                                    zIndex: "1",
-                                }}
-                                src={Logo6}
-                                alt="image"
-                            />
-                        </div>
-                        <div className="explore-logo-slide">
-                            <img
-                                style={{
-                                    width: "4.5vw",
-                                    height: "4.5vw",
-                                    position: "relative",
-                                    zIndex: "1",
-                                }}
-                                src={Logo7}
-                                alt="image"
-                            />
-                        </div>
-                        <div className="explore-logo-slide">
-                            <img
-                                style={{
-                                    width: "4.5vw",
-                                    height: "4.5vw",
-                                    position: "relative",
-                                    zIndex: "1",
-                                }}
-                                src={Logo8}
-                                alt="image"
-                            />
-                        </div>
-                        <div className="explore-logo-slide">
-                            <img
-                                style={{
-                                    width: "4.5vw",
-                                    height: "4.5vw",
-                                    position: "relative",
-                                    zIndex: "1",
-                                }}
-                                src={Logo7}
-                                alt="image"
-                            />
-                        </div>
-                        <div className="explore-logo-slide">
-                            <img
-                                style={{
-                                    width: "4.5vw",
-                                    height: "4.5vw",
-                                    position: "relative",
-                                    zIndex: "1",
-                                }}
-                                src={Logo8}
-                                alt="image"
-                            />
-                        </div>
-                        //{" "}
-                    </Slider>
                 </div>
             </div>
             <div className="explore-top-metaverses">
