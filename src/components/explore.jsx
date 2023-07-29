@@ -387,7 +387,6 @@ function Explore() {
                             alt="image"
                         />
                     </div>
-                    //{" "}
                 </div>
             </div>
             <div className="explore-top-metaverses">
