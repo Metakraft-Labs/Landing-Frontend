@@ -73,14 +73,12 @@ function Home() {
                 {/* <InfiniteSpace /> */}
 
                 <div
-                    className={`bg-black  bg-scroll  px-32 h-[732px] flex justify-start items-center`}
+                    className={`bg-black px-32 sm:px-16 ss:px-14 xs:px-10 h-[800px] md:h-[780px] xs:h-[600px] ss:h-[650px] flex justify-start items-center`}
                 >
                     <div>
-                        <div>
-                            <h1
-                                className={`text-[#EAEAEA] leading-[107.5%] text-[128px] font-bold`}
-                            >
-                                Making Internet <br />
+                        <div className="mt-20">
+                            <h1 className="text-[#EAEAEA] font-encodeSans leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] text-[128px] md:text-[110px] sm:text-[100px] ss:text-[80px] xs:text-[50px] font-bold">
+                                Making Internet <br className="xs:hidden ss:hidden sm:hidden" />
                                 <span
                                     className={`text-transparent bg-clip-text bg-gradient-to-r from-[#016DB0] to-[#01FFCA]`}
                                 >
@@ -88,11 +86,13 @@ function Home() {
                                 </span>
                             </h1>
                         </div>
-                        <div className={`my-6  font-bold `}>
-                            <button className="home-partner-3 text-[22px] h-[79px] w-[277px] rounded-[8px]">
+                        <div
+                            className={`my-6 flex flex-row text-[22px] xs:text-[16px] ss:text-[16px] xs:flex-col font-bold font-inter `}
+                        >
+                            <button className="home-partner-3 w-[277px] h-[79px] xs:w-[160px] xs:h-[48px]  ss:w-[160px] ss:h-[48px]  rounded-[8px]">
                                 Early Access
                             </button>
-                            <button className="home-partner-3 text-[22px] h-[79px] w-[277px] rounded-[8px] ml-12">
+                            <button className="home-partner-3 w-[277px] h-[79px] xs:w-[160px] xs:h-[48px]  ss:w-[160px] ss:h-[48px]  rounded-[8px] xs:ml-0 xs:mt-4 ml-12">
                                 Refer & Win
                             </button>
                         </div>
@@ -110,18 +110,20 @@ function Home() {
                             alt="home-live"
                         />
                     </div>
-                    <div className="text-[20px] font-bold leading-[105.5%]">
+                    <div className="text-[20px] xs:text-[16px] font-robotoMono font-bold leading-[105.5%]">
                         We are live! Learn More -&gt;
                     </div>
                 </div>
-                <div className="home-partner  ">
-                    <div className="home-partner-1">Ecosystem &</div>
-                    <div className="home-partner-2">Strategic Partners</div>
+                <div className="home-partner ">
+                    <div className="home-partner-1 mt-9 xs:mb-0 text-[96px] sm:text-[80px] ss:text-[65px] xs:text-[32px]   font-spaceGrotesk">
+                        Ecosystem & <br />
+                        Strategic Partners
+                    </div>
 
-                    <div className="flex mt-8">
+                    <div className="flex mt-8 md:mt-0">
                         <div
                             id="slideshow"
-                            className="mt-16"
+                            className="mt-16 xs:mt-4 ss:mt-3"
                             style={{
                                 width: "100%",
                                 background: "transparent",
@@ -138,10 +140,7 @@ function Home() {
                                         key={slide.id}
                                     >
                                         <img
-                                            className="w-[56px] h-[56px]"
-                                            style={{
-                                                marginLeft: "72px",
-                                            }}
+                                            className="w-[56px] h-[56px] mr-16 xs:mr-5"
                                             src={slide.img}
                                             alt="logo-1"
                                         />
@@ -150,7 +149,7 @@ function Home() {
                             </Marquee>
                         </div>
                     </div>
-                    <div className="home-demo">
+                    <div className="home-demo xs:w-full ss:w-full sm:w-full md:w-full ss:px-14 sm:px-16 md:px-20 px-10 mt-16">
                         <video
                             ref={videoRef}
                             className="home-demo-video"
@@ -161,41 +160,49 @@ function Home() {
                             muted
                         ></video>
                     </div>
-                    <div style={{ width: "100%", textAlign: "center" }}>
-                        <button className="home-partner-3 home-head-3-12" onClick={handleVideo}>
+                    <div style={{ width: "100%", textAlign: "center" }} className="mt-5">
+                        <button
+                            className="home-partner-3 w-[325px] h-[78px] xs:w-[160px] xs:h-[48px]  rounded-[9px] text-[22px] xs:text-[16px] ss:text-[16px] font-inter "
+                            onClick={handleVideo}
+                        >
+                            {/* w-[277px] h-[79px] xs:w-[160px] xs:h-[48px]  ss:w-[160px] ss:h-[48px] */}
                             Watch Demo
                         </button>
                     </div>
-                    <div className="home-partner-4 mt-10 px-20">
-                        <div style={{ paddingTop: "4vw" }} className="basis-[60%]">
-                            <div className="home-partner-4-2">Seamless Experience!</div>
+                    <div className="home-partner-4 flex xs:flex-col ss:flex-col sm:flex-col md:justify-between md:flex-col mt-10 px-32 xs:px-10 ss:px-14 sm:px-16 md:px-20">
+                        <div
+                            style={{ paddingTop: "4vw" }}
+                            className="basis-[60%] ss:basis-[100%] font-spaceGrotesk"
+                        >
+                            <h2 className="home-partner-4-2 md:text-[100px] sm:text-[80px] ss:text-[65px] xs:text-[32px] xs:mb-6 ">
+                                Seamless Experience!
+                            </h2>
                             <div className="home-partner-4-3" style={{ marginTop: "2vw" }}>
-                                Unleash your imagination with an AI-driven, browser-based
+                                Unleash your imagination with an AI-driven, browser-based platform.
+                                Build, customize, and connect in a secure environment, exploring
+                                endless possibilities and redefining the virtual realm effortlessly.
                             </div>
-                            <div className="home-partner-4-3">
-                                platform. Build, customize, and connect in a secure
-                            </div>
-                            <div className="home-partner-4-3">
-                                environment, exploring endless possibilities and redefining
-                            </div>
-                            <div className="home-partner-4-3">the virtual realm effortlessly.</div>
                         </div>
                         <div className="">
                             <img
-                                className="w-[864px] h-[830px] top-0 relative z-[1] -rotate-3    "
+                                className="w-full h-full top-0 relative z-[1] -rotate-3    "
                                 src={Ipad_Mini1}
                                 alt="partner-4"
                             />
                         </div>
                     </div>
-                    <div className="home-partner-5 flex ">
-                        <div className="basis-[30%]">
-                            <img className="home-partner-4-1 " src={Ipad_Mini} alt="partner-5" />
+                    <div className="home-partner-5 flex xs:flex-col  md:justify-between ss:flex-col sm:flex-col md:flex-col xs:px-10 ss:px-14 sm:px-16 md:px-20 px-32">
+                        <div className=" xs:hidden ss:hidden sm:hidden md:hidden">
+                            <img
+                                className="home-partner-4-1 w-full h-full"
+                                src={Ipad_Mini}
+                                alt="partner-5"
+                            />
                         </div>
-                        <div style={{ paddingTop: "8vw" }} className="basis-[50%]">
-                            <div className="home-partner-4-2 text-right">
-                                Designed to Scale with your need
-                            </div>
+                        <div className="basis-[50%] ss:basis-[100%] font-spaceGrotesk">
+                            <h2 className="home-partner-4-2 text-right md:text-[100px] sm:text-[80px] ss:text-[65px] xs:text-[32px] xs:mb-6 ">
+                                Designed to Scale with your Need
+                            </h2>
                             <div
                                 className="home-partner-4-3 text-right"
                                 style={{ marginTop: "2vw" }}
@@ -205,32 +212,54 @@ function Home() {
                                 while generating revenue.
                             </div>
                         </div>
+                        <div className=" xl:hidden lg:hidden">
+                            <img
+                                className="home-partner-4-1 w-full h-full "
+                                src={Ipad_Mini}
+                                alt="partner-5"
+                            />
+                        </div>
                     </div>
-                    <div className="home-floor flex flex-row items-center mx-20  ">
-                        <div className="home-floor-1">
+                    <div className="home-floor flex flex-row xs:flex-col ss:flex-col sm:flex-col md:flex-col items-center mx-20 xs:mx-10 ss:mx-14 sm:mx-16 lg:mt-20  font-spaceGrotesk  ">
+                        <div className=" flex justify-center items-center xs:flex-col ">
                             <div style={{ marginRight: "1.5vw" }}>
-                                <div className="home-floor-1-1">
-                                    <div className="home-floor-1-2 text-[43px]">Browser</div>
-                                    <div className="home-floor-1-3">Supported</div>
+                                <div className="home-floor-1-1 w-[180px] h-[180px] mb-6">
+                                    <div className="home-floor-1-2 xs:text-[30px] font-roboto">
+                                        Browser
+                                    </div>
+                                    <div className="home-floor-1-3 xs:text-[20px]">Supported</div>
                                 </div>
-                                <div className="home-floor-1-1">
-                                    <div className="home-floor-1-2  text-[43px]">AI Enabled</div>
-                                    <div className="home-floor-1-3">Asset Design</div>
+                                <div className="home-floor-1-1 w-[180px] h-[180px] mb-6">
+                                    <div className="home-floor-1-2 xs:text-[30px] font-roboto">
+                                        AI Enabled
+                                    </div>
+                                    <div className="home-floor-1-3 xs:text-[20px]">
+                                        Asset Design
+                                    </div>
                                 </div>
                             </div>
                             <div>
-                                <div className="home-floor-1-1" style={{ marginTop: "0" }}>
-                                    <div className="home-floor-1-2">500K+</div>
-                                    <div className="home-floor-1-3">Assets to use</div>
+                                <div
+                                    className="home-floor-1-1 w-[180px] h-[180px] mb-6"
+                                    style={{ marginTop: "0" }}
+                                >
+                                    <div className="home-floor-1-2 xs:text-[30px]  font-roboto">
+                                        500K+
+                                    </div>
+                                    <div className="home-floor-1-3 xs:text-[20px]">
+                                        Assets to use
+                                    </div>
                                 </div>
-                                <div className="home-floor-1-1">
-                                    <div className="home-floor-1-2">Mint</div>
-                                    <div className="home-floor-1-3">3D Assets</div>
+                                <div className="home-floor-1-1 w-[180px] h-[180px] mb-6">
+                                    <div className="home-floor-1-2 xs:text-[30px] font-roboto">
+                                        Mint
+                                    </div>
+                                    <div className="home-floor-1-3 xs:text-[20px]">3D Assets</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className=" flex flex-row justify-between overflow-hidden relative h-[691px] w-[695px] border-white border-[4px] rounded-[2vh]">
+                        <div className=" flex flex-row justify-between overflow-hidden relative h-[691px] xs:h-[300px] ss:h-[350px] w-[695px] xs:w-full ss:w-full border-white border-[4px] rounded-[2vh]">
                             {/* --------------------------first column--------------------------- */}
 
                             <Marquee
@@ -356,20 +385,22 @@ function Home() {
                         </div>
                     </div>
                     <div className="pt-28 feature-bg">
-                        {/* <div className=" bg-gradient-to-br from-red-500 to-red-800 blur-3xl rounded-full  h-64 w-96 "></div> */}
-                        <div className="flex justify-center items-center flex-col">
-                            <div className="home-slide-1">What Others Says</div>
-                            <div className="home-slide-2 mb-8">
+                        <div className="flex justify-center items-center flex-col xs:text-center xs:px-10 ss:px-14 sm:px-16">
+                            <div className="home-slide-1 text-[96px] md:text-[110px] sm:text-[80px] ss:text-[65px] xs:text-[32px]  font-spaceGrotesk">
+                                What Others Says
+                                {/* md:text-[110px] sm:text-[100px] ss:text-[65px] xs:text-[32px] xs:mb-6  */}
+                            </div>
+                            <div className="home-slide-2 font-sora xs:text-[20px] ss:text-[32px] sm:text-[38px] mb-8">
                                 Made by Builder&apos;s for the Builder&apos;s
                             </div>
                         </div>
 
-                        <div className="home-slide grid grid-cols-2  place-items-center  mx-20 ">
+                        <div className=" font-sans grid grid-cols-2 xs:grid-cols-1 ss:grid-cols-1 sm:grid-cols-1 md:grid-cols-1  place-items-center mx-20 xs:mx-10 ss:mx-14 sm:mx-16 ">
                             {/* -------------------------First Column------------------------------ */}
 
                             <div className=" flex flex-col justify-end">
-                                <div className="py-10"></div>
-                                <div className=" home-slide-3-1 box w-[485px] p-6 pr-16 h-[333px] mb-8 flex flex-row justify-center items-start">
+                                <div className="py-10 xs:hidden"></div>
+                                <div className=" home-slide-3-1 box w-[485px] xs:w-fit p-6 pr-16 h-[333px] xs:h-fit mb-8 flex flex-row justify-center items-start">
                                     <div className="w-[170px] mr-4">
                                         <img src={navmeet} className="w-full" alt="" />
                                     </div>
@@ -396,7 +427,7 @@ function Home() {
                                     </div>
                                 </div>
 
-                                <div className=" home-slide-3-1 box w-[485px] h-[197px]  p-6 pr-16 mb-8 flex flex-row justify-center items-start">
+                                <div className=" home-slide-3-1 box w-[485px] xs:w-fit h-[197px] xs:h-fit p-6 pr-16 mb-8 flex flex-row justify-center items-start">
                                     <div className="w-[100px] mr-4">
                                         <img src={disney} className="w-full" alt="" />
                                     </div>
@@ -414,7 +445,7 @@ function Home() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className=" home-slide-3-1 box w-[485px] h-[194px]  p-6 pr-16 flex flex-row justify-center items-start">
+                                <div className=" home-slide-3-1 box w-[485px] xs:w-fit h-[194px] xs:h-fit  p-6 pr-16 flex flex-row justify-center items-start">
                                     <div className="w-[100px] mr-4">
                                         <img src={rye} className="w-full" alt="" />
                                     </div>
@@ -435,8 +466,8 @@ function Home() {
                             </div>
                             {/* -------------------------Second Column------------------------------ */}
 
-                            <div className="flex flex-col justify-start">
-                                <div className=" home-slide-3-1 box w-[485px]  h-[210px]  mb-8  p-6 pr-16 flex flex-row justify-center items-start">
+                            <div className="flex flex-col justify-start ">
+                                <div className=" home-slide-3-1 box w-[485px] xs:w-fit  h-[210px] xs:h-fit  mb-8 xs:mt-8 ss:mt-8 sm:mt-8 md:mt-8  p-6 pr-16 flex flex-row justify-center items-start">
                                     <div className="w-[140px] mr-4">
                                         <img src={mani} className="w-full" alt="" />
                                     </div>
@@ -454,7 +485,7 @@ function Home() {
                                     </div>
                                 </div>
 
-                                <div className=" home-slide-3-1 box w-[485px]  h-[333px] mb-8  p-6 pr-16 flex flex-row justify-center items-start">
+                                <div className=" home-slide-3-1 box w-[485px] xs:w-fit  h-[333px] xs:h-fit mb-8  p-6 pr-16 flex flex-row justify-center items-start">
                                     <div className="w-[190px] mr-4">
                                         <img src={nandit} className="w-full" alt="" />
                                     </div>
@@ -481,7 +512,7 @@ function Home() {
                                     </div>
                                 </div>
 
-                                <div className=" home-slide-3-1 box w-[485px]  h-[192px]  p-6 pr-16 flex flex-row justify-center items-start">
+                                <div className=" home-slide-3-1 box w-[485px] xs:w-fit  h-[192px] xs:h-fit p-6 pr-16 flex flex-row justify-center items-start">
                                     <div className="w-[100px] mr-4">
                                         <img src={prasanna} className="w-full" alt="" />
                                     </div>
@@ -504,62 +535,41 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className="home-slide-4">
+                        <div className="home-slide-4 xs:text-[20px] ss:text-[32px] py-6 font-sora">
                             <Marquee>
-                                <div className="flex justify-between  items-center">
-                                    <div
-                                        style={{
-                                            marginRight: "100px",
-                                            textAlign: "center",
-                                        }}
-                                    >
-                                        1000+ Signups
-                                    </div>
-                                    <div
-                                        style={{
-                                            marginRight: "100px",
-                                            textAlign: "center",
-                                        }}
-                                    >
-                                        300+ Beta Users
-                                    </div>
-                                    <div
-                                        style={{
-                                            marginRight: "100px",
-                                            textAlign: "center",
-                                        }}
-                                    >
-                                        100+ Mints
-                                    </div>
-                                    <div
-                                        style={{
-                                            marginRight: "100px",
-                                            textAlign: "center",
-                                        }}
-                                    >
-                                        10+ Studio Partners
-                                    </div>
-                                </div>
+                                <div className="mx-full ">1000+ Signups</div>
+                                <div className="mx-full  ">300+ Beta Users</div>
+                                <div className="mx-full  ">100+ Mints</div>
+                                <div className="mx-full  ">10+ Studio Partners</div>
                             </Marquee>
                         </div>
                     </div>
 
-                    <div className="home-browsing relative">
-                        <div className="home-browsing-1">Go Beyond Browsing</div>
-                        <div className="home-browsing-2 py-6">
-                            <div>Create new door of experience for your Friends, Fans & </div>
-                            <div>Clients</div>
+                    <div className="home-browsing relative ">
+                        <div className="xs:mx-10 ss:mx-14 sm:mx-16 md:mx-20 xs:pt-6 text-transparent bg-clip-text bg-gradient-to-r from-[#6c6a6a] to-[#ffffff] text-[96px] md:text-[100px] sm:text-[80px] ss:text-[65px] xs:text-[32px] xs:mb-6  font-epilogue">
+                            Go Beyond Browsing
                         </div>
-                        <button className="home-browsing-3">
+                        <div className="xs:mx-10 ss:mx-14 home-browsing-2 xs:text-[20px] py-6 font-sora">
+                            <div>
+                                Create new door of experience for your Friends, Fans &{" "}
+                                <br className="xs:hidden ss:hidden" />
+                                Clients
+                            </div>
+                        </div>
+                        <button className="home-browsing-3  xs:text-[16px] ss:text-[16px] mt-16 font-sora py-3 px-6 xs:px-4">
                             <Link to="/feature">Explore Features</Link>
                         </button>
-                        <div className="home-browsing-4">
+                        <div className="home-browsing-4 md:">
                             <img src={Solana} alt="solana" />
                         </div>
-                        <div className="home-browsing-5">
-                            <div className="home-browsing-5-1">Stay Updated with Latest</div>
-                            <div className="home-browsing-5-2">Get Your Newsletter</div>
-                            <div className="home-browsing-6">
+                        <div className="home-browsing-5 xs:text-center ">
+                            <div className="home-browsing-5-1 xs:text-[16px] ss:text-[20px] font-spaceGrotesk">
+                                Stay Updated with Latest
+                            </div>
+                            <div className="home-browsing-5-2 xs:text-[30px] ss:text-[32px] font-roboto">
+                                Get Your Newsletter
+                            </div>
+                            <div className="home-browsing-6 font-spaceGrotesk">
                                 <div
                                     className="home-browsing-6-1"
                                     style={{ cursor: "pointer" }}

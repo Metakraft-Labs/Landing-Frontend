@@ -27,7 +27,6 @@
     z-index: 2;
 }
 .homeBody {
-    font-family: "Sofia Sans";
     height: 48vw;
 }
 .home-head {
@@ -146,10 +145,9 @@
 .home-partner-1,
 .home-partner-2 {
     width: 100%;
-    height: 7vw;
+    /* height: 237px; */
     text-align: center;
     color: white;
-    font-size: 6.34vw;
     font-weight: 700;
 }
 /* #slideshow .slick-slider {
@@ -161,7 +159,7 @@
 }
 .home-demo {
     width: 59.78vw;
-    height: 38.24vw;
+    /* height: 38.24vw; */
     border-radius: 2.08vw;
     border: 1px solid #000;
     backdrop-filter: blur(25px);
@@ -187,10 +185,9 @@
             )
             border-box;
     border: 1px solid transparent;
-    padding: 0.5vw 4vw;
+
     color: white;
     font-weight: 550;
-    border-radius: 0.4vw;
     background-color: #0e101c;
     position: relative;
     transform-style: preserve-3d;
@@ -203,24 +200,20 @@
 .home-partner-5 {
     display: flex;
     justify-content: center;
-    gap: 4vw;
+    /* gap: 4vw; */
 }
 .home-partner-4-1 {
-    width: 42.6vw;
-    height: 40.34vw;
     position: relative;
     z-index: 1;
 }
 .home-partner-4-2 {
     font-size: 96px;
-    /* height: 4.5vw; */
     color: white;
     font-weight: 600;
     line-height: normal;
 }
 .home-partner-4-3 {
     font-size: 24px;
-    /* height: 1.9vw; */
     color: white;
     font-weight: 400;
     line-height: normal;
@@ -233,6 +226,7 @@
 .home-floor-1 {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .home-floor-1-1 {
     background: linear-gradient(#000, #000) padding-box,
@@ -247,6 +241,10 @@
             )
             border-box;
     border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 250px;
     margin-top: 2vw;
     padding: 4vw 0;
@@ -255,7 +253,7 @@
 }
 .home-floor-1-2 {
     color: white;
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 650;
     text-align: center;
 }
@@ -266,7 +264,7 @@
     font-weight: 400;
 }
 .home-slide-1 {
-    font-size: 6.34vw;
+    font-size: 96px;
     padding-top: 3vw;
     font-weight: 600;
     color: white;
@@ -278,8 +276,8 @@
 .home-slide-4 {
     display: flex;
     margin-top: 6vh;
-    padding: 1.5vw 0;
-    font-size: 2.38vw;
+    padding: 32px 0;
+    font-size: 36px;
     font-weight: 600;
     color: #fff;
     border-top: 0.156vw solid #d5d5d5;
@@ -296,7 +294,7 @@
 }
 .home-browsing-1 {
     color: white;
-    font-size: 5.3vw;
+    font-size: 96px;
     height: 7vw;
     font-weight: 600;
     background-image: linear-gradient(270deg, #6c6a6a 6.12%, #ffffff 103.1%);
@@ -307,20 +305,19 @@
 }
 .home-browsing-2 {
     color: white;
-    font-size: 1.6vw;
+    font-size: 24px;
 }
 .home-browsing-2 div {
     height: 1.8vw;
 }
 .home-browsing-3 {
-    font-size: 1.6vw;
+    font-size: 24px;
     font-weight: 600;
-    padding: 0.3vw 1.5vw;
     margin-top: 2vw;
     margin-bottom: 10vw;
     color: black;
     background-color: white;
-    border-radius: 1.05vw;
+    border-radius: 16px;
     border: 1px solid transparent;
 }
 .home-browsing-4 {
@@ -344,11 +341,11 @@
     position: relative;
 }
 .home-browsing-5-1 {
-    font-size: 1.6vw;
+    font-size: 24px;
     color: white;
 }
 .home-browsing-5-2 {
-    font-size: 4.2vw;
+    font-size: 64px;
     color: white;
     font-weight: 450;
 }

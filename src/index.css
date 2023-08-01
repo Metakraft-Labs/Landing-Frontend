@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@700&family=Epilogue:wght@600&family=Inter:wght@600;700&family=Lato:wght@700&family=Roboto+Mono:wght@700&family=Roboto:wght@400;700&family=Sofia+Sans:wght@800&family=Sora:wght@600&family=Space+Grotesk&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

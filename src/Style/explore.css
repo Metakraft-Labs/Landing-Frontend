@@ -229,7 +229,6 @@
     height: 25vw;
 }
 .explore-publish-body-2-1-2 {
-    font-family: "Roboto";
     margin-top: 1vw;
     padding: 1vw 0;
     font-size: 1vw;
@@ -292,7 +291,6 @@
     padding: 1vw 1.8vw;
     height: 4vw;
     border-radius: 0.6vw;
-    font-family: "Roboto";
 }
 .explore-footer {
     display: flex;

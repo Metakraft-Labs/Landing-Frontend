@@ -70,7 +70,7 @@ function Header() {
     return (
         <>
             <div
-                className="flex justify-between items-center"
+                className="flex justify-between items-center flex-row"
                 style={{
                     position: "fixed",
                     zIndex: "4",
@@ -79,26 +79,26 @@ function Header() {
                     right: "0",
                     backgroundColor: "rgba(8,8,8,0.7)",
                     borderBottom: "1px solid #1e262e",
-                    paddingLeft: "2vw",
-                    paddingRight: "2vw",
-                    height: "3.8vw",
+                    height: "100px",
                 }}
             >
                 <div
                     id="alpha"
                     style={{
                         position: "absolute",
-                        top: "3.5vw",
-                        left: "31vw",
+                        top: "80px",
+                        left: "340px",
                         backgroundColor: "#1b1b1b",
                         height: "10vw",
                         width: "8vw",
                         borderRadius: "0.7vw",
                         display: `${panel[1]}`,
-                        fontSize: "1.11vw",
+                        fontSize: "14px",
                         color: "#9c9c9c",
                         border: "1px solid #9c9c9c",
                         textAlign: "center",
+                        paddingTop: "6px",
+                        paddingBottom: "6px",
                     }}
                 >
                     <div style={{ paddingTop: "1vw", cursor: "pointer" }}>
@@ -112,21 +112,15 @@ function Header() {
                     <div style={{ paddingTop: "1vw", cursor: "pointer" }}>Pine(Soon)</div>
                     <div style={{ paddingTop: "1vw", cursor: "pointer" }}>Lemon(Soon)</div>
                 </div>
-                <div
-                    className="navi w-full"
-                    style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-evenly",
-                    }}
-                >
+                <div className="navi w-full flex flex-row px-32 xs:px-10 ss:px-14 sm:px-16 py-[38px] justify-between items-center ">
                     <img
-                        style={{ marginTop: "0.5vw", height: "2.5vw", cursor: "pointer" }}
+                        // style={{ marginTop: "0.5vw", height: "2.5vw", cursor: "pointer" }}
                         src={aiverselogo}
+                        className="w-[146px] h-[39px] cursor-pointer"
                         alt="not found"
                         onClick={() => navigate("/")}
                     />
-                    <div style={{ display: "flex", paddingLeft: "9%", fontSize: "0.9vw" }}>
+                    <div className="font-inter flex xs:hidden ss:hidden sm:hidden ">
                         <div
                             className="navButton"
                             onClick={event => {
@@ -187,13 +181,13 @@ function Header() {
                                 color: "white",
                                 marginTop: "1vw",
                                 padding: "0.2vw 1vw",
-                                fontSize: "1vw",
+                                fontSize: "16px",
                                 fontWeight: "650",
                             }}
                             onClick={() =>
                                 window.open("https://app.social3.club/company/49", "_blank")
                             }
-                            className="hire"
+                            className="hire font-epilogue"
                         >
                             We are hiring!
                         </div>
@@ -206,16 +200,13 @@ function Header() {
                             gap: "0.5vw",
                             marginTop: "0.5vw",
                         }}
-                        className="rightHeader"
+                        className="rightHeader font-epilogue"
                     >
                         <button
-                            className="btn btn-outline-light"
+                            className="btn btn-outline-light w-[280px] lg:w-[200px] h-[60px] rounded-[2px] xs:hidden ss:hidden  sm:hidden"
                             style={{
-                                height: "2.5vw",
-                                border: "0.125vw solid #01C5BA",
-                                borderRadius: "0.2vw",
-                                padding: "0 4vw",
-                                fontSize: "0.9vw",
+                                border: "1px solid #01C5BA",
+                                fontSize: "16px",
                                 fontWeight: "500",
                             }}
                             onClick={() =>
@@ -232,13 +223,11 @@ function Header() {
                             onClick={() =>
                                 wallet ? disconnectWalletHandler() : connectWalletHandler()
                             }
-                            className="btn bg-white text-black"
+                            className="btn bg-white text-black  w-[280px] lg:w-[200px] h-[60px] rounded-[2px] xs:hidden ss:hidden  sm:hidden"
                             style={{
-                                height: "2.5vw",
-                                border: "0.125vw solid #01C5BA",
-                                borderRadius: "0.2vw",
-                                padding: "0 4vw",
-                                fontSize: "0.9vw",
+                                border: "1px solid #01C5BA",
+
+                                fontSize: "16px",
                                 fontWeight: "500",
                             }}
                         >

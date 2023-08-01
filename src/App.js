@@ -1,7 +1,6 @@
 import coinbaseWalletModule from "@web3-onboard/coinbase";
 import injectedModule from "@web3-onboard/injected-wallets";
 import { Web3OnboardProvider, init } from "@web3-onboard/react";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useCallback, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -10,7 +9,7 @@ import { status } from "./apis/auth";
 import Explore from "./components/explore";
 import Feature from "./components/feature.jsx";
 import Footer from "./components/footer.jsx";
-import Header from "./components/header";
+import Header from "./components/header.jsx";
 import AppStore from "./contexts/AppStore";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
@@ -40,7 +39,7 @@ function App() {
     const [user, setUser] = useState(null);
     const [token, setToken] = useState(localStorage.getItem("token") || null);
     const [defaultAccount, setDefaultAccount] = useState(null);
-    const [smallScreen, setSmallScreen] = useState(false);
+    // const [smallScreen, setSmallScreen] = useState(false);
 
     const getStatus = useCallback(async () => {
         if (localStorage.getItem("token") && !user) {
@@ -49,14 +48,14 @@ function App() {
         }
     }, [token]);
 
-    const resize = () => {
-        setSmallScreen(window.innerWidth / window.innerHeight < 1);
-    };
+    // const resize = () => {
+    //     setSmallScreen(window.innerWidth / window.innerHeight < 1);
+    // };
 
-    useState(() => {
-        window.addEventListener("resize", resize);
-        resize();
-    }, []);
+    // useState(() => {
+    //     window.addEventListener("resize", resize);
+    //     resize();
+    // }, []);
 
     useState(() => {
         getStatus();
@@ -68,50 +67,47 @@ function App() {
         if (ref_code) localStorage.setItem("ref_code", ref_code);
     }, []);
 
-    return smallScreen ? (
-        <p style={{ fontWeight: "600", color: "black", textAlign: "center" }}>
-            We do not support this screen size yet. Please open in a larger screen.
-        </p>
-    ) : (
-        <Web3OnboardProvider web3Onboard={web3Onboard}>
-            <AppStore.Provider
-                value={{ user, setUser, token, setToken, defaultAccount, setDefaultAccount }}
-            >
-                <div className={`App`}>
-                    <BrowserRouter>
-                        <Routes>
-                            <Route
-                                exact
-                                path="/explore"
-                                element={
-                                    <>
-                                        <Explore />
-                                    </>
-                                }
-                            />
-                            <Route
-                                exact
-                                path="/feature"
-                                element={
-                                    <>
-                                        <Header />
-                                        <Feature />
-                                        <Footer />
-                                    </>
-                                }
-                            />
-                            <Route
-                                exact
-                                path="/"
-                                element={
-                                    <>
-                                        <Header />
-                                        <Home />
-                                        <Footer />
-                                    </>
-                                }
-                            />
-                            {/* <Route
+    return (
+        <>
+            <Web3OnboardProvider web3Onboard={web3Onboard}>
+                <AppStore.Provider
+                    value={{ user, setUser, token, setToken, defaultAccount, setDefaultAccount }}
+                >
+                    <div className={`App`}>
+                        <BrowserRouter>
+                            <Routes>
+                                <Route
+                                    exact
+                                    path="/explore"
+                                    element={
+                                        <>
+                                            <Explore />
+                                        </>
+                                    }
+                                />
+                                <Route
+                                    exact
+                                    path="/feature"
+                                    element={
+                                        <>
+                                            <Header />
+                                            <Feature />
+                                            <Footer />
+                                        </>
+                                    }
+                                />
+                                <Route
+                                    exact
+                                    path="/"
+                                    element={
+                                        <>
+                                            <Header />
+                                            <Home />
+                                            <Footer />
+                                        </>
+                                    }
+                                />
+                                {/* <Route
                                 exact
                                 path="/about"
                                 element={
@@ -122,34 +118,35 @@ function App() {
                                     </>
                                 }
                             /> */}
-                            <Route
-                                exact
-                                path="/contact"
-                                element={
-                                    <>
-                                        <Header />
-                                        <Contact />
-                                        <Footer />
-                                    </>
-                                }
+                                <Route
+                                    exact
+                                    path="/contact"
+                                    element={
+                                        <>
+                                            <Header />
+                                            <Contact />
+                                            <Footer />
+                                        </>
+                                    }
+                                />
+                            </Routes>
+                            <ToastContainer
+                                style={{ zIndex: 99 }}
+                                position="top-right"
+                                autoClose={5000}
+                                hideProgressBar={false}
+                                newestOnTop={false}
+                                closeOnClick
+                                rtl={false}
+                                pauseOnFocusLoss
+                                draggable
+                                pauseOnHover
                             />
-                        </Routes>
-                        <ToastContainer
-                            style={{ zIndex: 99 }}
-                            position="top-right"
-                            autoClose={5000}
-                            hideProgressBar={false}
-                            newestOnTop={false}
-                            closeOnClick
-                            rtl={false}
-                            pauseOnFocusLoss
-                            draggable
-                            pauseOnHover
-                        />
-                    </BrowserRouter>
-                </div>
-            </AppStore.Provider>
-        </Web3OnboardProvider>
+                        </BrowserRouter>
+                    </div>
+                </AppStore.Provider>
+            </Web3OnboardProvider>
+        </>
     );
 }
 

@@ -32,8 +32,9 @@
 .navButton {
     margin-top: 1vw;
     padding: 0.2vw 1vw;
-    font-size: 1vw;
+    font-size: 16px;
     font-weight: 600;
+    height: 42px;
 }
 #dropdown-basic {
     background-color: transparent;
