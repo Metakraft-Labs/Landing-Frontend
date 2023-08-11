@@ -13,6 +13,7 @@ module.exports = {
                 robotoMono: ["Roboto Mono", "monospace"],
                 sofiaSans: ["Sofia Sans", "sans-serif"],
                 sora: ["Sora", "sans-serif"],
+                fira: ["Fira Sans Condensed", "sans-serif"],
             },
         },
         screens: {

@@ -8,9 +8,9 @@ function Footer() {
     const navigate = useNavigate();
 
     return (
-        <footer className="text-[14px] xs:text-[12px] xs:px-10 ss:px-20 ">
-            <div className="footer xs:flex-col xs:text-left text-[#D0D0D0] font-roboto">
-                <div className="left xs:flex-wrap justify-center items-center  xs:text-left p-2">
+        <footer className="text-[14px] xs:text-[12px] ">
+            <div className="footer xs:flex-col xs:text-left text-[#D0D0D0] font-roboto px-32 xl:px-44 sm:px-16 ss:px-14 xs:px-10">
+                <div className="left xs:flex-wrap justify-center items-start basis-[30%]  xs:text-left p-2">
                     <div>
                         <img
                             className="h-[60px] w-[153px]"
@@ -31,7 +31,7 @@ function Footer() {
                         />
                     </div>
                 </div>
-                <div className="center xs:pt-8 ss:pt-7 flex flex-row xs:flex-wrap xs:justify-between  xs:text-left p-2">
+                <div className="xs:pt-8 ss:pt-7 basis-[60%] flex flex-row justify-between   items-start xs:flex-wrap  xs:text-left p-2 ">
                     <div className="first">
                         <div className="text-[#E3E3E3] font-bold">Company</div>
                         <div
@@ -75,45 +75,46 @@ function Footer() {
                         <div className="pt-[4vh] xs:pt-3">Terms & Conditions</div>
                         <div className="pt-[4vh] xs:pt-3">Privacy Policy</div>
                     </div>
-                </div>
-                <div className="right ss:pt-7 p-2 xs:text-center xs:justify-center xs:items-center">
-                    <div className="text-[#E3E3E3] font-bold">Social</div>
-                    <div className="icons">
-                        <div className="pl-0">
-                            <a
-                                href="https://www.threads.net/@metakraft.labs"
-                                style={{ textDecoration: "none", color: "#ababab" }}
-                            >
+
+                    <div className="fourth xs:text-center xs:justify-center xs:items-center">
+                        <div className="text-[#E3E3E3] font-bold">Social</div>
+                        <div className="icons">
+                            <div className="pl-0">
+                                <a
+                                    href="https://www.threads.net/@metakraft.labs"
+                                    style={{ textDecoration: "none", color: "#ababab" }}
+                                >
+                                    {" "}
+                                    {/* <FontAwesomeIcon icon={faFacebook} />{" "} */}
+                                </a>
+                            </div>
+                            <div>
                                 {" "}
-                                {/* <FontAwesomeIcon icon={faFacebook} />{" "} */}
-                            </a>
-                        </div>
-                        <div>
-                            {" "}
-                            <a
-                                href="https://twitter.com/TheMetakraft"
-                                style={{ textDecoration: "none", color: "#ababab" }}
-                            >
-                                {/* <FontAwesomeIcon icon={faTwitter} />{" "} */}
-                            </a>{" "}
-                        </div>
-                        <div>
-                            {" "}
-                            <a
-                                href="https://www.instagram.com/metakraft.labs/"
-                                style={{ textDecoration: "none", color: "#ababab" }}
-                            >
-                                {/* <FontAwesomeIcon icon={faInstagram} />{" "} */}
-                            </a>{" "}
-                        </div>
-                        <div>
-                            {" "}
-                            <a
-                                href="https://www.linkedin.com/company/themetakraft/"
-                                style={{ textDecoration: "none", color: "#ababab" }}
-                            >
-                                {/* <FontAwesomeIcon icon={faLinkedin} />{" "} */}
-                            </a>{" "}
+                                <a
+                                    href="https://twitter.com/TheMetakraft"
+                                    style={{ textDecoration: "none", color: "#ababab" }}
+                                >
+                                    {/* <FontAwesomeIcon icon={faTwitter} />{" "} */}
+                                </a>{" "}
+                            </div>
+                            <div>
+                                {" "}
+                                <a
+                                    href="https://www.instagram.com/metakraft.labs/"
+                                    style={{ textDecoration: "none", color: "#ababab" }}
+                                >
+                                    {/* <FontAwesomeIcon icon={faInstagram} />{" "} */}
+                                </a>{" "}
+                            </div>
+                            <div>
+                                {" "}
+                                <a
+                                    href="https://www.linkedin.com/company/themetakraft/"
+                                    style={{ textDecoration: "none", color: "#ababab" }}
+                                >
+                                    {/* <FontAwesomeIcon icon={faLinkedin} />{" "} */}
+                                </a>{" "}
+                            </div>
                         </div>
                     </div>
                 </div>

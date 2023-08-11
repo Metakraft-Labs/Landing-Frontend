@@ -70,14 +70,14 @@ function Header() {
     return (
         <>
             <div
-                className="flex justify-between items-center flex-row"
+                className="flex justify-between items-center flex-row xl:mx-44 mx-32 sm:mx-16 ss:mx-14 xs:mx-10 mt-6 rounded-full backdrop-blur-xl bg-black/50  "
                 style={{
                     position: "fixed",
                     zIndex: "4",
                     top: "0",
                     left: "0",
                     right: "0",
-                    backgroundColor: "rgba(8,8,8,0.7)",
+                    // backgroundColor: "rgba(8,8,8,0.7)",
                     borderBottom: "1px solid #1e262e",
                     height: "100px",
                 }}
@@ -112,7 +112,7 @@ function Header() {
                     <div style={{ paddingTop: "1vw", cursor: "pointer" }}>Pine(Soon)</div>
                     <div style={{ paddingTop: "1vw", cursor: "pointer" }}>Lemon(Soon)</div>
                 </div>
-                <div className="navi w-full flex flex-row px-32 xs:px-10 ss:px-14 sm:px-16 py-[38px] justify-between items-center ">
+                <div className="navi w-full flex flex-row px-14 py-[38px] justify-between items-center ">
                     <img
                         // style={{ marginTop: "0.5vw", height: "2.5vw", cursor: "pointer" }}
                         src={aiverselogo}

@@ -69,25 +69,28 @@ function Home() {
     return (
         <>
             <Title title={"Home"} />
-            <div className={`w-full overflow-hidden`} style={{ fontFamily: "Roboto" }}>
+            <div className={`w-full overflow-hidden`}>
                 {/* <InfiniteSpace /> */}
 
                 <div
-                    className={`bg-black px-32 sm:px-16 ss:px-14 xs:px-10 h-[800px] md:h-[780px] xs:h-[600px] ss:h-[650px] flex justify-start items-center`}
+                    className={`bg-black xl:px-44 px-32 sm:px-16 ss:px-14 xs:px-10 h-[800px] md:h-[780px] xs:h-[600px] ss:h-[650px] flex justify-start items-center`}
                 >
                     <div>
                         <div className="mt-20">
                             <h1 className="text-[#EAEAEA] font-encodeSans leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] text-[128px] md:text-[110px] sm:text-[100px] ss:text-[80px] xs:text-[50px] font-bold">
-                                Making Internet <br className="xs:hidden ss:hidden sm:hidden" />
+                                Create, Launch <br className="xs:hidden ss:hidden sm:hidden" />
                                 <span
                                     className={`text-transparent bg-clip-text bg-gradient-to-r from-[#016DB0] to-[#01FFCA]`}
                                 >
-                                    Immersive!
+                                    Monetize!
                                 </span>
                             </h1>
+                            <p className="home-partner-4-3 font-spaceGrotesk">
+                                3D experiences in a Minute with your community across platforms{" "}
+                            </p>
                         </div>
                         <div
-                            className={`my-6 flex flex-row text-[22px] xs:text-[16px] ss:text-[16px] xs:flex-col font-bold font-inter `}
+                            className={`my-6 mt-10 flex flex-row text-[22px] xs:text-[16px] ss:text-[16px] xs:flex-col font-bold font-inter `}
                         >
                             <button className="home-partner-3 w-[277px] h-[79px] xs:w-[160px] xs:h-[48px]  ss:w-[160px] ss:h-[48px]  rounded-[8px]">
                                 Early Access
@@ -115,12 +118,12 @@ function Home() {
                     </div>
                 </div>
                 <div className="home-partner ">
-                    <div className="home-partner-1 mt-9 xs:mb-0 text-[96px] sm:text-[80px] ss:text-[65px] xs:text-[32px]   font-spaceGrotesk">
+                    <div className="home-partner-1 mt-9 xs:mb-0 text-[96px] sm:text-[80px] ss:text-[65px] xs:text-[45px]   font-spaceGrotesk">
                         Ecosystem & <br />
                         Strategic Partners
                     </div>
 
-                    <div className="flex mt-8 md:mt-0">
+                    <div className="flex mt-8 md:mt-0 xl:mx-96 ">
                         <div
                             id="slideshow"
                             className="mt-16 xs:mt-4 ss:mt-3"
@@ -169,12 +172,12 @@ function Home() {
                             Watch Demo
                         </button>
                     </div>
-                    <div className="home-partner-4 flex xs:flex-col ss:flex-col sm:flex-col md:justify-between md:flex-col mt-10 px-32 xs:px-10 ss:px-14 sm:px-16 md:px-20">
+                    <div className="home-partner-4 flex xs:flex-col ss:flex-col sm:flex-col md:justify-between md:flex-col mt-10 px-32  xs:px-10 ss:px-14 sm:px-16 md:px-20 xl:px-44">
                         <div
                             style={{ paddingTop: "4vw" }}
-                            className="basis-[60%] ss:basis-[100%] font-spaceGrotesk"
+                            className="basis-[60%] ss:basis-[100%] font-spaceGrotesk lg:text-left xl:text-left text-center"
                         >
-                            <h2 className="home-partner-4-2 md:text-[100px] sm:text-[80px] ss:text-[65px] xs:text-[32px] xs:mb-6 ">
+                            <h2 className="home-partner-4-2 md:text-[100px] sm:text-[80px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
                                 Seamless Experience!
                             </h2>
                             <div className="home-partner-4-3" style={{ marginTop: "2vw" }}>
@@ -199,12 +202,12 @@ function Home() {
                                 alt="partner-5"
                             />
                         </div>
-                        <div className="basis-[50%] ss:basis-[100%] font-spaceGrotesk">
-                            <h2 className="home-partner-4-2 text-right md:text-[100px] sm:text-[80px] ss:text-[65px] xs:text-[32px] xs:mb-6 ">
+                        <div className="basis-[50%] ss:basis-[100%] font-spaceGrotesk xl:mb-24">
+                            <h2 className="home-partner-4-2 lg:text-right xl:text-right text-center md:text-[100px] sm:text-[80px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
                                 Designed to Scale with your Need
                             </h2>
                             <div
-                                className="home-partner-4-3 text-right"
+                                className="home-partner-4-3 lg:text-right xl:text-right text-center"
                                 style={{ marginTop: "2vw" }}
                             >
                                 Metakraft is designed to scale with your business, creating engaging
@@ -259,7 +262,7 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className=" flex flex-row justify-between overflow-hidden relative h-[691px] xs:h-[300px] ss:h-[350px] w-[695px] xs:w-full ss:w-full border-white border-[4px] rounded-[2vh]">
+                        <div className=" xs:hidden ss:hidden sm:hidden md:hidden flex flex-row justify-between overflow-hidden relative h-[691px] xs:h-[700px] ss:h-[350px] w-[695px] xs:w-full ss:w-full border-white border-[4px] rounded-[2vh]">
                             {/* --------------------------first column--------------------------- */}
 
                             <Marquee
@@ -310,7 +313,7 @@ function Home() {
                                     width: "120%",
                                     display: "flex",
                                     position: "absolute",
-                                    left: "-50px",
+                                    left: "-60px",
                                     top: "0",
                                     bottom: "0",
                                 }}
@@ -383,10 +386,126 @@ function Home() {
                                 </div>
                             </Marquee>
                         </div>
+
+                        <div className=" flex flex-col justify-between lg:hidden xl:hidden overflow-hidden relative h-[691px] xs:h-fit ss:h-fit sm:h-fit md:h-fit w-[695px] xs:w-full ss:w-full border-white border-[4px] rounded-[2vh]">
+                            <Marquee
+                                style={{
+                                    display: "flex",
+                                    marginTop: "12px",
+                                }}
+                            >
+                                <div className=" flex flex-col p-4 w-[306px] mr-4   rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                        first
+                                    </div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                                <div className=" flex flex-col p-4 w-[306px]  mr-4   rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                        second
+                                    </div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                                <div className=" flex flex-col p-4 w-[306px] mr-4  rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                        third
+                                    </div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                            </Marquee>
+                            <Marquee
+                                direction="right"
+                                style={{
+                                    display: "flex",
+                                    marginTop: "12px",
+                                    marginBottom: "12px",
+                                }}
+                            >
+                                <div className=" flex flex-col p-4 w-[306px] mr-4   rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                        first
+                                    </div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                                <div className=" flex flex-col p-4 w-[306px]  mr-4   rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                        second
+                                    </div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                                <div className=" flex flex-col p-4 w-[306px] mr-4  rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                        third
+                                    </div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                            </Marquee>
+                            <Marquee
+                                style={{
+                                    display: "flex",
+                                    marginBottom: "12px",
+                                }}
+                            >
+                                <div className=" flex flex-col p-4 w-[306px] mr-4   rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                        first
+                                    </div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                                <div className=" flex flex-col p-4 w-[306px]  mr-4   rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                        second
+                                    </div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                                <div className=" flex flex-col p-4 w-[306px] mr-4  rounded-[23px] bg-white">
+                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                        third
+                                    </div>
+                                    <div className="flex flex-row my-4">
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#A841F9] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 mx-4 bg-[#FF576E] "></div>
+                                        <div className="w-[34px] h-[34px] rounded-full mt-4 bg-[#150135] "></div>
+                                    </div>
+                                </div>
+                            </Marquee>
+                        </div>
                     </div>
-                    <div className="pt-28 feature-bg">
+                    <div className="pt-28 feedback-bg">
                         <div className="flex justify-center items-center flex-col xs:text-center xs:px-10 ss:px-14 sm:px-16">
-                            <div className="home-slide-1 text-[96px] md:text-[110px] sm:text-[80px] ss:text-[65px] xs:text-[32px]  font-spaceGrotesk">
+                            <div className="home-slide-1 text-[96px] md:text-[110px] sm:text-[80px] ss:text-[65px] xs:text-[45px]  font-spaceGrotesk">
                                 What Others Says
                                 {/* md:text-[110px] sm:text-[100px] ss:text-[65px] xs:text-[32px] xs:mb-6  */}
                             </div>
@@ -395,16 +514,16 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className=" font-sans grid grid-cols-2 xs:grid-cols-1 ss:grid-cols-1 sm:grid-cols-1 md:grid-cols-1  place-items-center mx-20 xs:mx-10 ss:mx-14 sm:mx-16 ">
+                        <div className=" font-sans grid grid-cols-2 xs:grid-cols-1 ss:grid-cols-1 sm:grid-cols-1 md:grid-cols-1  place-items-center mx-32 xl:mx-44 xs:mx-10 ss:mx-14 sm:mx-16 ">
                             {/* -------------------------First Column------------------------------ */}
 
                             <div className=" flex flex-col justify-end">
                                 <div className="py-10 xs:hidden"></div>
-                                <div className=" home-slide-3-1 box w-[485px] xs:w-fit p-6 pr-16 h-[333px] xs:h-fit mb-8 flex flex-row justify-center items-start">
+                                <div className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full p-6 pr-16 xs:pr-6 h-[333px] xs:h-fit mb-8 flex flex-row justify-center items-start">
                                     <div className="w-[170px] mr-4">
                                         <img src={navmeet} className="w-full" alt="" />
                                     </div>
-                                    <div className="text-white">
+                                    <div className="text-white xs:text-center">
                                         <div>
                                             <h3 className="text-[24px] font-bold">
                                                 Navneet Mishra
@@ -418,7 +537,7 @@ function Home() {
                                             I am excited to share with you all that @TheMetakraft is
                                             going to launch their game editor soon.
                                             <br />
-                                            <br />
+                                            <br className="xs:hidden" />
                                             The first very exciting thing i liked about them was
                                             their user friendly layout of the interface of the
                                             editor where things are quiet easy and understandable to
@@ -427,11 +546,11 @@ function Home() {
                                     </div>
                                 </div>
 
-                                <div className=" home-slide-3-1 box w-[485px] xs:w-fit h-[197px] xs:h-fit p-6 pr-16 mb-8 flex flex-row justify-center items-start">
+                                <div className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full h-[197px] xs:h-fit p-6 pr-16 xs:pr-6 mb-8 flex flex-row justify-center items-start">
                                     <div className="w-[100px] mr-4">
                                         <img src={disney} className="w-full" alt="" />
                                     </div>
-                                    <div className="text-white">
+                                    <div className="text-white xs:text-center">
                                         <div>
                                             <h3 className="text-[24px] font-bold">Disney</h3>
                                             <p className="text-[14px] text-[#B9B9B9]">
@@ -445,11 +564,11 @@ function Home() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className=" home-slide-3-1 box w-[485px] xs:w-fit h-[194px] xs:h-fit  p-6 pr-16 flex flex-row justify-center items-start">
+                                <div className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full h-[194px] xs:h-fit  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start">
                                     <div className="w-[100px] mr-4">
                                         <img src={rye} className="w-full" alt="" />
                                     </div>
-                                    <div className="text-white">
+                                    <div className="text-white xs:text-center">
                                         <div>
                                             <h3 className="text-[24px] font-bold">rye</h3>
                                             <p className="text-[14px] text-[#B9B9B9]">
@@ -467,11 +586,11 @@ function Home() {
                             {/* -------------------------Second Column------------------------------ */}
 
                             <div className="flex flex-col justify-start ">
-                                <div className=" home-slide-3-1 box w-[485px] xs:w-fit  h-[210px] xs:h-fit  mb-8 xs:mt-8 ss:mt-8 sm:mt-8 md:mt-8  p-6 pr-16 flex flex-row justify-center items-start">
+                                <div className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[210px] xs:h-fit  mb-8 xs:mt-8 ss:mt-8 sm:mt-8 md:mt-8  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start">
                                     <div className="w-[140px] mr-4">
                                         <img src={mani} className="w-full" alt="" />
                                     </div>
-                                    <div className="text-white">
+                                    <div className="text-white xs:text-center">
                                         <div>
                                             <h3 className="text-[24px] font-bold">mani.wagmi</h3>
                                             <p className="text-[14px] text-[#B9B9B9]">@wokeblunt</p>
@@ -485,11 +604,11 @@ function Home() {
                                     </div>
                                 </div>
 
-                                <div className=" home-slide-3-1 box w-[485px] xs:w-fit  h-[333px] xs:h-fit mb-8  p-6 pr-16 flex flex-row justify-center items-start">
+                                <div className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[333px] xs:h-fit mb-8  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start">
                                     <div className="w-[190px] mr-4">
                                         <img src={nandit} className="w-full" alt="" />
                                     </div>
-                                    <div className="text-white">
+                                    <div className="text-white xs:text-center">
                                         <div>
                                             <h3 className="text-[24px] font-bold">Nandit Mehra</h3>
                                             <p className="text-[14px] text-[#B9B9B9]">
@@ -503,20 +622,20 @@ function Home() {
                                             and Assets with Lighthouse for permanent storage. Very
                                             excited for their product
                                             <br />
-                                            <br />
+                                            <br className="xs:hidden" />
                                             POWERED BY LIGHTHOUSE SDK @LighthouseWeb3
                                             <br />
-                                            <br />
+                                            <br className="xs:hidden" />
                                             #web3 #lighthouse #crypto #ipfs #filecoin
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className=" home-slide-3-1 box w-[485px] xs:w-fit  h-[192px] xs:h-fit p-6 pr-16 flex flex-row justify-center items-start">
+                                <div className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[192px] xs:h-fit p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start">
                                     <div className="w-[100px] mr-4">
                                         <img src={prasanna} className="w-full" alt="" />
                                     </div>
-                                    <div className="text-white">
+                                    <div className="text-white xs:text-center">
                                         <div>
                                             <h3 className="text-[24px] font-bold">
                                                 Prasanna Kondapaneni
@@ -535,32 +654,36 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className="home-slide-4 xs:text-[20px] ss:text-[32px] py-6 font-sora">
+                        <div className="home-slide-4 xs:text-[20px] ss:text-[32px] py-6 font-sora xl:px-96">
                             <Marquee>
-                                <div className="mx-full ">1000+ Signups</div>
-                                <div className="mx-full  ">300+ Beta Users</div>
-                                <div className="mx-full  ">100+ Mints</div>
-                                <div className="mx-full  ">10+ Studio Partners</div>
+                                <div>1000+ Signups</div>
+                                <div>300+ Beta Users</div>
+                                <div>100+ Mints</div>
+                                <div>10+ Studio Partners</div>
                             </Marquee>
                         </div>
                     </div>
 
                     <div className="home-browsing relative ">
-                        <div className="xs:mx-10 ss:mx-14 sm:mx-16 md:mx-20 xs:pt-6 text-transparent bg-clip-text bg-gradient-to-r from-[#6c6a6a] to-[#ffffff] text-[96px] md:text-[100px] sm:text-[80px] ss:text-[65px] xs:text-[32px] xs:mb-6  font-epilogue">
+                        <div className="xs:mx-10 ss:mx-14 sm:mx-16 md:mx-20 xs:pt-6 leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] text-transparent bg-clip-text bg-gradient-to-r from-[#6c6a6a] to-[#ffffff] text-[96px] md:text-[100px] sm:text-[80px] ss:text-[65px] xs:text-[45px] xs:mb-6  font-epilogue">
                             Go Beyond Browsing
                         </div>
-                        <div className="xs:mx-10 ss:mx-14 home-browsing-2 xs:text-[20px] py-6 font-sora">
+                        <div className="xs:mx-10 ss:mx-14 home-browsing-2 xs:text-[16px] py-6  xs:py-2 font-sora">
                             <div>
                                 Create new door of experience for your Friends, Fans &{" "}
                                 <br className="xs:hidden ss:hidden" />
                                 Clients
                             </div>
                         </div>
-                        <button className="home-browsing-3  xs:text-[16px] ss:text-[16px] mt-16 font-sora py-3 px-6 xs:px-4">
+                        <button className="home-browsing-3  xs:text-[14px] ss:text-[16px] mt-12 xs:mt-16 font-sora py-3 px-6 xs:px-4">
                             <Link to="/feature">Explore Features</Link>
                         </button>
-                        <div className="home-browsing-4 md:">
-                            <img src={Solana} alt="solana" />
+                        <div className="home-browsing-4">
+                            <img
+                                src={Solana}
+                                alt="solana"
+                                className="absolute xs:top-80 ss:top-80  top-96     "
+                            />
                         </div>
                         <div className="home-browsing-5 xs:text-center ">
                             <div className="home-browsing-5-1 xs:text-[16px] ss:text-[20px] font-spaceGrotesk">

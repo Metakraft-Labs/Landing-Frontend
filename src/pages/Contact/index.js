@@ -1,48 +1,27 @@
 import React from "react";
 import "../../Style/contact.css";
 // import { Button } from 'react-bootstrap';
-import Socials from "../../components/Socials";
 import Title from "../../shared/Title";
 
 function Contact() {
     return (
         <>
             <Title title={"Contact Us"} />
-            <div className="contact">
-                <div className="contactHeading" style={{ borderBottom: "1px solid #393556" }}>
-                    <div
-                        className="contactHeadingFirst"
-                        style={{
-                            padding: "0 15vw",
-                            fontSize: "7vw",
-                            fontWeight: "1000",
-                            borderRight: "1px solid #393556",
-                        }}
-                    >
-                        <div className="contactFirstFirst">We’d love to</div>
-                        <div className="contactFirstSecond">help</div>
+            <div className="contact  ">
+                <div className="mt-24 pb-20 flex justify-between items-center border-b-[1px] border-[#393556] xl:px-44 px-32 sm:px-16 ss:px-14 xs:px-10">
+                    <div className="contactHeadingFirst">
+                        <div className="text-[#D0DBFF] border-r-[1px] pr-60 border-[#393556] font-encodeSans font-black text-[80px]">
+                            WE&apos;D LOVE TO <br />
+                            <span className="contactFirstSecond  text-[128px]">Help</span>
+                        </div>
                     </div>
-                    <div
-                        className="contactHeadingSecond"
-                        style={{
-                            paddingTop: "5vw",
-                            paddingLeft: "3vw",
-                            color: "#E6E6EB",
-                            fontSize: "1.4vw",
-                        }}
-                    >
+                    <div className="contactHeadingSecond text-[64px] basis-[20%] font-bold font-epilogue text-white">
                         Get in touch
                     </div>
                 </div>
-                <div
-                    style={{
-                        width: "36.9vw",
-                        padding: "6vw 0",
-                        borderRight: "0.138vw solid #393556",
-                    }}
-                ></div>
-                <div className="contactBody">
-                    <div style={{ padding: "6vw 4vw", border: "1px solid #393556" }}>
+
+                <div className="flex justify-between items-center xl:px-44 px-32 sm:px-16 ss:px-14 xs:px-10 mt-28">
+                    <div className="border-[1px] border-[#BAB0FF] rounded-[23px] p-12 ">
                         <div>
                             <svg
                                 width="3.9vw"
@@ -57,39 +36,23 @@ function Contact() {
                                 />
                             </svg>
                         </div>
-                        <h3
-                            style={{
-                                color: "#FFFFFF",
-                                fontSize: "2.5vw",
-                                paddingTop: "1.4vw",
-                                paddingBottom: "1.1vw",
-                            }}
-                        >
-                            Contact Us
-                        </h3>
-                        <div
-                            style={{ color: "#CECCD6", paddingBottom: "1.3vw", fontSize: "1.1vw" }}
-                        >
+                        <div className="text-[36px] mt-6 font-sora text-[#F7F7F7]">Contact Us</div>
+                        <div className="text-[#CECCD6]">
                             Schedule a meeting with our team and ask anything about us.
                         </div>
                         <button
+                            className="w-full border-[1px] rounded-[8px] border-[#E1E1E1] bg-[#1E262E] text-white font-epilogue text-[16px] py-4 mt-6 mb-10   "
                             onClick={() =>
                                 window.open(
                                     "https://calendly.com/metakraft/call-with-metakraft",
                                     "_blank",
                                 )
                             }
-                            style={{
-                                width: "100%",
-                                backgroundColor: "#1E262E",
-                                border: "1px solid #FFFFFF",
-                                fontSize: "1.1vw",
-                            }}
                         >
-                            Schedule a Meeting
+                            Schedule Call
                         </button>
                     </div>
-                    <div style={{ padding: "6vw 4vw", border: "1px solid #393556" }}>
+                    <div className="border-[1px] border-[#BAB0FF] rounded-[23px] p-12 ">
                         <div>
                             <svg
                                 width="3.9vw"
@@ -104,34 +67,20 @@ function Contact() {
                                 />
                             </svg>
                         </div>
-                        <h3
-                            style={{
-                                color: "#FFFFFF",
-                                fontSize: "2.5vw",
-                                paddingTop: "1.4vw",
-                                paddingBottom: "1.1vw",
-                            }}
-                        >
+                        <div className="text-[36px]  mt-6  font-sora text-[#F7F7F7]">
                             Drop us an email
-                        </h3>
-                        <div
-                            style={{ color: "#CECCD6", paddingBottom: "1.3vw", fontSize: "1.1vw" }}
-                        >
+                        </div>
+                        <div className="text-[#CECCD6]">
                             Don’t have time to schedule a meeting? Drop us an email
                         </div>
                         <button
+                            className="w-full border-[1px] rounded-[8px] border-[#E1E1E1] bg-[#1E262E] text-white font-epilogue text-[16px] py-4 mt-6 mb-10   "
                             onClick={() => window.open("mailto:team@metakraft.live", "_blank")}
-                            style={{
-                                width: "100%",
-                                backgroundColor: "#1E262E",
-                                border: "1px solid #FFFFFF",
-                                fontSize: "1.1vw",
-                            }}
                         >
                             Send an Email
                         </button>
                     </div>
-                    <div style={{ padding: "6vw 4vw", border: "1px solid #393556" }}>
+                    <div className="border-[1px] border-[#BAB0FF] rounded-[23px] p-12 ">
                         <div>
                             <svg
                                 width="3.9vw"
@@ -146,44 +95,43 @@ function Contact() {
                                 />
                             </svg>
                         </div>
-                        <h3
-                            style={{
-                                color: "#FFFFFF",
-                                fontSize: "2.5vw",
-                                paddingTop: "1.4vw",
-                                paddingBottom: "1.1vw",
-                            }}
-                        >
+                        <div className="text-[36px]  mt-6  font-sora text-[#F7F7F7]">
                             Tell on Telegram
-                        </h3>
-                        <div
-                            style={{ color: "#CECCD6", paddingBottom: "1.3vw", fontSize: "1.1vw" }}
-                        >
+                        </div>
+                        <div className="text-[#CECCD6]">
                             Join our telegram to receive real-time updates on Metakraft
                         </div>
                         <button
+                            className="w-full border-[1px] rounded-[8px] border-[#E1E1E1] bg-[#1E262E] text-white font-epilogue text-[16px] py-4 mt-6 mb-10   "
                             onClick={() =>
                                 window.open("https://t.me/metakraftdiscussions", "_blank")
                             }
-                            style={{
-                                width: "100%",
-                                backgroundColor: "#1E262E",
-                                border: "1px solid #FFFFFF",
-                                fontSize: "1.1vw",
-                            }}
                         >
                             Connect an Telegram
                         </button>
                     </div>
                 </div>
-                <div
-                    style={{
-                        width: "64vw",
-                        padding: "6vw 0",
-                        borderRight: "0.138vw solid #393556",
-                    }}
-                ></div>
-                <Socials />
+
+                <div className="relative my-96    flex justify-center items-center  ">
+                    <div className="w-[278px] h-[304px] left-0  absolute z-[0] rotate-[-24deg] bg-[#AB4700] blur-[150px] rounded-[704px] "></div>
+                    <div className="w-[440px] h-[278px] -right-96   absolute z-0 rotate-[-24deg] bg-[#2C00D9] blur-[200px] rounded-[300px] "></div>
+                    <div className="w-[316px] h-[306px] -right-96 -top-2      absolute z-0 rotate-[27deg] bg-[#0FF] blur-[200px] rounded-[616px] "></div>
+                    <div className="w-[529px] h-[306px] -right-96 -top-0      absolute z-0 rotate-[9deg] bg-[#F09] blur-[150px] rounded-[616px] "></div>
+                    <div className="contactbg w-[1126px] h-[563px] absolute p-48 rounded-[37px] flex justify-center items-center overflow-hidden xl:px-44 px-32 sm:px-16 ss:px-14 xs:px-10  ">
+                        {/* <img src={contactbg1} alt="" className="absolute z-[1] rounded-[37px]" /> */}
+                        <div className="flex flex-row justify-between items-center">
+                            <div className="font-encodeSans text-[80px] font-black text-[#D0DBFF] uppercase  ">
+                                Join Our Community
+                            </div>
+                            <div className="font-encodeSans text-[80px] font-black text-[#D0DBFF]">
+                                hello!!
+                            </div>
+                        </div>
+                        {/* <div className="w-[860px] h-[860px] bg-[#FFCA7B] blur-[10px] rounded-full absolute z-[1]"></div>
+                        <div className="w-[860px] h-[860px] bg-[#FFD100] blur-[10px] rounded-full absolute z-[1]"></div>
+                        <div className="w-[560px] h-[560px] bg-black blur-[10px]  rounded-full absolute z-[1]"></div> */}
+                    </div>
+                </div>
             </div>
         </>
     );

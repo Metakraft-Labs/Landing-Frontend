@@ -15,6 +15,11 @@ import s7 from "./Assets/slider1/s7.svg";
 import s8 from "./Assets/slider1/s8.svg";
 import s9 from "./Assets/slider1/s9.svg";
 
+import Feature3 from "./Assets/feature-3.png";
+import Feature4 from "./Assets/feature-4.png";
+import Feature5 from "./Assets/feature-5.png";
+import Feature6 from "./Assets/feature-6.png";
+
 export const slider1 = [
     {
         id: 1,
@@ -79,5 +84,32 @@ export const slider1 = [
     {
         id: 16,
         img: s16,
+    },
+];
+
+export const featureSlider = [
+    {
+        id: 1,
+        imgUrl: Feature3,
+        title: "Redefine your Enterprise",
+        para: "Immersive shopping experiences are the next step in the evolution of e-commerce",
+    },
+    {
+        id: 2,
+        imgUrl: Feature4,
+        title: "Showcase Your Products",
+        para: "Immersive shopping experiences are the next step in the evolution of e-commerce",
+    },
+    {
+        id: 3,
+        imgUrl: Feature5,
+        title: "Real Estate Visualization",
+        para: "Immersive shopping experiences are the next step in the evolution of e-commerce",
+    },
+    {
+        id: 4,
+        imgUrl: Feature6,
+        title: "Speed Your Creation",
+        para: "Immersive shopping experiences are the next step in the evolution of e-commerce",
     },
 ];
