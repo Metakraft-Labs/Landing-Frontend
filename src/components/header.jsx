@@ -1,6 +1,6 @@
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { useConnectWallet } from "@web3-onboard/react";
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
@@ -125,7 +125,7 @@ function Header() {
 
                     <div className="font-inter text-[#C4C4C4]  xs:hidden ss:hidden sm:hidden flex justify-between items-center ">
                         <div
-                            className="navButton cursor-pointer px-6 md:px-2  lg:px-2 hover:text-[#88b2db] ease-in-out duration-300"
+                            className="navButton cursor-pointer px-6 hover:text-[#88b2db] ease-in-out duration-300"
                             onClick={event => {
                                 showSpeed(event, "");
                             }}
@@ -135,77 +135,78 @@ function Header() {
                         </div>
 
                         <div
-                            className="navButton cursor-pointer px-6 md:px-2  lg:px-2 hover:text-[#88b2db] ease-in-out duration-300"
+                            className="navButton cursor-pointer px-6 hover:text-[#88b2db] ease-in-out duration-300"
                             onClick={event => {
                                 showSpeed(event, "about");
                             }}
                             href="#"
                         >
-                            About
-                        </div>
-
-                        <div
-                            className="navButton cursor-pointer px-6 md:px-2  lg:px-2 hover:text-[#88b2db] ease-in-out duration-300"
-                            onClick={event => {
-                                showSpeed(event, "contact");
-                            }}
-                            href="#"
-                        >
-                            Contact
-                        </div>
-                        <div
-                            href="#"
-                            style={{
-                                cursor: "pointer",
-                                color: "white",
-
-                                fontSize: "16px",
-                                fontWeight: "650",
-                            }}
-                            onClick={() =>
-                                window.open("https://app.social3.club/company/49", "_blank")
-                            }
-                            className="hire font-epilogue px-6 md:px-2 lg:px-2 ease-in-out duration-300"
-                        >
-                            We are hiring!
+                            About Us
                         </div>
 
                         <div onClick={() => setClick(prev => !prev)}>
                             {click ? (
-                                <MoreVertIcon
-                                    fontSize="medium"
-                                    className="text-white flex justify-center items-center"
-                                />
+                                <div className="navButton flex flex-row  justify-center items-center hover:text-[#88b2db] ease-in-out duration-300">
+                                    <div className="  cursor-pointer px-6  hover:text-[#88b2db] ease-in-out duration-300">
+                                        More
+                                    </div>
+                                    <ArrowDropDownIcon fontSize="medium" />
+                                </div>
                             ) : (
-                                <MoreVertIcon
-                                    fontSize="medium"
-                                    className="text-[#e6e5e5] flex justify-center items-center"
-                                />
+                                <div className="navButton flex flex-row  justify-center items-center hover:text-[#88b2db] ease-in-out duration-300">
+                                    <div className=" cursor-pointer px-6">More</div>
+                                    <ArrowDropDownIcon fontSize="medium" />
+                                </div>
                             )}
 
                             <div
                                 className={`${
                                     click ? "flex" : "hidden"
-                                } sidebar bg-[#111111] shadow-sm shadow-[#464545] h-fit py-16 px-20 absolute top-28 rounded-[32px]  flex flex-col ease-in duration-500  `}
+                                } sidebar  bg-[#111111] border-t-[3px] border-[#0BB6AC]  shadow-sm shadow-[#464545] h-fit py-10 px-20 absolute top-[100px] rounded-[7px]  flex flex-col ease-in duration-500  `}
                             >
-                                <div
-                                    className="navButton py-4 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300"
+                                {/* <div
+                                    className="navButton py-3 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300"
                                     href="#"
                                 >
                                     Discover
                                 </div>
-                                <div className="navButton py-4 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300">
+                                <div className="navButton py-3 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300">
                                     <a href="https://linktr.ee/metakraft">Creators</a>
+                                </div> */}
+                                <div className="navButton py-3 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300">
+                                    Peach
                                 </div>
-                                <div className="navButton py-4 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300">
-                                    Pine(Soon)
-                                </div>
-                                <div className="navButton py-4 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300">
-                                    Lemon(Soon)
+                                <div className="navButton py-3 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300">
+                                    Lemon(Coming Soon)
                                 </div>
 
-                                <div className="navButton py-4 cursor-pointer  hover:text-[#88b2db] ease-in-out duration-300">
+                                <div className="navButton py-3 cursor-pointer  hover:text-[#88b2db] ease-in-out duration-300">
                                     <a href="https://blog.metakraft.live/">Blog</a>
+                                </div>
+                                <div
+                                    className="navButton py-3 cursor-pointer  hover:text-[#88b2db] ease-in-out duration-300"
+                                    onClick={event => {
+                                        showSpeed(event, "contact");
+                                    }}
+                                    href="#"
+                                >
+                                    Contact Us
+                                </div>
+                                <div
+                                    href="#"
+                                    style={{
+                                        cursor: "pointer",
+                                        color: "white",
+
+                                        fontSize: "16px",
+                                        fontWeight: "650",
+                                    }}
+                                    onClick={() =>
+                                        window.open("https://app.social3.club/company/49", "_blank")
+                                    }
+                                    className="hire font-epilogue  py-3 cursor-pointer  hover:text-[#88b2db] ease-in-out duration-300"
+                                >
+                                    We are hiring!
                                 </div>
                             </div>
                         </div>
@@ -277,12 +278,12 @@ function Header() {
                                 </li>
                                 <li className={``}>
                                     <div className="navButton py-3" style={{ cursor: "pointer" }}>
-                                        Pine(Soon)
+                                        Peach
                                     </div>
                                 </li>
                                 <li className={``}>
                                     <div className="navButton py-3" style={{ cursor: "pointer" }}>
-                                        Lemon(Soon)
+                                        Lemon(Coming Soon)
                                     </div>
                                 </li>
                                 <li className={``}>
@@ -294,7 +295,7 @@ function Header() {
                                         href="#"
                                         style={{ cursor: "pointer", color: "#C4C4C4" }}
                                     >
-                                        About
+                                        About Us
                                     </div>
                                 </li>
                                 <li className={``}>
@@ -323,7 +324,7 @@ function Header() {
                                         href="#"
                                         style={{ cursor: "pointer", color: "#C4C4C4" }}
                                     >
-                                        Contact
+                                        Contact Us
                                     </div>
                                 </li>
                                 <li className={``}>
