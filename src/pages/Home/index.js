@@ -1,9 +1,7 @@
+import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
-// import AppStore from "../../contexts/AppStore";
-// import Header from "../../components/Header.jsx";
-// import InfiniteSpace from "../../Animation/Infinitespace";
 import Animate from "../../Assets/Animated.mp4";
 import disney from "../../Assets/feedback/disney.svg";
 import mani from "../../Assets/feedback/mani.svg";
@@ -18,6 +16,7 @@ import Solana from "../../Assets/solana.png";
 import "../../Style/home.css";
 import { slider1 } from "../../data";
 import Title from "../../shared/Title";
+import { navVariants } from "../../utils/motion";
 
 function Home() {
     // const settings = {
@@ -76,8 +75,8 @@ function Home() {
                     className={`bg-black xl:px-44 px-32 sm:px-16 ss:px-14 xs:px-10 h-[800px] md:h-[780px] xs:h-[600px] ss:h-[650px] flex justify-start items-center`}
                 >
                     <div>
-                        <div className="mt-20">
-                            <h1 className="text-[#EAEAEA] font-encodeSans leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] text-[128px] md:text-[110px] sm:text-[100px] ss:text-[80px] xs:text-[50px] font-bold">
+                        <div className="mt-20 xs:mt-32">
+                            <h1 className="text-[#EAEAEA] font-encodeSans leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] text-[120px] md:text-[110px] sm:text-[100px] ss:text-[80px] xs:text-[50px] font-bold">
                                 Create, Launch <br className="xs:hidden ss:hidden sm:hidden" />
                                 <span
                                     className={`text-transparent bg-clip-text bg-gradient-to-r from-[#016DB0] to-[#01FFCA]`}
@@ -92,12 +91,22 @@ function Home() {
                         <div
                             className={`my-6 mt-10 flex flex-row text-[22px] xs:text-[16px] ss:text-[16px] xs:flex-col font-bold font-inter `}
                         >
-                            <button className="home-partner-3 w-[277px] h-[79px] xs:w-[160px] xs:h-[48px]  ss:w-[160px] ss:h-[48px]  rounded-[8px]">
+                            <motion.button
+                                whileInView="show"
+                                initial="hidden"
+                                variants={navVariants}
+                                className="home-partner-3 home-head-3-12 w-[277px] h-[79px] xs:w-[160px] xs:h-[48px]  ss:w-[160px] ss:h-[48px]  rounded-[8px]"
+                            >
                                 Early Access
-                            </button>
-                            <button className="home-partner-3 w-[277px] h-[79px] xs:w-[160px] xs:h-[48px]  ss:w-[160px] ss:h-[48px]  rounded-[8px] xs:ml-0 xs:mt-4 ml-12">
+                            </motion.button>
+                            <motion.button
+                                whileInView="show"
+                                initial="hidden"
+                                variants={navVariants}
+                                className="home-partner-3 home-head-3-12 w-[277px] h-[79px] xs:w-[160px] xs:h-[48px]  ss:w-[160px] ss:h-[48px]  rounded-[8px] xs:ml-0 xs:mt-4 ml-12"
+                            >
                                 Refer & Win
-                            </button>
+                            </motion.button>
                         </div>
                     </div>
                 </div>
@@ -106,7 +115,7 @@ function Home() {
                 <div className="punc3">$</div>
 
                 <div className="home-live flex justify-center items-center h-[57px]">
-                    <div className="home-live-gradient">
+                    <div className="home-live-gradient ">
                         <img
                             className="home-live-1 h-[42px] w-[44px]"
                             src={metakraft}
@@ -118,7 +127,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="home-partner ">
-                    <div className="home-partner-1 mt-9 xs:mb-0 text-[96px] sm:text-[80px] ss:text-[65px] xs:text-[45px]   font-spaceGrotesk">
+                    <div className="home-partner-1 mt-9 xs:mb-0 text-[80px] sm:text-[70px] ss:text-[65px] xs:text-[45px]   font-spaceGrotesk">
                         Ecosystem & <br />
                         Strategic Partners
                     </div>
@@ -164,20 +173,22 @@ function Home() {
                         ></video>
                     </div>
                     <div style={{ width: "100%", textAlign: "center" }} className="mt-5">
-                        <button
-                            className="home-partner-3 w-[325px] h-[78px] xs:w-[160px] xs:h-[48px]  rounded-[9px] text-[22px] xs:text-[16px] ss:text-[16px] font-inter "
+                        <motion.button
+                            whileInView="show"
+                            initial="hidden"
+                            variants={navVariants}
+                            className="home-partner-3 home-head-3-12 w-[325px] h-[78px] xs:w-[160px] xs:h-[48px]  rounded-[9px] text-[22px] xs:text-[16px] ss:text-[16px] font-inter "
                             onClick={handleVideo}
                         >
-                            {/* w-[277px] h-[79px] xs:w-[160px] xs:h-[48px]  ss:w-[160px] ss:h-[48px] */}
                             Watch Demo
-                        </button>
+                        </motion.button>
                     </div>
                     <div className="home-partner-4 flex xs:flex-col ss:flex-col sm:flex-col md:justify-between md:flex-col mt-10 px-32  xs:px-10 ss:px-14 sm:px-16 md:px-20 xl:px-44">
                         <div
                             style={{ paddingTop: "4vw" }}
                             className="basis-[60%] ss:basis-[100%] font-spaceGrotesk lg:text-left xl:text-left text-center"
                         >
-                            <h2 className="home-partner-4-2 md:text-[100px] sm:text-[80px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
+                            <h2 className="home-partner-4-2 text-[80px] sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
                                 Seamless Experience!
                             </h2>
                             <div className="home-partner-4-3" style={{ marginTop: "2vw" }}>
@@ -187,7 +198,10 @@ function Home() {
                             </div>
                         </div>
                         <div className="">
-                            <img
+                            <motion.img
+                                whileInView="show"
+                                initial="hidden"
+                                variants={navVariants}
                                 className="w-full h-full top-0 relative z-[1] -rotate-3    "
                                 src={Ipad_Mini1}
                                 alt="partner-4"
@@ -196,14 +210,17 @@ function Home() {
                     </div>
                     <div className="home-partner-5 flex xs:flex-col  md:justify-between ss:flex-col sm:flex-col md:flex-col xs:px-10 ss:px-14 sm:px-16 md:px-20 px-32">
                         <div className=" xs:hidden ss:hidden sm:hidden md:hidden">
-                            <img
+                            <motion.img
+                                whileInView="show"
+                                initial="hidden"
+                                variants={navVariants}
                                 className="home-partner-4-1 w-full h-full"
                                 src={Ipad_Mini}
                                 alt="partner-5"
                             />
                         </div>
                         <div className="basis-[50%] ss:basis-[100%] font-spaceGrotesk xl:mb-24">
-                            <h2 className="home-partner-4-2 lg:text-right xl:text-right text-center md:text-[100px] sm:text-[80px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
+                            <h2 className="home-partner-4-2 lg:text-right xl:text-right text-center text-[80px] sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
                                 Designed to Scale with your Need
                             </h2>
                             <div
@@ -226,23 +243,36 @@ function Home() {
                     <div className="home-floor flex flex-row xs:flex-col ss:flex-col sm:flex-col md:flex-col items-center mx-20 xs:mx-10 ss:mx-14 sm:mx-16 lg:mt-20  font-spaceGrotesk  ">
                         <div className=" flex justify-center items-center xs:flex-col ">
                             <div style={{ marginRight: "1.5vw" }}>
-                                <div className="home-floor-1-1 w-[180px] h-[180px] mb-6">
+                                <motion.div
+                                    whileInView="show"
+                                    initial="hidden"
+                                    variants={navVariants}
+                                    className="home-floor-1-1 w-[180px] h-[180px] mb-6"
+                                >
                                     <div className="home-floor-1-2 xs:text-[30px] font-roboto">
                                         Browser
                                     </div>
                                     <div className="home-floor-1-3 xs:text-[20px]">Supported</div>
-                                </div>
-                                <div className="home-floor-1-1 w-[180px] h-[180px] mb-6">
+                                </motion.div>
+                                <motion.div
+                                    whileInView="show"
+                                    initial="hidden"
+                                    variants={navVariants}
+                                    className="home-floor-1-1 w-[180px] h-[180px] mb-6"
+                                >
                                     <div className="home-floor-1-2 xs:text-[30px] font-roboto">
                                         AI Enabled
                                     </div>
                                     <div className="home-floor-1-3 xs:text-[20px]">
                                         Asset Design
                                     </div>
-                                </div>
+                                </motion.div>
                             </div>
                             <div>
-                                <div
+                                <motion.div
+                                    whileInView="show"
+                                    initial="hidden"
+                                    variants={navVariants}
                                     className="home-floor-1-1 w-[180px] h-[180px] mb-6"
                                     style={{ marginTop: "0" }}
                                 >
@@ -252,13 +282,18 @@ function Home() {
                                     <div className="home-floor-1-3 xs:text-[20px]">
                                         Assets to use
                                     </div>
-                                </div>
-                                <div className="home-floor-1-1 w-[180px] h-[180px] mb-6">
+                                </motion.div>
+                                <motion.div
+                                    whileInView="show"
+                                    initial="hidden"
+                                    variants={navVariants}
+                                    className="home-floor-1-1 w-[180px] h-[180px] mb-6"
+                                >
                                     <div className="home-floor-1-2 xs:text-[30px] font-roboto">
                                         Mint
                                     </div>
                                     <div className="home-floor-1-3 xs:text-[20px]">3D Assets</div>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
 
@@ -505,7 +540,7 @@ function Home() {
                     </div>
                     <div className="pt-28 feedback-bg">
                         <div className="flex justify-center items-center flex-col xs:text-center xs:px-10 ss:px-14 sm:px-16">
-                            <div className="home-slide-1 text-[96px] md:text-[110px] sm:text-[80px] ss:text-[65px] xs:text-[45px]  font-spaceGrotesk">
+                            <div className="home-slide-1 text-[80px]  sm:text-[70px] ss:text-[65px] xs:text-[45px]  font-spaceGrotesk">
                                 What Others Says
                                 {/* md:text-[110px] sm:text-[100px] ss:text-[65px] xs:text-[32px] xs:mb-6  */}
                             </div>
@@ -517,9 +552,14 @@ function Home() {
                         <div className=" font-sans grid grid-cols-2 xs:grid-cols-1 ss:grid-cols-1 sm:grid-cols-1 md:grid-cols-1  place-items-center mx-32 xl:mx-44 xs:mx-10 ss:mx-14 sm:mx-16 ">
                             {/* -------------------------First Column------------------------------ */}
 
-                            <div className=" flex flex-col justify-end">
+                            <div className=" flex flex-col justify-end ">
                                 <div className="py-10 xs:hidden"></div>
-                                <div className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full p-6 pr-16 xs:pr-6 h-[333px] xs:h-fit mb-8 flex flex-row justify-center items-start">
+                                <motion.div
+                                    whileInView="show"
+                                    initial="hidden"
+                                    variants={navVariants}
+                                    className=" home-slide-3-1  box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full p-6 pr-16 xs:pr-6 h-[333px] xs:h-fit mb-8 flex flex-row justify-center items-start"
+                                >
                                     <div className="w-[170px] mr-4">
                                         <img src={navmeet} className="w-full" alt="" />
                                     </div>
@@ -544,9 +584,14 @@ function Home() {
                                             newbies.
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
 
-                                <div className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full h-[197px] xs:h-fit p-6 pr-16 xs:pr-6 mb-8 flex flex-row justify-center items-start">
+                                <motion.div
+                                    whileInView="show"
+                                    initial="hidden"
+                                    variants={navVariants}
+                                    className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full h-[197px] xs:h-fit p-6 pr-16 xs:pr-6 mb-8 flex flex-row justify-center items-start"
+                                >
                                     <div className="w-[100px] mr-4">
                                         <img src={disney} className="w-full" alt="" />
                                     </div>
@@ -563,8 +608,13 @@ function Home() {
                                             of helping features that can helps us!
                                         </div>
                                     </div>
-                                </div>
-                                <div className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full h-[194px] xs:h-fit  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start">
+                                </motion.div>
+                                <motion.div
+                                    whileInView="show"
+                                    initial="hidden"
+                                    variants={navVariants}
+                                    className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full h-[194px] xs:h-fit  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start"
+                                >
                                     <div className="w-[100px] mr-4">
                                         <img src={rye} className="w-full" alt="" />
                                     </div>
@@ -581,12 +631,17 @@ function Home() {
                                             metaverse #Metakraft
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             </div>
                             {/* -------------------------Second Column------------------------------ */}
 
                             <div className="flex flex-col justify-start ">
-                                <div className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[210px] xs:h-fit  mb-8 xs:mt-8 ss:mt-8 sm:mt-8 md:mt-8  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start">
+                                <motion.div
+                                    whileInView="show"
+                                    initial="hidden"
+                                    variants={navVariants}
+                                    className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[210px] xs:h-fit  mb-8 xs:mt-8 ss:mt-8 sm:mt-8 md:mt-8  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start"
+                                >
                                     <div className="w-[140px] mr-4">
                                         <img src={mani} className="w-full" alt="" />
                                     </div>
@@ -602,9 +657,14 @@ function Home() {
                                             @AIVerse_Dai
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
 
-                                <div className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[333px] xs:h-fit mb-8  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start">
+                                <motion.div
+                                    whileInView="show"
+                                    initial="hidden"
+                                    variants={navVariants}
+                                    className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[333px] xs:h-fit mb-8  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start"
+                                >
                                     <div className="w-[190px] mr-4">
                                         <img src={nandit} className="w-full" alt="" />
                                     </div>
@@ -629,9 +689,14 @@ function Home() {
                                             #web3 #lighthouse #crypto #ipfs #filecoin
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
 
-                                <div className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[192px] xs:h-fit p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start">
+                                <motion.div
+                                    whileInView="show"
+                                    initial="hidden"
+                                    variants={navVariants}
+                                    className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[192px] xs:h-fit p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start"
+                                >
                                     <div className="w-[100px] mr-4">
                                         <img src={prasanna} className="w-full" alt="" />
                                     </div>
@@ -650,10 +715,9 @@ function Home() {
                                             of helping features that can helps us!
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
-
                         <div className="home-slide-4 xs:text-[20px] ss:text-[32px] py-6 font-sora xl:px-96">
                             <Marquee>
                                 <div>1000+ Signups</div>
@@ -665,7 +729,7 @@ function Home() {
                     </div>
 
                     <div className="home-browsing relative ">
-                        <div className="xs:mx-10 ss:mx-14 sm:mx-16 md:mx-20 xs:pt-6 leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] text-transparent bg-clip-text bg-gradient-to-r from-[#6c6a6a] to-[#ffffff] text-[96px] md:text-[100px] sm:text-[80px] ss:text-[65px] xs:text-[45px] xs:mb-6  font-epilogue">
+                        <div className="xs:mx-10 ss:mx-14 sm:mx-16 md:mx-20 xs:pt-6 leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] text-transparent bg-clip-text bg-gradient-to-r from-[#6c6a6a] to-[#ffffff] text-[80px]  sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6  font-epilogue">
                             Go Beyond Browsing
                         </div>
                         <div className="xs:mx-10 ss:mx-14 home-browsing-2 xs:text-[16px] py-6  xs:py-2 font-sora">
@@ -675,9 +739,14 @@ function Home() {
                                 Clients
                             </div>
                         </div>
-                        <button className="home-browsing-3  xs:text-[14px] ss:text-[16px] mt-12 xs:mt-16 font-sora py-3 px-6 xs:px-4">
+                        <motion.button
+                            whileInView="show"
+                            initial="hidden"
+                            variants={navVariants}
+                            className="home-browsing-3  xs:text-[14px] ss:text-[16px] mt-12 xs:mt-16 font-sora py-3 px-6 xs:px-4"
+                        >
                             <Link to="/feature">Explore Features</Link>
-                        </button>
+                        </motion.button>
                         <div className="home-browsing-4">
                             <img
                                 src={Solana}
@@ -685,16 +754,16 @@ function Home() {
                                 className="absolute xs:top-80 ss:top-80  top-96     "
                             />
                         </div>
-                        <div className="home-browsing-5 xs:text-center ">
+                        <div className="home-browsing-5 flex flex-col xs:text-center xs:items-center xs:justify-center ss:text-center ss:items-center ss:justify-center  sm:text-center sm:items-center sm:justify-center md:text-center md:items-center md:justify-center  ">
                             <div className="home-browsing-5-1 xs:text-[16px] ss:text-[20px] font-spaceGrotesk">
                                 Stay Updated with Latest
                             </div>
                             <div className="home-browsing-5-2 xs:text-[30px] ss:text-[32px] font-roboto">
                                 Get Your Newsletter
                             </div>
-                            <div className="home-browsing-6 font-spaceGrotesk">
+                            <div className="home-browsing-6 flex justify-between  items-center  ml-[62vw] xs:ml-0 ss:ml-0 sm:ml-0 md:ml-0   font-spaceGrotesk">
                                 <div
-                                    className="home-browsing-6-1"
+                                    className="home-browsing-6-1 "
                                     style={{ cursor: "pointer" }}
                                     onClick={subscribe}
                                 >
@@ -706,7 +775,7 @@ function Home() {
                                     onChange={event => {
                                         setNews(event.target.value);
                                     }}
-                                    className="home-browsing-6-2 bg-black w-fit"
+                                    className="home-browsing-6-2 bg-black w-full px-6"
                                     placeholder="Enter Your Email"
                                 />
                             </div>

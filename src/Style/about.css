@@ -14,21 +14,32 @@
                 rgba(131, 73, 255, 0.65) 70.34%,
                 #0eff26 100.44%
             )
-            border-box !important;
-    border: 1px solid transparent !important;
-    background-color: #0e101c !important;
+            border-box;
+    border: 1px solid transparent;
+
+    color: white;
+    font-weight: 550;
+    background-color: #0e101c;
     position: relative;
     transform-style: preserve-3d;
 }
-.contactUsButton::before {
+
+.home-head-3-12:hover::before {
     content: "";
     position: absolute;
-    inset: -0.5vw;
+    inset: -1px;
     z-index: -1;
     transform: translate3d(0, 0, -0.052vw); /* (X, Y, Z) */
-    background: linear-gradient(335deg, rgba(136, 96, 243, 1) 27%, rgba(255, 255, 255, 1) 100%);
-    background-color: #0e101c;
-    opacity: 0.3;
+    background: linear-gradient(
+        228.09deg,
+        #ffea2c -9.95%,
+        rgba(251, 108, 4, 0.796875) 12.47%,
+        rgba(255, 126, 227, 0.81) 30.87%,
+        rgba(255, 255, 255, 0) 53.87%,
+        rgba(131, 73, 255, 0.65) 70.34%,
+        #0eff26 100.44%
+    );
+    opacity: 0.5;
     filter: blur(0.781vw);
 }
 

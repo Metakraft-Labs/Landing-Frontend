@@ -30,11 +30,8 @@
 }
 
 .navButton {
-    margin-top: 1vw;
-    padding: 0.2vw 1vw;
     font-size: 16px;
     font-weight: 600;
-    height: 42px;
 }
 #dropdown-basic {
     background-color: transparent;
@@ -57,4 +54,31 @@
     font-size: 0.91vw !important;
     font-weight: 500 !important;
     padding-bottom: 1vw !important;
+}
+
+.sidebar {
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 }

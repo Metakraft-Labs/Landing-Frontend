@@ -192,7 +192,6 @@
     font-weight: 800;
 }
 .feature-3-14-2 {
-    font-size: 63px;
     font-weight: 600;
 }
 .feature-3-14-3 {
@@ -252,7 +251,6 @@
 .feature-slider .slick-track {
     background-color: black;
 }
-
 .feature-bg {
     background-image: url("../Assets/feature_bg.svg") !important;
     background-attachment: fixed;
