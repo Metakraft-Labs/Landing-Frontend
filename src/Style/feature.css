@@ -18,23 +18,22 @@
         linear-gradient(90deg, #ff3bff 0%, #ecbfbf 38.02%, #5c24ff 75.83%, #d94fd5 100%) border-box;
     border: 1px solid transparent;
     display: flex;
-    width: 493px;
+    /* width: 493px;
     height: 71px;
-    margin-top: 1.5vw;
+    margin-top: 1.5vw; */
     border-radius: 7px;
     filter: brightness(150%);
 }
-.feature-browsing-6-1 {
+/* .feature-browsing-6-1 {
     font-size: 40px;
     color: white;
-}
+} */
 .feature-browsing-6-2 {
     font-size: 20px;
     font-weight: 450;
     color: white;
     background-color: transparent;
     border: transparent;
-    /* margin: 0.2vw 0; */
 }
 .feature-browsing-6-2:focus {
     outline: none;

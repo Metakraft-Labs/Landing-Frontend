@@ -12,7 +12,7 @@ import { useWallet } from "../hooks/useWallet";
 import { navVariants } from "../utils/motion";
 
 function Header() {
-    const [toggle, setToggle] = useState();
+    const [toggle, setToggle] = useState(false);
     const [click, setClick] = useState();
 
     const [{ wallet, connecting }] = useConnectWallet();
@@ -26,38 +26,6 @@ function Header() {
     };
     useEffect(() => {
         function mains() {
-            //         let buttonList = document.getElementsByClassName("navButton");
-            //         for (let i = 0; i < buttonList.length; ++i) {
-            //             if (i == 1) continue;
-            //             console.log(i);
-            //             let set = ["none", "none", "none", "none", "none"];
-            //             buttonList[i].addEventListener("mouseenter", function (event) {
-            //                 event.target.style.color = "#88b2db";
-            //                 event.target.style.borderRadius = "0.7vw";
-            //                 event.target.style.backgroundColor = "#1B1B1B";
-            //                 set[i] = "block";
-            //                 setPanel(set);
-            //             });
-            //             buttonList[i].addEventListener("mouseleave", function () {
-            //                 buttonList[i].style.color = "#a390a4";
-            //                 buttonList[i].style.borderRadius = "0";
-            //                 buttonList[i].style.backgroundColor = "transparent";
-            //                 setPanel(["none", "none", "none", "none", "none"]);
-            //             });
-            //         }
-            //         let set = ["none", "none", "none", "none", "none"];
-            //         buttonList[1].addEventListener("mouseenter", function (event) {
-            //             event.target.style.color = "#88b2db";
-            //             event.target.style.borderRadius = "0.7vw";
-            //             event.target.style.backgroundColor = "#1B1B1B";
-            //             set[1] = "block";
-            //             setPanel(set);
-            //         });
-            //         buttonList[1].addEventListener("mouseleave", function () {
-            //             buttonList[1].style.color = "#a390a4";
-            //             buttonList[1].style.borderRadius = "0";
-            //             buttonList[1].style.backgroundColor = "transparent";
-            //         });
             let m = document.getElementById("alpha");
             m.addEventListener("mouseleave", function () {
                 buttonList[1].style.color = "#a390a4";
@@ -68,14 +36,7 @@ function Header() {
         }
         mains();
     }, []);
-    //  function turbo(event){
-    //   let alp=event.target
-    //   const sv=alp.style.borderColor
-    //   alp.style.border="4px solid #01C5BA"
-    //   setTimeout(()=>{
-    //     alp.style.border=sv
-    //   },300)
-    //  }
+
     return (
         <>
             <motion.div
@@ -144,34 +105,27 @@ function Header() {
                             About Us
                         </div>
 
-                        <div onClick={() => setClick(prev => !prev)}>
-                            {click ? (
-                                <div className="navButton flex flex-row  justify-center items-center hover:text-[#88b2db] ease-in-out duration-300">
-                                    <div className="  cursor-pointer px-6  hover:text-[#88b2db] ease-in-out duration-300">
-                                        More
+                        <div>
+                            <div onClick={() => setClick(prev => !prev)}>
+                                {click ? (
+                                    <div className="navButton flex flex-row  justify-center items-center hover:text-[#88b2db] ease-in-out duration-300">
+                                        <div className="  cursor-pointer px-6  hover:text-[#88b2db] ease-in-out duration-300">
+                                            More
+                                        </div>
+                                        <ArrowDropDownIcon fontSize="medium" />
                                     </div>
-                                    <ArrowDropDownIcon fontSize="medium" />
-                                </div>
-                            ) : (
-                                <div className="navButton flex flex-row  justify-center items-center hover:text-[#88b2db] ease-in-out duration-300">
-                                    <div className=" cursor-pointer px-6">More</div>
-                                    <ArrowDropDownIcon fontSize="medium" />
-                                </div>
-                            )}
+                                ) : (
+                                    <div className="navButton flex flex-row  justify-center items-center hover:text-[#88b2db] ease-in-out duration-300">
+                                        <div className=" cursor-pointer px-6">More</div>
+                                        <ArrowDropDownIcon fontSize="medium" />
+                                    </div>
+                                )}
+                            </div>
                             <div
                                 className={`${
                                     click ? "flex" : "hidden"
                                 } sidebar  bg-[#111111] border-t-[3px] border-[#0BB6AC]  shadow-sm shadow-[#464545] h-fit py-10 px-20 absolute top-[100px] rounded-[7px]  flex flex-col ease-in duration-500  `}
                             >
-                                {/* <div
-                                    className="navButton py-3 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300"
-                                    href="#"
-                                >
-                                    Discover
-                                </div>
-                                <div className="navButton py-3 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300">
-                                    <a href="https://linktr.ee/metakraft">Creators</a>
-                                </div> */}
                                 <div className="navButton py-3 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300">
                                     Peach
                                 </div>
@@ -252,17 +206,20 @@ function Header() {
                     </div>
 
                     {/* ----------------------------------Mobile view------------------------------------------------ */}
-                    <div
-                        className="  md:hidden lg:hidden xl:hidden w-full  flex justify-end items-center text-white "
-                        onClick={() => setToggle(prev => !prev)}
-                    >
-                        {toggle ? <CloseIcon fontSize="large" /> : <MenuIcon fontSize="large" />}
+                    <div className="  md:hidden lg:hidden xl:hidden w-full  flex flex-1 justify-end items-center text-white ">
+                        <div onClick={() => setToggle(prev => !prev)}>
+                            {toggle ? (
+                                <CloseIcon fontSize="large" />
+                            ) : (
+                                <MenuIcon fontSize="large" />
+                            )}
+                        </div>
                         <div
                             className={`${
                                 toggle ? "flex" : "hidden"
-                            } sidebar  rounded-[32px] duration-500 ease-in-out text-[16px]  font-encodeSans bg-[#111111]  shadow-sm shadow-[#464545]  z-10 absolute top-[110px] h-fit py-16 text-white flex flex-col justify-start items-start xs:px-12 ss:px-20 px-32 w-full left-[0.15%]`}
+                            } sidebar  rounded-[32px] text-[16px] font-encodeSans bg-[#111111]  shadow-sm shadow-[#464545]  z-10 absolute top-[110px] h-fit py-16 text-white xs:px-12 ss:px-20 px-32 w-full left-[0.15%]`}
                         >
-                            <ul className="text-left ">
+                            <ul className="text-left list-none flex justify-start items-start  flex-1 flex-col ">
                                 <li className={``}>
                                     <div
                                         className="navButton py-3"

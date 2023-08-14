@@ -89,8 +89,8 @@ function Home() {
                     className={`bg-black xl:px-44 px-32 sm:px-16 ss:px-14 xs:px-10 h-[800px] md:h-[780px] xs:h-[600px] ss:h-[650px] flex justify-start items-center`}
                 >
                     <div>
-                        <div className="mt-20 xs:mt-32">
-                            <h1 className="text-[#EAEAEA] font-encodeSans leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] text-[120px] md:text-[110px] sm:text-[100px] ss:text-[80px] xs:text-[50px] font-bold">
+                        <div className="mt-5 xs:mt-32">
+                            <h1 className="text-[#EAEAEA] font-encodeSans leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] text-[110px] md:text-[100px] sm:text-[100px] ss:text-[80px] xs:text-[50px] font-bold">
                                 Create, Launch <br className="xs:hidden ss:hidden sm:hidden" />
                                 <span
                                     className={`text-transparent bg-clip-text bg-gradient-to-r from-[#016DB0] to-[#01FFCA]`}
@@ -107,43 +107,33 @@ function Home() {
                             className={`my-6 mt-10 flex flex-row text-[22px] xs:text-[16px] ss:text-[16px] xs:flex-col font-bold font-inter `}
                         >
                             <motion.button
-                                animate={mainControls}
+                                whileInView="show"
                                 initial="hidden"
-                                transition={{
-                                    duration: 0.5,
-                                    delay: 0.25,
-                                }}
-                                variants={{
-                                    hidden: {
-                                        opacity: 0,
-                                        y: 75,
-                                    },
-                                    show: {
-                                        opacity: 1,
-                                        y: 0,
-                                    },
-                                }}
+                                variants={navVariants}
+                                // animate={mainControls}
+                                // initial="hidden"
+                                // transition={{
+                                //     duration: 0.5,
+                                //     delay: 0.25,
+                                // }}
+                                // variants={{
+                                //     hidden: {
+                                //         opacity: 0,
+                                //         y: 75,
+                                //     },
+                                //     show: {
+                                //         opacity: 1,
+                                //         y: 0,
+                                //     },
+                                // }}
                                 className="home-partner-3 home-head-3-12 w-[277px] h-[79px] xs:w-[160px] xs:h-[48px]  ss:w-[160px] ss:h-[48px]  rounded-[8px]"
                             >
                                 Early Access
                             </motion.button>
                             <motion.button
-                                animate={mainControls}
+                                whileInView="show"
                                 initial="hidden"
-                                transition={{
-                                    duration: 0.5,
-                                    delay: 0.25,
-                                }}
-                                variants={{
-                                    hidden: {
-                                        opacity: 0,
-                                        y: 75,
-                                    },
-                                    show: {
-                                        opacity: 1,
-                                        y: 0,
-                                    },
-                                }}
+                                variants={navVariants}
                                 className="home-partner-3 home-head-3-12 w-[277px] h-[79px] xs:w-[160px] xs:h-[48px]  ss:w-[160px] ss:h-[48px]  rounded-[8px] xs:ml-0 xs:mt-4 ml-12"
                             >
                                 Refer & Win
@@ -215,22 +205,9 @@ function Home() {
                     </div>
                     <div style={{ width: "100%", textAlign: "center" }} className="mt-5">
                         <motion.button
-                            animate={mainControls}
+                            whileInView="show"
                             initial="hidden"
-                            transition={{
-                                duration: 0.5,
-                                delay: 0.25,
-                            }}
-                            variants={{
-                                hidden: {
-                                    opacity: 0,
-                                    y: 75,
-                                },
-                                show: {
-                                    opacity: 1,
-                                    y: 0,
-                                },
-                            }}
+                            variants={navVariants}
                             className="home-partner-3 home-head-3-12 w-[325px] h-[78px] xs:w-[160px] xs:h-[48px]  rounded-[9px] text-[22px] xs:text-[16px] ss:text-[16px] font-inter "
                             onClick={handleVideo}
                         >
@@ -253,22 +230,9 @@ function Home() {
                         </div>
                         <div className="">
                             <motion.img
-                                animate={mainControls}
+                                whileInView="show"
                                 initial="hidden"
-                                transition={{
-                                    duration: 0.5,
-                                    delay: 0.25,
-                                }}
-                                variants={{
-                                    hidden: {
-                                        opacity: 0,
-                                        y: 75,
-                                    },
-                                    show: {
-                                        opacity: 1,
-                                        y: 0,
-                                    },
-                                }}
+                                variants={navVariants}
                                 className="w-full h-full top-0 relative z-[1] -rotate-3    "
                                 src={Ipad_Mini1}
                                 alt="partner-4"
@@ -278,22 +242,9 @@ function Home() {
                     <div className="home-partner-5 flex xs:flex-col  md:justify-between ss:flex-col sm:flex-col md:flex-col xs:px-10 ss:px-14 sm:px-16 md:px-20 px-32">
                         <div className=" xs:hidden ss:hidden sm:hidden md:hidden">
                             <motion.img
-                                animate={mainControls}
+                                whileInView="show"
                                 initial="hidden"
-                                transition={{
-                                    duration: 0.5,
-                                    delay: 0.25,
-                                }}
-                                variants={{
-                                    hidden: {
-                                        opacity: 0,
-                                        y: 75,
-                                    },
-                                    show: {
-                                        opacity: 1,
-                                        y: 0,
-                                    },
-                                }}
+                                variants={navVariants}
                                 className="home-partner-4-1 w-full h-full"
                                 src={Ipad_Mini}
                                 alt="partner-5"
@@ -324,22 +275,9 @@ function Home() {
                         <div className=" flex justify-center items-center xs:flex-col ">
                             <div style={{ marginRight: "1.5vw" }}>
                                 <motion.div
-                                    animate={mainControls}
+                                    whileInView="show"
                                     initial="hidden"
-                                    transition={{
-                                        duration: 0.5,
-                                        delay: 0.25,
-                                    }}
-                                    variants={{
-                                        hidden: {
-                                            opacity: 0,
-                                            y: 75,
-                                        },
-                                        show: {
-                                            opacity: 1,
-                                            y: 0,
-                                        },
-                                    }}
+                                    variants={navVariants}
                                     className="home-floor-1-1 w-[180px] h-[180px] mb-6"
                                 >
                                     <div className="home-floor-1-2 xs:text-[30px] font-roboto">
@@ -348,22 +286,9 @@ function Home() {
                                     <div className="home-floor-1-3 xs:text-[20px]">Supported</div>
                                 </motion.div>
                                 <motion.div
-                                    animate={mainControls}
+                                    whileInView="show"
                                     initial="hidden"
-                                    transition={{
-                                        duration: 0.5,
-                                        delay: 0.25,
-                                    }}
-                                    variants={{
-                                        hidden: {
-                                            opacity: 0,
-                                            y: 75,
-                                        },
-                                        show: {
-                                            opacity: 1,
-                                            y: 0,
-                                        },
-                                    }}
+                                    variants={navVariants}
                                     className="home-floor-1-1 w-[180px] h-[180px] mb-6"
                                 >
                                     <div className="home-floor-1-2 xs:text-[30px] font-roboto">
@@ -376,22 +301,9 @@ function Home() {
                             </div>
                             <div ref={ref}>
                                 <motion.div
-                                    animate={mainControls}
+                                    whileInView="show"
                                     initial="hidden"
-                                    transition={{
-                                        duration: 0.5,
-                                        delay: 0.25,
-                                    }}
-                                    variants={{
-                                        hidden: {
-                                            opacity: 0,
-                                            y: 75,
-                                        },
-                                        show: {
-                                            opacity: 1,
-                                            y: 0,
-                                        },
-                                    }}
+                                    variants={navVariants}
                                     className="home-floor-1-1 w-[180px] h-[180px] mb-6"
                                     style={{ marginTop: "0" }}
                                 >
@@ -403,22 +315,9 @@ function Home() {
                                     </div>
                                 </motion.div>
                                 <motion.div
-                                    animate={mainControls}
+                                    whileInView="show"
                                     initial="hidden"
-                                    transition={{
-                                        duration: 0.5,
-                                        delay: 0.5,
-                                    }}
-                                    variants={{
-                                        hidden: {
-                                            opacity: 0,
-                                            y: 75,
-                                        },
-                                        show: {
-                                            opacity: 1,
-                                            y: 0,
-                                        },
-                                    }}
+                                    variants={navVariants}
                                     className="home-floor-1-1 w-[180px] h-[180px] mb-6"
                                 >
                                     <div className="home-floor-1-2 xs:text-[30px] font-roboto">
@@ -429,7 +328,7 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className=" xs:hidden ss:hidden sm:hidden md:hidden flex flex-row justify-between overflow-hidden relative h-[691px] xs:h-[700px] ss:h-[350px] w-[695px] xs:w-full ss:w-full border-white border-[4px] rounded-[2vh]">
+                        <div className=" xs:hidden ss:hidden sm:hidden md:hidden flex flex-row justify-between overflow-hidden relative h-[630px] xs:h-[700px] ss:h-[350px] w-[695px] xs:w-full ss:w-full border-white border-[4px] rounded-[2vh]">
                             {/* --------------------------first column--------------------------- */}
 
                             <Marquee
@@ -886,14 +785,17 @@ function Home() {
                                 className="absolute xs:top-80 ss:top-80  top-96     "
                             />
                         </div>
-                        <div className="home-browsing-5 flex flex-col xs:text-center xs:items-center xs:justify-center ss:text-center ss:items-center ss:justify-center  sm:text-center sm:items-center sm:justify-center md:text-center md:items-center md:justify-center  ">
-                            <div className="feature-browsing-5-1 font-spaceGrotesk ">
-                                Stay Updated with Latest
-                            </div>
-                            <div className="feature-browsing-5-2 font-roboto">
-                                Get Your Newsletter
-                            </div>
-                            {/* <div className="home-browsing-6 flex justify-between  items-center  ml-[62vw] xs:ml-0 ss:ml-0 sm:ml-0 md:ml-0   font-spaceGrotesk">
+                        <div className="home-browsing-5 flex flex-row justify-between items-center">
+                            <div className="basis-[50%] xs:hidden ss:hidden sm:hidden md:hidden"></div>
+
+                            <div className="lg:basis-[50%] xl:basis-[50%] basis-[100%]  flex flex-col justify-end items-end xs:text-center xs:items-center xs:justify-center ss:text-center ss:items-center ss:justify-center  sm:text-center sm:items-center sm:justify-center md:text-center md:items-center md:justify-center  ">
+                                <div className="feature-browsing-5-1 font-spaceGrotesk ">
+                                    Stay Updated with Latest
+                                </div>
+                                <div className="feature-browsing-5-2 font-roboto">
+                                    Get Your Newsletter
+                                </div>
+                                {/* <div className="home-browsing-6 flex justify-between  items-center  ml-[62vw] xs:ml-0 ss:ml-0 sm:ml-0 md:ml-0   font-spaceGrotesk">
                                 <div
                                     className="home-browsing-6-1 "
                                     style={{ cursor: "pointer" }}
@@ -911,24 +813,25 @@ function Home() {
                                     placeholder="Enter Your Email"
                                 />
                             </div> */}
-                            <div className="feature-browsing-6 flex justify-center items-center ml-[62vw] xs:ml-0 ss:ml-0 sm:ml-0 md:ml-0 w-[300px] h-[60px] ss:w-[400px] ss:h-[70px] sm:w-[434px] sm:h-[80px] md:w-[534px] md:h-[90px]   lg:w-[534px] lg:h-[90px] xl:w-[534px] xl:h-[90px]">
-                                <div
-                                    className="feature-browsing-6-1 lg:ml-10 xl:ml-10 ml-0 xs:text-[20px] ss:text-[24px] sm:text-[28px] md:text-[34px]"
-                                    onClick={() => {
-                                        subscribe(mail2);
-                                    }}
-                                >
-                                    &lt;
+                                <div className="feature-browsing-6 flex justify-center  items-center w-[300px] h-[60px] ss:w-[400px] ss:h-[70px] sm:w-[434px] sm:h-[80px] md:w-[534px] md:h-[90px]   lg:w-fit lg:h-[90px] xl:w-[730px] xl:h-[90px]">
+                                    <div
+                                        className="text-[40px] text-white xs:text-[20px] ss:text-[24px] sm:text-[28px] md:text-[34px]"
+                                        onClick={() => {
+                                            subscribe(mail2);
+                                        }}
+                                    >
+                                        &lt;
+                                    </div>
+                                    <input
+                                        type="text"
+                                        value={mail2}
+                                        onChange={event => {
+                                            setMail2(event.target.value);
+                                        }}
+                                        className="feature-browsing-6-2 xs:text-[16px] font-spaceGrotesk"
+                                        placeholder="Enter Your Email"
+                                    />
                                 </div>
-                                <input
-                                    type="text"
-                                    value={mail2}
-                                    onChange={event => {
-                                        setMail2(event.target.value);
-                                    }}
-                                    className="feature-browsing-6-2 xs:text-[16px] font-spaceGrotesk"
-                                    placeholder="Enter Your Email"
-                                />
                             </div>
                         </div>
                     </div>
