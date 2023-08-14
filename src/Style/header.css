@@ -13,9 +13,9 @@
     .navi {
         justify-content: space-between;
     }
-    .right div {
+    /* .right div {
         padding: 4px 7px !important;
-    }
+    } */
 }
 .dropdown-menu.show {
     background-color: #1b1b1b;

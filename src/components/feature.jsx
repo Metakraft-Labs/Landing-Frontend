@@ -73,7 +73,7 @@ function Feature() {
                     <div className=" font-encodeSans  text-[80px]  sm:text-[70px] ss:text-[65px] xs:text-[45px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px]  xs:mb-6 font-bold text-[#E3E3E3]">
                         Get Started for Free
                     </div>
-                    <div className=" font-spaceGrotesk py-6 xs:pt-0 text-[24px]">
+                    <div className=" font-spaceGrotesk py-2 xs:pt-0 text-[24px]">
                         Build better metaverses effortlessly! For Your Client, Business or{" "}
                         <br className="xs:hidden ss:hidden sm:hidden md:hidden" />
                         Employee Onboarding.

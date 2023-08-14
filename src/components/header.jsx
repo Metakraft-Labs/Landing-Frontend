@@ -91,7 +91,7 @@ function Header() {
                     right: "0",
                     // backgroundColor: "rgba(8,8,8,0.7)",
                     borderBottom: "1px solid #1e262e",
-                    height: "100px",
+                    // height: "100px",
                 }}
             >
                 <div
@@ -113,7 +113,7 @@ function Header() {
                         paddingBottom: "6px",
                     }}
                 ></div>
-                <div className="navi w-full flex flex-row px-10 md:px-8 xs:px-5 py-[38px] justify-between items-center ">
+                <div className="navi w-full flex flex-row px-10 md:px-8 xs:px-5 justify-between items-center ">
                     <img
                         // style={{ marginTop: "0.5vw", height: "2.5vw", cursor: "pointer" }}
                         src={aiverselogo}
@@ -158,7 +158,6 @@ function Header() {
                                     <ArrowDropDownIcon fontSize="medium" />
                                 </div>
                             )}
-
                             <div
                                 className={`${
                                     click ? "flex" : "hidden"
@@ -222,7 +221,7 @@ function Header() {
                         className="rightHeader font-epilogue"
                     >
                         <button
-                            className="  text-[14px] md:text-[12px] w-[280px] md:w-[150px] lg:w-[150px] h-[60px] rounded-[2px] xs:hidden ss:hidden  sm:hidden hover:bg-[#1b1a1a] ease-in-out duration-300"
+                            className="  text-[14px] md:text-[12px] w-[280px] md:w-[150px] lg:w-[150px] rounded-[2px] py-2 my-1 mb-3 xs:hidden ss:hidden  sm:hidden hover:bg-[#1b1a1a] ease-in-out duration-300"
                             style={{
                                 border: "1px solid #01C5BA",
                                 fontWeight: "500",
@@ -241,7 +240,7 @@ function Header() {
                             onClick={() =>
                                 wallet ? disconnectWalletHandler() : connectWalletHandler()
                             }
-                            className="bg-white text-black text-[14px]  md:text-[12px]  w-[280px] md:w-[150px] lg:w-[150px] h-[60px] rounded-[2px] xs:hidden ss:hidden  sm:hidden hover:bg-[#e2e1e1] ease-in-out duration-300"
+                            className="bg-white text-black text-[14px]  md:text-[12px]  w-[280px] md:w-[150px] lg:w-[150px] rounded-[2px] py-2 my-1 mb-3  xs:hidden ss:hidden  sm:hidden hover:bg-[#e2e1e1] ease-in-out duration-300"
                             style={{
                                 border: "1px solid #01C5BA",
 

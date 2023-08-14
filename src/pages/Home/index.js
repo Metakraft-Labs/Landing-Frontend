@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import React, { useRef, useState } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 import Animate from "../../Assets/Animated.mp4";
@@ -13,6 +13,7 @@ import Ipad_Mini from "../../Assets/iPad Mini.svg";
 import Ipad_Mini1 from "../../Assets/iPad_Mini.svg";
 import metakraft from "../../Assets/metakraft.png";
 import Solana from "../../Assets/solana.png";
+import "../../Style/feature.css";
 import "../../Style/home.css";
 import { slider1 } from "../../data";
 import Title from "../../shared/Title";
@@ -26,6 +27,18 @@ function Home() {
     //     slidesToShow: 1,
     //     slidesToScroll: 1,
     // };
+
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
+    const mainControls = useAnimation();
+
+    useEffect(() => {
+        if (isInView) {
+            // fire animation
+            mainControls.start("show");
+        }
+    }, [isInView]);
 
     // const { token } = useContext(AppStore);
     const [news, setNews] = useState("");
@@ -42,6 +55,7 @@ function Home() {
         }
     };
 
+    const [mail2, setMail2] = useState("");
     const subscribe = async () => {
         const crudresponse = await fetch("https://blog.metakraft.live/api/newsletter/subscribe", {
             method: "POST",
@@ -89,20 +103,47 @@ function Home() {
                             </p>
                         </div>
                         <div
+                            ref={ref}
                             className={`my-6 mt-10 flex flex-row text-[22px] xs:text-[16px] ss:text-[16px] xs:flex-col font-bold font-inter `}
                         >
                             <motion.button
-                                whileInView="show"
+                                animate={mainControls}
                                 initial="hidden"
-                                variants={navVariants}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: 0.25,
+                                }}
+                                variants={{
+                                    hidden: {
+                                        opacity: 0,
+                                        y: 75,
+                                    },
+                                    show: {
+                                        opacity: 1,
+                                        y: 0,
+                                    },
+                                }}
                                 className="home-partner-3 home-head-3-12 w-[277px] h-[79px] xs:w-[160px] xs:h-[48px]  ss:w-[160px] ss:h-[48px]  rounded-[8px]"
                             >
                                 Early Access
                             </motion.button>
                             <motion.button
-                                whileInView="show"
+                                animate={mainControls}
                                 initial="hidden"
-                                variants={navVariants}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: 0.25,
+                                }}
+                                variants={{
+                                    hidden: {
+                                        opacity: 0,
+                                        y: 75,
+                                    },
+                                    show: {
+                                        opacity: 1,
+                                        y: 0,
+                                    },
+                                }}
                                 className="home-partner-3 home-head-3-12 w-[277px] h-[79px] xs:w-[160px] xs:h-[48px]  ss:w-[160px] ss:h-[48px]  rounded-[8px] xs:ml-0 xs:mt-4 ml-12"
                             >
                                 Refer & Win
@@ -114,7 +155,7 @@ function Home() {
                 <div className="punc2">#</div>
                 <div className="punc3">$</div>
 
-                <div className="home-live flex justify-center items-center h-[57px]">
+                <div className="home-live py-6 flex justify-center items-center">
                     <div className="home-live-gradient ">
                         <img
                             className="home-live-1 h-[42px] w-[44px]"
@@ -174,9 +215,22 @@ function Home() {
                     </div>
                     <div style={{ width: "100%", textAlign: "center" }} className="mt-5">
                         <motion.button
-                            whileInView="show"
+                            animate={mainControls}
                             initial="hidden"
-                            variants={navVariants}
+                            transition={{
+                                duration: 0.5,
+                                delay: 0.25,
+                            }}
+                            variants={{
+                                hidden: {
+                                    opacity: 0,
+                                    y: 75,
+                                },
+                                show: {
+                                    opacity: 1,
+                                    y: 0,
+                                },
+                            }}
                             className="home-partner-3 home-head-3-12 w-[325px] h-[78px] xs:w-[160px] xs:h-[48px]  rounded-[9px] text-[22px] xs:text-[16px] ss:text-[16px] font-inter "
                             onClick={handleVideo}
                         >
@@ -199,9 +253,22 @@ function Home() {
                         </div>
                         <div className="">
                             <motion.img
-                                whileInView="show"
+                                animate={mainControls}
                                 initial="hidden"
-                                variants={navVariants}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: 0.25,
+                                }}
+                                variants={{
+                                    hidden: {
+                                        opacity: 0,
+                                        y: 75,
+                                    },
+                                    show: {
+                                        opacity: 1,
+                                        y: 0,
+                                    },
+                                }}
                                 className="w-full h-full top-0 relative z-[1] -rotate-3    "
                                 src={Ipad_Mini1}
                                 alt="partner-4"
@@ -211,9 +278,22 @@ function Home() {
                     <div className="home-partner-5 flex xs:flex-col  md:justify-between ss:flex-col sm:flex-col md:flex-col xs:px-10 ss:px-14 sm:px-16 md:px-20 px-32">
                         <div className=" xs:hidden ss:hidden sm:hidden md:hidden">
                             <motion.img
-                                whileInView="show"
+                                animate={mainControls}
                                 initial="hidden"
-                                variants={navVariants}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: 0.25,
+                                }}
+                                variants={{
+                                    hidden: {
+                                        opacity: 0,
+                                        y: 75,
+                                    },
+                                    show: {
+                                        opacity: 1,
+                                        y: 0,
+                                    },
+                                }}
                                 className="home-partner-4-1 w-full h-full"
                                 src={Ipad_Mini}
                                 alt="partner-5"
@@ -244,9 +324,22 @@ function Home() {
                         <div className=" flex justify-center items-center xs:flex-col ">
                             <div style={{ marginRight: "1.5vw" }}>
                                 <motion.div
-                                    whileInView="show"
+                                    animate={mainControls}
                                     initial="hidden"
-                                    variants={navVariants}
+                                    transition={{
+                                        duration: 0.5,
+                                        delay: 0.25,
+                                    }}
+                                    variants={{
+                                        hidden: {
+                                            opacity: 0,
+                                            y: 75,
+                                        },
+                                        show: {
+                                            opacity: 1,
+                                            y: 0,
+                                        },
+                                    }}
                                     className="home-floor-1-1 w-[180px] h-[180px] mb-6"
                                 >
                                     <div className="home-floor-1-2 xs:text-[30px] font-roboto">
@@ -255,9 +348,22 @@ function Home() {
                                     <div className="home-floor-1-3 xs:text-[20px]">Supported</div>
                                 </motion.div>
                                 <motion.div
-                                    whileInView="show"
+                                    animate={mainControls}
                                     initial="hidden"
-                                    variants={navVariants}
+                                    transition={{
+                                        duration: 0.5,
+                                        delay: 0.25,
+                                    }}
+                                    variants={{
+                                        hidden: {
+                                            opacity: 0,
+                                            y: 75,
+                                        },
+                                        show: {
+                                            opacity: 1,
+                                            y: 0,
+                                        },
+                                    }}
                                     className="home-floor-1-1 w-[180px] h-[180px] mb-6"
                                 >
                                     <div className="home-floor-1-2 xs:text-[30px] font-roboto">
@@ -268,11 +374,24 @@ function Home() {
                                     </div>
                                 </motion.div>
                             </div>
-                            <div>
+                            <div ref={ref}>
                                 <motion.div
-                                    whileInView="show"
+                                    animate={mainControls}
                                     initial="hidden"
-                                    variants={navVariants}
+                                    transition={{
+                                        duration: 0.5,
+                                        delay: 0.25,
+                                    }}
+                                    variants={{
+                                        hidden: {
+                                            opacity: 0,
+                                            y: 75,
+                                        },
+                                        show: {
+                                            opacity: 1,
+                                            y: 0,
+                                        },
+                                    }}
                                     className="home-floor-1-1 w-[180px] h-[180px] mb-6"
                                     style={{ marginTop: "0" }}
                                 >
@@ -284,9 +403,22 @@ function Home() {
                                     </div>
                                 </motion.div>
                                 <motion.div
-                                    whileInView="show"
+                                    animate={mainControls}
                                     initial="hidden"
-                                    variants={navVariants}
+                                    transition={{
+                                        duration: 0.5,
+                                        delay: 0.5,
+                                    }}
+                                    variants={{
+                                        hidden: {
+                                            opacity: 0,
+                                            y: 75,
+                                        },
+                                        show: {
+                                            opacity: 1,
+                                            y: 0,
+                                        },
+                                    }}
                                     className="home-floor-1-1 w-[180px] h-[180px] mb-6"
                                 >
                                     <div className="home-floor-1-2 xs:text-[30px] font-roboto">
@@ -430,7 +562,7 @@ function Home() {
                                 }}
                             >
                                 <div className=" flex flex-col p-4 w-[306px] mr-4   rounded-[23px] bg-white">
-                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                    <div className="gradient1 h-[150px] w-full rounded-[15.2px]">
                                         first
                                     </div>
                                     <div className="flex flex-row my-4">
@@ -440,7 +572,7 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className=" flex flex-col p-4 w-[306px]  mr-4   rounded-[23px] bg-white">
-                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                    <div className="gradient1 h-[150px] w-full rounded-[15.2px]">
                                         second
                                     </div>
                                     <div className="flex flex-row my-4">
@@ -450,7 +582,7 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className=" flex flex-col p-4 w-[306px] mr-4  rounded-[23px] bg-white">
-                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                    <div className="gradient1 h-[150px] w-full rounded-[15.2px]">
                                         third
                                     </div>
                                     <div className="flex flex-row my-4">
@@ -469,7 +601,7 @@ function Home() {
                                 }}
                             >
                                 <div className=" flex flex-col p-4 w-[306px] mr-4   rounded-[23px] bg-white">
-                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                    <div className="gradient1 h-[150px] w-full rounded-[15.2px]">
                                         first
                                     </div>
                                     <div className="flex flex-row my-4">
@@ -479,7 +611,7 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className=" flex flex-col p-4 w-[306px]  mr-4   rounded-[23px] bg-white">
-                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                    <div className="gradient1 h-[150px] w-full rounded-[15.2px]">
                                         second
                                     </div>
                                     <div className="flex flex-row my-4">
@@ -489,7 +621,7 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className=" flex flex-col p-4 w-[306px] mr-4  rounded-[23px] bg-white">
-                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                    <div className="gradient1 h-[150px] w-full rounded-[15.2px]">
                                         third
                                     </div>
                                     <div className="flex flex-row my-4">
@@ -506,7 +638,7 @@ function Home() {
                                 }}
                             >
                                 <div className=" flex flex-col p-4 w-[306px] mr-4   rounded-[23px] bg-white">
-                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                    <div className="gradient1 h-[150px] w-full rounded-[15.2px]">
                                         first
                                     </div>
                                     <div className="flex flex-row my-4">
@@ -516,7 +648,7 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className=" flex flex-col p-4 w-[306px]  mr-4   rounded-[23px] bg-white">
-                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                    <div className="gradient1 h-[150px] w-full rounded-[15.2px]">
                                         second
                                     </div>
                                     <div className="flex flex-row my-4">
@@ -526,7 +658,7 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className=" flex flex-col p-4 w-[306px] mr-4  rounded-[23px] bg-white">
-                                    <div className="gradient1 h-[206px] w-full rounded-[15.2px]">
+                                    <div className="gradient1 h-[150px] w-full rounded-[15.2px]">
                                         third
                                     </div>
                                     <div className="flex flex-row my-4">
@@ -732,7 +864,7 @@ function Home() {
                         <div className="xs:mx-10 ss:mx-14 sm:mx-16 md:mx-20 xs:pt-6 leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] text-transparent bg-clip-text bg-gradient-to-r from-[#6c6a6a] to-[#ffffff] text-[80px]  sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6  font-epilogue">
                             Go Beyond Browsing
                         </div>
-                        <div className="xs:mx-10 ss:mx-14 home-browsing-2 xs:text-[16px] py-6  xs:py-2 font-sora">
+                        <div className="xs:mx-10 ss:mx-14 home-browsing-2 xs:text-[16px] pt-0 pb-6  xs:py-2 font-sora">
                             <div>
                                 Create new door of experience for your Friends, Fans &{" "}
                                 <br className="xs:hidden ss:hidden" />
@@ -755,13 +887,13 @@ function Home() {
                             />
                         </div>
                         <div className="home-browsing-5 flex flex-col xs:text-center xs:items-center xs:justify-center ss:text-center ss:items-center ss:justify-center  sm:text-center sm:items-center sm:justify-center md:text-center md:items-center md:justify-center  ">
-                            <div className="home-browsing-5-1 xs:text-[16px] ss:text-[20px] font-spaceGrotesk">
+                            <div className="feature-browsing-5-1 font-spaceGrotesk ">
                                 Stay Updated with Latest
                             </div>
-                            <div className="home-browsing-5-2 xs:text-[30px] ss:text-[32px] font-roboto">
+                            <div className="feature-browsing-5-2 font-roboto">
                                 Get Your Newsletter
                             </div>
-                            <div className="home-browsing-6 flex justify-between  items-center  ml-[62vw] xs:ml-0 ss:ml-0 sm:ml-0 md:ml-0   font-spaceGrotesk">
+                            {/* <div className="home-browsing-6 flex justify-between  items-center  ml-[62vw] xs:ml-0 ss:ml-0 sm:ml-0 md:ml-0   font-spaceGrotesk">
                                 <div
                                     className="home-browsing-6-1 "
                                     style={{ cursor: "pointer" }}
@@ -775,7 +907,26 @@ function Home() {
                                     onChange={event => {
                                         setNews(event.target.value);
                                     }}
-                                    className="home-browsing-6-2 bg-black w-full px-6"
+                                    className="home-browsing-6-2 bg-black w-full px-6 "
+                                    placeholder="Enter Your Email"
+                                />
+                            </div> */}
+                            <div className="feature-browsing-6 flex justify-center items-center ml-[62vw] xs:ml-0 ss:ml-0 sm:ml-0 md:ml-0 w-[300px] h-[60px] ss:w-[400px] ss:h-[70px] sm:w-[434px] sm:h-[80px] md:w-[534px] md:h-[90px]   lg:w-[534px] lg:h-[90px] xl:w-[534px] xl:h-[90px]">
+                                <div
+                                    className="feature-browsing-6-1 lg:ml-10 xl:ml-10 ml-0 xs:text-[20px] ss:text-[24px] sm:text-[28px] md:text-[34px]"
+                                    onClick={() => {
+                                        subscribe(mail2);
+                                    }}
+                                >
+                                    &lt;
+                                </div>
+                                <input
+                                    type="text"
+                                    value={mail2}
+                                    onChange={event => {
+                                        setMail2(event.target.value);
+                                    }}
+                                    className="feature-browsing-6-2 xs:text-[16px] font-spaceGrotesk"
                                     placeholder="Enter Your Email"
                                 />
                             </div>

@@ -12,9 +12,7 @@ import contact5 from "../../Assets/contact5.png";
 import e1 from "../../Assets/e1.png";
 import e2 from "../../Assets/e2.png";
 import e3 from "../../Assets/e3.png";
-import { navVariants } from "../../utils/motion";
 
-import { motion } from "framer-motion";
 import Title from "../../shared/Title";
 
 function Contact() {
@@ -24,20 +22,20 @@ function Contact() {
             <div className="contact  ">
                 <div className="mt-32 flex xs:text-center ss:text-center sm:text-center  justify-between items-center border-b-[1px] border-[#393556] xs:flex-col ss:flex-col sm:flex-col xs:py-12 ss:py-12 sm:py-12 xl:px-44 px-32 sm:px-16 ss:px-14 xs:px-10">
                     <div className="contactHeadingFirst xs:border-r-0 ss:border-r-0 sm:border-r-0  border-r-[1px] border-[#393556]  ">
-                        <div className="text-[#D0DBFF]  xs:pb-12  pr-60 xs:pr-0 ss:pr-0 sm:pr-0 font-encodeSans font-black leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] text-[80px] sm:text-[70px] ss:text-[60px] xs:text-[50px]">
+                        <div className="text-[#D0DBFF]  xs:pb-6  pr-60 xs:pr-0 ss:pr-0 sm:pr-0 md:pr-16 lg:pr-32  font-encodeSans font-black leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] text-[75px] sm:text-[60px] ss:text-[50px] xs:text-[45px]">
                             WE&apos;D LOVE TO <br />
-                            <span className="contactFirstSecond  text-[128px] leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[70px]  sm:text-[85px] ss:text-[80px] xs:text-[70px]">
+                            <span className="contactFirstSecond  text-[128px] leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[65px] xs:leading-[70px]  sm:text-[85px] ss:text-[55px] xs:text-[50px]">
                                 Help
                             </span>
                         </div>
                     </div>
-                    <div className="contactHeadingSecond text-[64px]  ss:text-[55px] xs:text-[45px] pl-20 xs:pl-0 ss:pl-0 sm:pl-0 basis-[20%] font-bold font-epilogue text-white">
+                    <div className="contactHeadingSecond text-[64px]  ss:text-[45px] xs:text-[35px] pl-20 xs:pl-0 ss:pl-0 sm:pl-0 basis-[20%] font-bold font-epilogue text-white">
                         Get in touch
                     </div>
                 </div>
 
-                <div className="flex justify-between h-[400px] xs:flex-col ss:flex-col sm:flex-col  items-center xl:px-44 px-32 sm:px-32   ss:px-14 xs:px-10 mt-28">
-                    <div className="border-[1px] border-[#BAB0FF] rounded-[23px] h-full p-12 md:p-8 xs:p-7 xs:w-full ss:w-full sm:w-full flex flex-col justify-center items-center text-center xl:items-start xl:text-left lg:items-start lg:text-left ">
+                <div className="flex justify-between h-[400px] xs:flex-col ss:flex-col sm:flex-col  items-center xl:px-44 px-32 sm:px-32   ss:px-14 xs:px-10 mt-28 xs:mt-20">
+                    <div className="border-[1px] border-[#BAB0FF] rounded-[23px] h-full mx-2 xs:my-2 ss:my-2 sm:my-2 p-12 md:p-8 xs:p-7 xs:w-full ss:w-full sm:w-full flex flex-col justify-center items-center text-center xl:items-start xl:text-left lg:items-start lg:text-left ">
                         <div>
                             <svg
                                 width="4.9vw"
@@ -71,7 +69,7 @@ function Contact() {
                             Schedule Call
                         </button>
                     </div>
-                    <div className="border-[1px] border-[#BAB0FF] rounded-[23px] h-full p-12 md:p-8  xs:p-7 xs:w-full ss:w-full  sm:w-full flex flex-col justify-center items-center text-center  xl:items-start xl:text-left lg:items-start lg:text-left ">
+                    <div className="border-[1px] border-[#BAB0FF] rounded-[23px] h-full  mx-2 xs:my-2 ss:my-2 sm:my-2 p-12 md:p-8  xs:p-7 xs:w-full ss:w-full  sm:w-full flex flex-col justify-center items-center text-center  xl:items-start xl:text-left lg:items-start lg:text-left ">
                         <div>
                             <svg
                                 width="3.9vw"
@@ -100,7 +98,7 @@ function Contact() {
                             Send an Email
                         </button>
                     </div>
-                    <div className="border-[1px] border-[#BAB0FF] rounded-[23px] h-full p-12 md:p-8  xs:p-7 xs:w-full ss:w-full sm:w-full flex flex-col justify-center items-center text-center  xl:items-start xl:text-left  lg:items-start lg:text-left ">
+                    <div className="border-[1px] border-[#BAB0FF] rounded-[23px] h-full  mx-2 xs:my-2 ss:my-2 sm:my-2 p-12 md:p-8  xs:p-7 xs:w-full ss:w-full sm:w-full flex flex-col justify-center items-center text-center  xl:items-start xl:text-left  lg:items-start lg:text-left ">
                         <div>
                             <svg
                                 width="3.9vw"
@@ -133,7 +131,7 @@ function Contact() {
                     </div>
                 </div>
 
-                <div className="relative xl:my-96 lg:my-96 my-[500px]  md:my-[500px] xs:mt-[1300px]  xs:mb-[600px]  ss:mt-[1140px] sm:mt-[1200px] flex justify-center items-center xl:mx-44 mx-32 sm:mx-16 ss:mx-14 xs:mx-10  ">
+                <div className="relative xl:my-96 lg:my-96 my-[500px]  md:my-[500px] xs:mt-[1350px]  xs:mb-[600px]  ss:mt-[1140px] sm:mt-[1200px] flex justify-center items-center xl:mx-44 mx-32 sm:mx-16 ss:mx-14 xs:mx-10  ">
                     <div className="w-[278px] h-[304px] left-0  absolute z-[0] rotate-[-24deg] bg-[#AB4700] blur-[150px] rounded-[704px] "></div>
                     <div className="w-[440px] h-[278px] -right-96   absolute z-0 rotate-[-24deg] bg-[#2C00D9] blur-[200px] rounded-[300px] "></div>
                     <div className="w-[316px] h-[306px] -right-96 -top-2 absolute z-0 rotate-[27deg] bg-[#0FF] blur-[200px] rounded-[616px] "></div>
@@ -144,12 +142,7 @@ function Contact() {
                                 Join Our Community
                             </div>
                             <div className="font-encodeSans text-[80px] font-black text-[#D0DBFF] xs:hidden">
-                                <motion.div
-                                    whileInView="show"
-                                    initial="hidden"
-                                    variants={navVariants}
-                                    className="relative xl:-top-52 lg:-top-52 ss:top-0 top-0 -left-64 xs:-left-32 ss:-left-36 w-[100px] scale-105  hover:scale-125 duration-500     ease-in-out   "
-                                >
+                                <div className="relative xl:-top-52 lg:-top-52 ss:top-0 top-0 -left-64 xs:-left-32 ss:-left-36 w-[100px] scale-105  hover:scale-125 duration-500     ease-in-out   ">
                                     <img src={c1} alt="" className="absolute z-[1] left-2   " />
                                     <img
                                         src={e1}
@@ -161,13 +154,8 @@ function Contact() {
                                         alt=""
                                         className="absolute z-[1] left-5  w-[70px] top-[15px]   "
                                     />
-                                </motion.div>
-                                <motion.div
-                                    whileInView="show"
-                                    initial="hidden"
-                                    variants={navVariants}
-                                    className="relative xl:-top-44 lg:-top-44 ss:-top-6 xs:-top-6 top-0 xl:-left-20 lg:-left-20 ss:-left-20 -left-24  w-[100px] scale-105  hover:scale-125 duration-500 "
-                                >
+                                </div>
+                                <div className="relative xl:-top-44 lg:-top-44 ss:-top-6 xs:-top-6 top-0 xl:-left-20 lg:-left-20 ss:-left-20 -left-24  w-[100px] scale-105  hover:scale-125 duration-500 ">
                                     <img src={c2} alt="" className="absolute z-[1] left-20  " />
                                     <img
                                         src={e2}
@@ -179,13 +167,8 @@ function Contact() {
                                         alt=""
                                         className="absolute z-[1] left-[104px] top-6   "
                                     />
-                                </motion.div>
-                                <motion.div
-                                    whileInView="show"
-                                    initial="hidden"
-                                    variants={navVariants}
-                                    className="relative xl:-top-8 lg:-top-8 ss:top-36 xs:top-36  top-44 xl:right-48 ss:right-32 xs:right-32 right-48   w-[100px] scale-105  hover:scale-125 duration-500 "
-                                >
+                                </div>
+                                <div className="relative xl:-top-8 lg:-top-8 ss:top-36 xs:top-36  top-44 xl:right-48 ss:right-32 xs:right-32 right-48   w-[100px] scale-105  hover:scale-125 duration-500 ">
                                     <img src={c3} alt="" className="absolute z-[1] left-12  " />
                                     <img
                                         src={e3}
@@ -197,31 +180,20 @@ function Contact() {
                                         alt=""
                                         className="absolute z-[1] left-[70px] top-5  "
                                     />
-                                </motion.div>
-                                <motion.img
-                                    whileInView="show"
-                                    initial="hidden"
-                                    variants={navVariants}
+                                </div>
+                                <img
                                     src={contact4}
                                     alt=""
                                     className="absolute z-[1]  xl:top-96 lg:top-96 ss:top-[530px] xs:top-[530px]   top-[560px] right-64 ss:right-36 xs:right-36  xl:right-80 lg:right-80 scale-105  hover:scale-125 duration-500 "
                                 />
-                                <motion.img
-                                    whileInView="show"
-                                    initial="hidden"
-                                    variants={navVariants}
+                                <img
                                     src={contact5}
                                     alt=""
                                     className="absolute z-[1]  xl:top-96 lg:top-96 top-[400px] ss:right-20 right-24 xl:right-16 lg:right-16 scale-105  hover:scale-125 duration-500 "
                                 />
                             </div>
                             <div className="ss:hidden sm:hidden md:hidden lg:hidden xl:hidden">
-                                <motion.div
-                                    whileInView="show"
-                                    initial="hidden"
-                                    variants={navVariants}
-                                    className="relative w-[100px] -top-44   scale-105  hover:scale-125 duration-500     ease-in-out   "
-                                >
+                                <div className="relative w-[100px] -top-44   scale-105  hover:scale-125 duration-500     ease-in-out   ">
                                     <img src={c1} alt="" className="absolute z-[1] -top-16   " />
                                     <img
                                         src={e1}
@@ -233,13 +205,8 @@ function Contact() {
                                         alt=""
                                         className="absolute z-[1] left-4  w-[70px] -top-12   "
                                     />
-                                </motion.div>
-                                <motion.div
-                                    whileInView="show"
-                                    initial="hidden"
-                                    variants={navVariants}
-                                    className="relative w-[100px] -top-24 -left-20 scale-105  hover:scale-125 duration-500 "
-                                >
+                                </div>
+                                <div className="relative w-[100px] -top-24 -left-20 scale-105  hover:scale-125 duration-500 ">
                                     <img src={c2} alt="" className="absolute z-[1] left-20  " />
                                     <img
                                         src={e2}
@@ -251,13 +218,8 @@ function Contact() {
                                         alt=""
                                         className="absolute z-[1] left-[104px] top-6   "
                                     />
-                                </motion.div>
-                                <motion.div
-                                    whileInView="show"
-                                    initial="hidden"
-                                    variants={navVariants}
-                                    className="relative  w-[100px] top-12 -left-12 scale-105  hover:scale-125 duration-500 "
-                                >
+                                </div>
+                                <div className="relative  w-[100px] top-12 -left-12 scale-105  hover:scale-125 duration-500 ">
                                     <img src={c3} alt="" className="absolute z-[1] left-12  " />
                                     <img
                                         src={e3}
@@ -269,19 +231,13 @@ function Contact() {
                                         alt=""
                                         className="absolute z-[1] left-[70px] top-5  "
                                     />
-                                </motion.div>
-                                <motion.img
-                                    whileInView="show"
-                                    initial="hidden"
-                                    variants={navVariants}
+                                </div>
+                                <img
                                     src={contact4}
                                     alt=""
                                     className="absolute z-[1] top-[670px]  scale-105  hover:scale-125 duration-500 "
                                 />
-                                <motion.img
-                                    whileInView="show"
-                                    initial="hidden"
-                                    variants={navVariants}
+                                <img
                                     src={contact5}
                                     alt=""
                                     className="absolute z-[1] top-[840px] scale-105  hover:scale-125 duration-500 "

@@ -142,9 +142,10 @@
 .home-demo {
     width: 59.78vw;
     /* height: 38.24vw; */
-    border-radius: 2.08vw;
+    /* border-radius: 2.08vw;
     border: 1px solid #000;
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px); */
+
     text-align: center;
     margin: 2px auto;
     margin-top: 12vh;

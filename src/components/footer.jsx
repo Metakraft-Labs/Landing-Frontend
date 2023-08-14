@@ -16,25 +16,27 @@ function Footer() {
                 <div className="left xs:flex-wrap justify-center items-start basis-[30%] xs:items-center ss:items-center sm:items-center  p-2">
                     <div>
                         <img
-                            className="h-[60px] w-[153px]"
+                            className="h-[60px] w-[153px] ml-4"
                             src={aiverselogo}
                             onClick={() => navigate("/")}
                             alt="not found"
                         />
                     </div>
-                    <div className="pt-[4vh] xs:pt-3 text-[#E3E3E3] ">Copy @ 2023 Metakraft.</div>
-                    <div className="text-[#E3E3E3] ">All rights reserved.</div>
-                    <div className="pt-[4vh] xs:pt-4 ">
+                    <div className="pt-[4vh] xs:pt-3 ml-4 text-[#E3E3E3] ">
+                        Copy @ 2023 Metakraft.
+                    </div>
+                    <div className="text-[#E3E3E3] ml-4 ">All rights reserved.</div>
+                    <div className="pt-[4vh] xs:pt-4 relative ">
                         <img
                             src={MetaForum}
                             alt="image"
                             onClick={() => navigate("/")}
                             style={{ cursor: "pointer" }}
-                            className="w-[259px] xs:w-[180px] h-[72px] xs:h-[50px]"
+                            className="w-[259px] xs:w-[180px] h-[72px] xs:h-[50px] "
                         />
                     </div>
                 </div>
-                <div className=" xs:pt-8 ss:pt-7 basis-[60%] flex flex-row justify-evenly  items-start xs:flex-wrap ss:flex-wrap  xs:text-left p-2 ">
+                <div className=" xs:hidden ss:hidden sm:hidden xs:pt-8 ss:pt-7 basis-[60%] flex flex-row justify-evenly  items-start xs:flex-wrap ss:flex-wrap  xs:text-left p-2 ">
                     <div className="first">
                         <div className="text-[#E3E3E3] font-bold">Company</div>
                         <div
@@ -44,7 +46,19 @@ function Footer() {
                         >
                             About Us
                         </div>
-                        <div className="pt-[4vh] xs:pt-3">Branding Kit</div>
+                        <div
+                            className="pt-[4vh] xs:pt-3
+                        "
+                            style={{ cursor: "pointer" }}
+                            onClick={() =>
+                                window.open(
+                                    "https://www.figma.com/file/5ILVnFr6rmjXeWodocSgCU/Brand-Kit?type=design&node-id=0%3A1&mode=design&t=pREIregSrbE61Bdu-1",
+                                    "_blank",
+                                )
+                            }
+                        >
+                            Branding Kit
+                        </div>
                         <div
                             className="pt-[4vh] xs:pt-3"
                             style={{ cursor: "pointer" }}
@@ -71,7 +85,13 @@ function Footer() {
                         >
                             Newsletter
                         </div>
-                        <div className="pt-[4vh] xs:pt-3">How it works?</div>
+                        <div
+                            className="pt-[4vh] xs:pt-3"
+                            style={{ cursor: "pointer" }}
+                            onClick={() => navigate("/about")}
+                        >
+                            How it works?
+                        </div>
                     </div>
                     <div className="third mb-20">
                         <div className="text-[#E3E3E3] font-bold">Legal</div>
