@@ -1,7 +1,7 @@
 import coinbaseWalletModule from "@web3-onboard/coinbase";
 import injectedModule from "@web3-onboard/injected-wallets";
 import { Web3OnboardProvider, init } from "@web3-onboard/react";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -14,6 +14,8 @@ import AppStore from "./contexts/AppStore";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+
+import PulseLoader from "react-spinners/PulseLoader";
 
 const coinbaseWalletSdk = coinbaseWalletModule({ darkMode: true });
 const INFURA_KEY = "";
@@ -37,6 +39,14 @@ const web3Onboard = init({
 });
 
 function App() {
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+        }, 8000);
+    }, []);
+
     const [user, setUser] = useState(null);
     const [token, setToken] = useState(localStorage.getItem("token") || null);
     const [defaultAccount, setDefaultAccount] = useState(null);
@@ -48,15 +58,6 @@ function App() {
             setUser(res.data);
         }
     }, [token]);
-
-    // const resize = () => {
-    //     setSmallScreen(window.innerWidth / window.innerHeight < 1);
-    // };
-
-    // useState(() => {
-    //     window.addEventListener("resize", resize);
-    //     resize();
-    // }, []);
 
     useState(() => {
         getStatus();
@@ -75,75 +76,86 @@ function App() {
                     value={{ user, setUser, token, setToken, defaultAccount, setDefaultAccount }}
                 >
                     <div className={`App`}>
-                        <BrowserRouter>
-                            <Routes>
-                                <Route
-                                    exact
-                                    path="/explore"
-                                    element={
-                                        <>
-                                            <Explore />
-                                        </>
-                                    }
-                                />
-                                <Route
-                                    exact
-                                    path="/feature"
-                                    element={
-                                        <>
-                                            <Header />
-                                            <Feature />
-                                            <Footer />
-                                        </>
-                                    }
-                                />
-                                <Route
-                                    exact
-                                    path="/"
-                                    element={
-                                        <>
-                                            <Header />
-                                            <Home />
-                                            <Footer />
-                                        </>
-                                    }
-                                />
-                                <Route
-                                    exact
-                                    path="/about"
-                                    element={
-                                        <>
-                                            <Header />
-                                            <About />
-                                            <Footer />
-                                        </>
-                                    }
-                                />
-                                <Route
-                                    exact
-                                    path="/contact"
-                                    element={
-                                        <>
-                                            <Header />
-                                            <Contact />
-                                            <Footer />
-                                        </>
-                                    }
-                                />
-                            </Routes>
-                            <ToastContainer
-                                style={{ zIndex: 99 }}
-                                position="top-right"
-                                autoClose={5000}
-                                hideProgressBar={false}
-                                newestOnTop={false}
-                                closeOnClick
-                                rtl={false}
-                                pauseOnFocusLoss
-                                draggable
-                                pauseOnHover
+                        {loading ? (
+                            <PulseLoader
+                                color={"#b3d3e7"}
+                                loading={loading}
+                                size={20}
+                                className=" text-center py-[20%] xs:py-[70%] ss:py-[50%]    bg-black w-full h-screen"
                             />
-                        </BrowserRouter>
+                        ) : (
+                            <>
+                                <BrowserRouter>
+                                    <Routes>
+                                        <Route
+                                            exact
+                                            path="/explore"
+                                            element={
+                                                <>
+                                                    <Explore />
+                                                </>
+                                            }
+                                        />
+                                        <Route
+                                            exact
+                                            path="/feature"
+                                            element={
+                                                <>
+                                                    <Header />
+                                                    <Feature />
+                                                    <Footer />
+                                                </>
+                                            }
+                                        />
+                                        <Route
+                                            exact
+                                            path="/"
+                                            element={
+                                                <>
+                                                    <Header />
+                                                    <Home />
+                                                    <Footer />
+                                                </>
+                                            }
+                                        />
+                                        <Route
+                                            exact
+                                            path="/about"
+                                            element={
+                                                <>
+                                                    <Header />
+                                                    <About />
+                                                    <Footer />
+                                                </>
+                                            }
+                                        />
+                                        <Route
+                                            exact
+                                            path="/contact"
+                                            element={
+                                                <>
+                                                    <Header />
+                                                    <Contact />
+                                                    <Footer />
+                                                </>
+                                            }
+                                        />
+                                    </Routes>
+                                    <ToastContainer
+                                        style={{ zIndex: 99 }}
+                                        position="top-right"
+                                        autoClose={5000}
+                                        hideProgressBar={false}
+                                        newestOnTop={false}
+                                        closeOnClick
+                                        rtl={false}
+                                        pauseOnFocusLoss
+                                        draggable
+                                        pauseOnHover
+                                    />
+                                </BrowserRouter>
+                            </>
+                        )}
                     </div>
                 </AppStore.Provider>
             </Web3OnboardProvider>

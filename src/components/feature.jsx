@@ -35,16 +35,7 @@ function Feature() {
             event.target.classList.add("feature-hover");
         }, 2000);
     };
-    // const settings = {
-    //     dots: false,
-    //     infinite: true, // Enable infinite loop
-    //     speed: 2000,
-    //     slidesToShow: 1, // Number of slides to show at once
-    //     slidesToScroll: 1,
-    //     autoplay: true,
-    //     autoplaySpeed: 2000,
-    //     arrows: false,
-    // };
+
     return (
         <div className=" bg-black w-full overflow-hidden   ">
             <img className="feature-shadow" src={Shadow} alt="image" />

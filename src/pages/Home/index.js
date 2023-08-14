@@ -2,7 +2,6 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
-import Animate from "../../Assets/Animated.mp4";
 import disney from "../../Assets/feedback/disney.svg";
 import mani from "../../Assets/feedback/mani.svg";
 import nandit from "../../Assets/feedback/nandit.svg";
@@ -19,6 +18,8 @@ import { slider1 } from "../../data";
 import Title from "../../shared/Title";
 import { navVariants } from "../../utils/motion";
 
+// import ClipLoader from "react-spinners/ClipLoader";
+
 function Home() {
     // const settings = {
     //     dots: true,
@@ -27,6 +28,14 @@ function Home() {
     //     slidesToShow: 1,
     //     slidesToScroll: 1,
     // };
+
+    // const [loading, setLoading] = useState(false);
+    // useEffect(() => {
+    //     setLoading(true);
+    //     setTimeout(() => {
+    //         setLoading(false);
+    //     }, 8000);
+    // }, []);
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
@@ -83,6 +92,10 @@ function Home() {
         <>
             <Title title={"Home"} />
             <div className={`w-full overflow-hidden`}>
+                {/* {loading ? (
+                    <ClipLoader color={"#f37A24"} loading={loading} size={30} />
+                ) : (
+                    <> */}
                 {/* <InfiniteSpace /> */}
 
                 <div
@@ -192,16 +205,13 @@ function Home() {
                             </Marquee>
                         </div>
                     </div>
-                    <div className="home-demo xs:w-full ss:w-full sm:w-full md:w-full ss:px-14 sm:px-16 md:px-20 px-10 mt-16">
-                        <video
-                            ref={videoRef}
-                            className="home-demo-video"
-                            src={Animate}
-                            type="video/mp4"
-                            autoPlay
-                            loop
-                            muted
-                        ></video>
+                    <div className="home-demo   h-[500px] xs:w-full ss:w-full sm:w-full md:w-full ss:px-14 sm:px-16 md:px-20 px-10 mt-16">
+                        <iframe
+                            className="home-demo-video h-full rounded-[23px] shadow-md  shadow-[#464545] "
+                            src="https://www.youtube.com/embed/k___p7o0WM0?autoplay=1&mute=1&controls=0&loop=1"
+                            type="text/html"
+                            allowfullscreen
+                        ></iframe>
                     </div>
                     <div style={{ width: "100%", textAlign: "center" }} className="mt-5">
                         <motion.button
@@ -836,6 +846,8 @@ function Home() {
                         </div>
                     </div>
                 </div>
+                {/* </>
+                )} */}
             </div>
         </>
     );
