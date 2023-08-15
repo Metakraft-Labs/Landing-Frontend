@@ -21,14 +21,6 @@ import { navVariants } from "../../utils/motion";
 // import ClipLoader from "react-spinners/ClipLoader";
 
 function Home() {
-    // const settings = {
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    // };
-
     // const [loading, setLoading] = useState(false);
     // useEffect(() => {
     //     setLoading(true);
@@ -52,17 +44,17 @@ function Home() {
     // const { token } = useContext(AppStore);
     const [news, setNews] = useState("");
 
-    const videoRef = useRef();
-    const [stop, setStop] = useState(false);
+    // const videoRef = useRef();
+    // const [stop, setStop] = useState(false);
 
-    const handleVideo = () => {
-        setStop(!stop);
-        if (stop === true) {
-            videoRef.current.pause();
-        } else {
-            videoRef.current.play();
-        }
-    };
+    // const handleVideo = () => {
+    //     setStop(!stop);
+    //     if (stop === true) {
+    //         videoRef.current.pause();
+    //     } else {
+    //         videoRef.current.play();
+    //     }
+    // };
 
     const [mail2, setMail2] = useState("");
     const subscribe = async () => {
@@ -171,12 +163,16 @@ function Home() {
                     </div>
                 </div>
                 <div className="home-partner ">
-                    <div className="home-partner-1 mt-9 xs:mb-0 text-[80px] sm:text-[70px] ss:text-[65px] xs:text-[45px]   font-spaceGrotesk">
+                    <div className="flex relative ">
+                        <div className="gra1 z-0 xs:-left-14 "></div>
+                        <div className="gra2 z-0 left-[1000px] xs:left-48   sm:left-[500px]"></div>
+                    </div>
+                    <div className="home-partner-1 absolute z-[1] mt-9 xs:mb-0 text-[80px] sm:text-[70px] ss:text-[65px] xs:text-[45px]   font-spaceGrotesk">
                         Ecosystem & <br />
                         Strategic Partners
                     </div>
 
-                    <div className="flex mt-8 md:mt-0 xl:mx-96 ">
+                    <div className="flex mt-72 xs:mt-56 xl:mx-96 ">
                         <div
                             id="slideshow"
                             className="mt-16 xs:mt-4 ss:mt-3"
@@ -205,7 +201,7 @@ function Home() {
                             </Marquee>
                         </div>
                     </div>
-                    <div className="home-demo   h-[500px] xs:w-full ss:w-full sm:w-full md:w-full ss:px-14 sm:px-16 md:px-20 px-10 mt-16">
+                    <div className="home-demo   h-[500px] xs:h-[300px] xs:w-full ss:w-full sm:w-full md:w-full ss:px-14 sm:px-16 md:px-20 px-10 mt-16">
                         <iframe
                             className="home-demo-video h-full rounded-[23px] shadow-md  shadow-[#464545] "
                             src="https://www.youtube.com/embed/k___p7o0WM0?autoplay=1&mute=1&controls=0&loop=1"
@@ -213,7 +209,7 @@ function Home() {
                             allowfullscreen
                         ></iframe>
                     </div>
-                    <div style={{ width: "100%", textAlign: "center" }} className="mt-5">
+                    {/* <div style={{ width: "100%", textAlign: "center" }} className="mt-5">
                         <motion.button
                             whileInView="show"
                             initial="hidden"
@@ -223,13 +219,13 @@ function Home() {
                         >
                             Watch Demo
                         </motion.button>
-                    </div>
+                    </div> */}
                     <div className="home-partner-4 flex xs:flex-col ss:flex-col sm:flex-col md:justify-between md:flex-col mt-10 px-32  xs:px-10 ss:px-14 sm:px-16 md:px-20 xl:px-44">
                         <div
                             style={{ paddingTop: "4vw" }}
                             className="basis-[60%] ss:basis-[100%] font-spaceGrotesk lg:text-left xl:text-left text-center"
                         >
-                            <h2 className="home-partner-4-2 text-[80px] sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
+                            <h2 className="home-partner-4-2 font-encodeSans text-[80px] sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
                                 Seamless Experience!
                             </h2>
                             <div className="home-partner-4-3" style={{ marginTop: "2vw" }}>
@@ -261,7 +257,7 @@ function Home() {
                             />
                         </div>
                         <div className="basis-[50%] ss:basis-[100%] font-spaceGrotesk xl:mb-24">
-                            <h2 className="home-partner-4-2 lg:text-right xl:text-right text-center text-[80px] sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
+                            <h2 className="home-partner-4-2 font-encodeSans font lg:text-right xl:text-right text-center text-[80px] sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
                                 Designed to Scale with your Need
                             </h2>
                             <div
@@ -580,8 +576,8 @@ function Home() {
                         </div>
                     </div>
                     <div className="pt-28 feedback-bg">
-                        <div className="flex justify-center items-center flex-col xs:text-center xs:px-10 ss:px-14 sm:px-16">
-                            <div className="home-slide-1 text-[80px]  sm:text-[70px] ss:text-[65px] xs:text-[45px]  font-spaceGrotesk">
+                        <div className="flex justify-center items-center flex-col xs:text-center ss:text-center sm:text-center xs:px-10 ss:px-14 sm:px-16">
+                            <div className="home-slide-1 font-encodeSans text-[80px]  sm:text-[70px] ss:text-[65px] xs:text-[45px] ">
                                 What Others Says
                                 {/* md:text-[110px] sm:text-[100px] ss:text-[65px] xs:text-[32px] xs:mb-6  */}
                             </div>
@@ -590,7 +586,7 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className=" font-sans grid grid-cols-2 xs:grid-cols-1 ss:grid-cols-1 sm:grid-cols-1 md:grid-cols-1  place-items-center mx-32 xl:mx-44 xs:mx-10 ss:mx-14 sm:mx-16 ">
+                        <div className=" font-sans grid grid-cols-2 xs:grid-cols-1 ss:grid-cols-1 place-items-center mx-32 xl:mx-44 xs:mx-10 ss:mx-14 sm:mx-16 ">
                             {/* -------------------------First Column------------------------------ */}
 
                             <div className=" flex flex-col justify-end ">
@@ -599,7 +595,7 @@ function Home() {
                                     whileInView="show"
                                     initial="hidden"
                                     variants={navVariants}
-                                    className=" home-slide-3-1  box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full p-6 pr-16 xs:pr-6 h-[333px] xs:h-fit mb-8 flex flex-row justify-center items-start"
+                                    className=" home-slide-3-1  box w-[485px] sm:w-[300px] md:w-[400px] xs:flex-col xs:justify-center xs:items-center xs:w-full p-6 pr-16 xs:pr-6 h-[333px] xs:h-fit  sm:h-fit md:h-fit mb-8 flex flex-row justify-center items-start"
                                 >
                                     <div className="w-[170px] mr-4">
                                         <img src={navmeet} className="w-full" alt="" />
@@ -631,7 +627,7 @@ function Home() {
                                     whileInView="show"
                                     initial="hidden"
                                     variants={navVariants}
-                                    className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full h-[197px] xs:h-fit p-6 pr-16 xs:pr-6 mb-8 flex flex-row justify-center items-start"
+                                    className=" home-slide-3-1 box w-[485px] sm:w-[300px]  md:w-[400px] xs:flex-col xs:justify-center xs:items-center xs:w-full h-[197px] xs:h-fit sm:h-fit md:h-fit p-6 pr-16 xs:pr-6 mb-8 flex flex-row justify-center items-start"
                                 >
                                     <div className="w-[100px] mr-4">
                                         <img src={disney} className="w-full" alt="" />
@@ -654,7 +650,7 @@ function Home() {
                                     whileInView="show"
                                     initial="hidden"
                                     variants={navVariants}
-                                    className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full h-[194px] xs:h-fit  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start"
+                                    className=" home-slide-3-1 box w-[485px] sm:w-[300px]  md:w-[400px] xs:flex-col xs:justify-center xs:items-center xs:w-full h-[194px] xs:h-fit sm:h-fit  md:h-fit p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start"
                                 >
                                     <div className="w-[100px] mr-4">
                                         <img src={rye} className="w-full" alt="" />
@@ -681,7 +677,7 @@ function Home() {
                                     whileInView="show"
                                     initial="hidden"
                                     variants={navVariants}
-                                    className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[210px] xs:h-fit  mb-8 xs:mt-8 ss:mt-8 sm:mt-8 md:mt-8  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start"
+                                    className=" home-slide-3-1 box w-[485px] sm:w-[300px]  md:w-[400px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[210px] xs:h-fit sm:h-fit md:h-fit  mb-8 xs:mt-8 ss:mt-8 sm:mt-8 md:mt-8  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start"
                                 >
                                     <div className="w-[140px] mr-4">
                                         <img src={mani} className="w-full" alt="" />
@@ -704,7 +700,7 @@ function Home() {
                                     whileInView="show"
                                     initial="hidden"
                                     variants={navVariants}
-                                    className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[333px] xs:h-fit mb-8  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start"
+                                    className=" home-slide-3-1 box w-[485px] sm:w-[300px]  md:w-[400px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[333px] xs:h-fit sm:h-fit md:h-fit mb-8  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start"
                                 >
                                     <div className="w-[190px] mr-4">
                                         <img src={nandit} className="w-full" alt="" />
@@ -736,7 +732,7 @@ function Home() {
                                     whileInView="show"
                                     initial="hidden"
                                     variants={navVariants}
-                                    className=" home-slide-3-1 box w-[485px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[192px] xs:h-fit p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start"
+                                    className=" home-slide-3-1 box w-[485px] sm:w-[300px]  md:w-[400px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[192px] xs:h-fit sm:h-fit md:h-fit p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start"
                                 >
                                     <div className="w-[100px] mr-4">
                                         <img src={prasanna} className="w-full" alt="" />

@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import aiverselogo from "../Assets/aiverselogo.svg";
-import aiverselogo1 from "../Assets/aiverselogo1.png";
+import aiverselogo1 from "../Assets/aiverselogo1.svg";
 import "../Style/header.css";
 import { useWallet } from "../hooks/useWallet";
 import { navVariants } from "../utils/motion";
 
 function Header() {
     const [toggle, setToggle] = useState(false);
-    const [click, setClick] = useState();
+    const [click, setClick] = useState(false);
 
     const [{ wallet, connecting }] = useConnectWallet();
     const { connectWalletHandler, disconnectWalletHandler } = useWallet();
@@ -106,7 +106,15 @@ function Header() {
                         </div>
 
                         <div>
-                            <div onClick={() => setClick(prev => !prev)}>
+                            <div
+                                onClick={() => setClick(prev => !prev)}
+                                onMouseEnter={() => setClick(true)}
+
+                                // onClickCapture={() => setClick(prev => !prev)}
+                                // onClickCapture={() => setClick(prev => !prev)}
+                                // onDragLeave={() => setClick(prev => !prev)}
+                                // onMouseOut={() => setClick()}
+                            >
                                 {click ? (
                                     <div className="navButton flex flex-row  justify-center items-center hover:text-[#88b2db] ease-in-out duration-300">
                                         <div className="  cursor-pointer px-6  hover:text-[#88b2db] ease-in-out duration-300">
@@ -120,46 +128,51 @@ function Header() {
                                         <ArrowDropDownIcon fontSize="medium" />
                                     </div>
                                 )}
-                            </div>
-                            <div
-                                className={`${
-                                    click ? "flex" : "hidden"
-                                } sidebar  bg-[#111111] border-t-[3px] border-[#0BB6AC]  shadow-sm shadow-[#464545] h-fit py-10 px-20 absolute top-[100px] rounded-[7px]  flex flex-col ease-in duration-500  `}
-                            >
-                                <div className="navButton py-3 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300">
-                                    Peach
-                                </div>
-                                <div className="navButton py-3 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300">
-                                    Lemon(Coming Soon)
-                                </div>
 
-                                <div className="navButton py-3 cursor-pointer  hover:text-[#88b2db] ease-in-out duration-300">
-                                    <a href="https://blog.metakraft.live/">Blog</a>
-                                </div>
                                 <div
-                                    className="navButton py-3 cursor-pointer  hover:text-[#88b2db] ease-in-out duration-300"
-                                    onClick={event => {
-                                        showSpeed(event, "contact");
-                                    }}
-                                    href="#"
+                                    onMouseLeave={() => setClick(false)}
+                                    className={`${
+                                        click ? "flex" : "hidden"
+                                    } sidebar  bg-[#111111] border-t-[3px] border-[#0BB6AC]  shadow-sm shadow-[#464545] h-fit py-10 px-20 absolute top-[64px] rounded-[7px]  flex flex-col ease-in duration-500  `}
                                 >
-                                    Contact Us
-                                </div>
-                                <div
-                                    href="#"
-                                    style={{
-                                        cursor: "pointer",
-                                        color: "white",
+                                    <div className="navButton py-3 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300">
+                                        Peach
+                                    </div>
+                                    <div className="navButton py-3 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300">
+                                        Lemon(Coming Soon)
+                                    </div>
 
-                                        fontSize: "16px",
-                                        fontWeight: "650",
-                                    }}
-                                    onClick={() =>
-                                        window.open("https://app.social3.club/company/49", "_blank")
-                                    }
-                                    className="hire font-epilogue  py-3 cursor-pointer  hover:text-[#88b2db] ease-in-out duration-300"
-                                >
-                                    We are hiring!
+                                    <div className="navButton py-3 cursor-pointer  hover:text-[#88b2db] ease-in-out duration-300">
+                                        <a href="https://blog.metakraft.live/">Blog</a>
+                                    </div>
+                                    <div
+                                        className="navButton py-3 cursor-pointer  hover:text-[#88b2db] ease-in-out duration-300"
+                                        onClick={event => {
+                                            showSpeed(event, "contact");
+                                        }}
+                                        href="#"
+                                    >
+                                        Contact Us
+                                    </div>
+                                    <div
+                                        href="#"
+                                        style={{
+                                            cursor: "pointer",
+                                            color: "white",
+
+                                            fontSize: "16px",
+                                            fontWeight: "650",
+                                        }}
+                                        onClick={() =>
+                                            window.open(
+                                                "https://app.social3.club/company/49",
+                                                "_blank",
+                                            )
+                                        }
+                                        className="hire font-epilogue  py-3 cursor-pointer  hover:text-[#88b2db] ease-in-out duration-300"
+                                    >
+                                        We are hiring!
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +188,8 @@ function Header() {
                         className="rightHeader font-epilogue"
                     >
                         <button
-                            className="  text-[14px] md:text-[12px] w-[280px] md:w-[150px] lg:w-[150px] rounded-[2px] py-2 my-1 mb-3 xs:hidden ss:hidden  sm:hidden hover:bg-[#1b1a1a] ease-in-out duration-300"
+                            className="  text-[14px] md:text-[12px] w-[280px] md:w-[150px] lg:w-[150px] rounded-full py-2 my-1 mb-3 xs:hidden ss:hidden  sm:hidden hover:bg-[#1b1a1a] ease-in-out duration-300"
+                            // className="text-[#626262] mt-5 text-[24px] xs:text-[16px] bg-white py-4 px-8  font-bold rounded-full "
                             style={{
                                 border: "1px solid #01C5BA",
                                 fontWeight: "500",
@@ -194,7 +208,7 @@ function Header() {
                             onClick={() =>
                                 wallet ? disconnectWalletHandler() : connectWalletHandler()
                             }
-                            className="bg-white text-black text-[14px]  md:text-[12px]  w-[280px] md:w-[150px] lg:w-[150px] rounded-[2px] py-2 my-1 mb-3  xs:hidden ss:hidden  sm:hidden hover:bg-[#e2e1e1] ease-in-out duration-300"
+                            className="bg-white text-black text-[14px] rounded-full  md:text-[12px]  w-[280px] md:w-[150px] lg:w-[150px] py-2 my-1 mb-3  xs:hidden ss:hidden  sm:hidden hover:bg-[#e2e1e1] ease-in-out duration-300"
                             style={{
                                 border: "1px solid #01C5BA",
 
@@ -206,10 +220,16 @@ function Header() {
                     </div>
 
                     {/* ----------------------------------Mobile view------------------------------------------------ */}
-                    <div className="  md:hidden lg:hidden xl:hidden w-full  flex flex-1 justify-end items-center text-white ">
-                        <div onClick={() => setToggle(prev => !prev)}>
+                    <div
+                        onClick={() => setToggle(prev => !prev)}
+                        className="  md:hidden lg:hidden xl:hidden w-full  flex flex-1 justify-end items-center text-white "
+                    >
+                        <div>
                             {toggle ? (
-                                <CloseIcon fontSize="large" />
+                                <CloseIcon
+                                    fontSize="large"
+                                    className="z-20 absolute top-2 right-4 sm:right-8 sm:top-4"
+                                />
                             ) : (
                                 <MenuIcon fontSize="large" />
                             )}
@@ -217,9 +237,9 @@ function Header() {
                         <div
                             className={`${
                                 toggle ? "flex" : "hidden"
-                            } sidebar  rounded-[32px] text-[16px] font-encodeSans bg-[#111111]  shadow-sm shadow-[#464545]  z-10 absolute top-[110px] h-fit py-16 text-white xs:px-12 ss:px-20 px-32 w-full left-[0.15%]`}
+                            } sidebar text-[16px] font-encodeSans bg-[#111111]  shadow-sm shadow-[#464545]  z-10 absolute -top-6 py-16 text-white xs:px-12 ss:px-20 w-screen h-screen -right-10 ss:-right-14 sm:-right-16 px-32   `}
                         >
-                            <ul className="text-left list-none flex justify-start items-start  flex-1 flex-col ">
+                            <ul className="text-left list-none flex justify-start items-start  flex-1 flex-col  pt-20">
                                 <li className={``}>
                                     <div
                                         className="navButton py-3"

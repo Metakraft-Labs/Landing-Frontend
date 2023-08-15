@@ -1,5 +1,6 @@
 import TwitterIcon from "@mui/icons-material/Twitter";
 import React from "react";
+import aboutbg2 from "../../Assets/aboutbg2.mp4";
 import Cube from "../../Assets/cube.82f18a4d.gif";
 import metakraft1 from "../../Assets/metakraft1.png";
 import profile1 from "../../Assets/profile1.png";
@@ -33,7 +34,7 @@ function About() {
                 </div>
                 <div className="  xl:px-44 px-32 sm:px-16 ss:px-14 xs:px-10  ss:mt-96  sm:mt-96 md:mt-80 mt-72  ">
                     <div className="flex flex-col justify-center items-center  ">
-                        <h1 className=" uppercase absolute z-[1] mt-16  font-encodeSans text-[80px] text-white leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] md:text-[70px]  sm:text-[70px] ss:text-[60px] xs:text-[50px] ">
+                        <h1 className="  absolute z-[1] mt-16  font-encodeSans  text-[80px] text-white leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] md:text-[70px]  sm:text-[70px] ss:text-[60px] xs:text-[50px] ">
                             Imagine
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00D6DB] to-[#008AED] font-black   ">
                                 .<br className="md:hidden lg:hidden xl:hidden" />
@@ -51,7 +52,7 @@ function About() {
 
                     <div className="aboutbg1 relative w-full my-20 mt-72 xs:mt-[500px] ss:mt-[450px] sm:mt-[400px] xs:h-[750px]    h-[478px] rounded-[45px] flex flex-col justify-center items-center ">
                         {/* <img src={aboutbg1} alt="" className="w-full h-full absolute z-0 " /> */}
-                        <div className="text-white absolute z-[1] font-spaceGrotesk text-[24px] backdrop-blur-2xl rounded-[18px] text-center flex flex-col justify-center items-center mx-32 px-12 py-8 xs:mx-6 ss:mx-6 sm:mx-6 md:mx-6  ">
+                        <div className="text-white absolute z-[1] font-spaceGrotesk text-[24px] backdrop-blur-2xl rounded-[18px] border-[1px] text-center flex flex-col justify-center items-center mx-32 px-12 py-8 xs:mx-6 ss:mx-6 sm:mx-6 md:mx-6  ">
                             <div>
                                 People spend 80% of their time on internet. We are the tool to
                                 create the Internet&apos;s Immersive layer. Sign Up for Access
@@ -67,31 +68,38 @@ function About() {
                         </div>
                     </div>
                     <div className="flex flex-col justify-center items-center xs:text-center ss:text-center sm:text-center md:text-center">
-                        <h4 className="text-[24px] xs:mt-20   font-roboto text-[#E6E6EB] font-bold ">
+                        <h4 className="text-[24px] xs:mt-20 mt-10   font-roboto text-[#E6E6EB] font-bold ">
                             Our Solution
                         </h4>
-                        <h1 className="aboutConnectHead text-[80px] sm:text-[70px]  ss:text-[65px] xs:text-[45px]  bg-clip-text text-transparent bg-gradient-to-r from-white to-[#6C6A6A] font-bold ">
+                        <h1 className="aboutConnectHead font-encodeSans text-[80px] sm:text-[70px]  ss:text-[65px] xs:text-[45px]  bg-clip-text text-transparent bg-gradient-to-r from-white to-[#6C6A6A] font-bold ">
                             The Metakraft Method
                         </h1>
 
-                        <div className="aboutbg2 flex  justify-center items-center relative mt-7 mb-20 w-full h-[860px] ss:h-[600px] sm:h-[600px] md:h-[600px] lg:w-[1103px] xl:w-[1103px] lg:h-[478px] xl:h-[478px] rounded-[45px] ">
-                            {/* <img src={aboutbg2} alt="" className="w-full h-full absolute z-0 " /> */}
-                            <div className=" text-white absolute z-[1] flex xs:flex-col xs:justify-center ss:flex-col ss:justify-center sm:flex-col sm:justify-center md:flex-col md:justify-center justify-between items-center xs:px-10 ss:px-10 sm:px-10 ">
-                                <div className=" bg-black/60 rounded-[16px] p-8 mx-4  xs:my-2 ss:my-2 sm:my-3 md:my-3 xs:w-full ss:w-full sm:w-full md:w-full">
+                        <div className="aboutbg2 flex  justify-center items-center  rounded-[45px] relative mt-7 mb-20 w-full h-[860px] ss:h-[600px] sm:h-[500px] md:h-[300px] lg:w-[1103px] xl:w-[1103px] lg:h-[478px] xl:h-[478px]">
+                            <video
+                                src={aboutbg2}
+                                alt=""
+                                className="w-full h-full xs:hidden ss:hidden sm:hidden absolute  rounded-[45px] z-[1] "
+                                autoPlay
+                                muted
+                                loop
+                            />
+                            <div className=" text-white absolute z-[1] flex h-full xs:flex-col xs:justify-center ss:flex-col ss:justify-center justify-between items-center xs:px-10 sm:py-24 ss:px-10 md:py-6 py-28 ">
+                                <div className=" bg-black/60 backdrop-blur-xl  border-[1px] rounded-[16px] p-8 mx-4 flex flex-col  h-full xs:my-2 ss:my-2 sm:my-3 md:my-3 xs:w-full ss:w-full sm:w-full md:w-full">
                                     <h5 className="text-[32px] font-bold">No-Code</h5>
                                     <div className="font-spaceGrotesk text-[16px] mt-2 ">
                                         Browser-based tools to increase productivity & creating
                                         experiences
                                     </div>
                                 </div>
-                                <div className="bg-black/60 rounded-[16px] p-8 mx-4  xs:my-2 ss:my-2 sm:my-3 md:my-3 xs:w-full ss:w-full sm:w-full md:w-full">
+                                <div className="bg-black/60 backdrop-blur-xl border-[1px] rounded-[16px] p-8 mx-4 flex flex-col  h-full  xs:my-2 ss:my-2 sm:my-3 md:my-3 xs:w-full ss:w-full sm:w-full md:w-full">
                                     <h5 className="text-[32px] font-bold">Take Control</h5>
                                     <div className="font-spaceGrotesk text-[16px] mt-2 ">
                                         Allow your creativity to fly without need for a 3rd party to
                                         monetize it.
                                     </div>
                                 </div>
-                                <div className="bg-black/60 rounded-[16px] p-8 mx-4  xs:my-2 ss:my-2 sm:my-3 md:my-3 xs:w-full ss:w-full sm:w-full md:w-full">
+                                <div className="bg-black/60 backdrop-blur-xl border-[1px] rounded-[16px] p-8 mx-4 flex flex-col  h-full xs:my-2 ss:my-2 sm:my-3 md:my-3 xs:w-full ss:w-full sm:w-full md:w-full">
                                     <h5 className="text-[32px] font-bold">Spacial Rooms</h5>
                                     <div className="font-spaceGrotesk text-[16px] mt-2 ">
                                         For Product Showcase, Demo, Education or a Virtual Store.

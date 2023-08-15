@@ -119,7 +119,7 @@ function Feature() {
                         Schedule Demo
                     </motion.button>
                 </div>
-                <div className="flex flex-col justify-end  items-center  text-center lg:items-end lg:text-right lg:my-24 xl:items-end xl:text-right xl:mt-24 mt-20 ">
+                <div className="flex flex-col justify-end  items-center  text-center lg:items-end lg:text-right lg:mt-24 xl:items-end xl:text-right xl:mt-24 mt-20 ">
                     <div className="feature-3-6 font-encodeSans text-[80px]  sm:text-[70px] ss:text-[65px] xs:text-[45px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px]">
                         Compatible with <br className="xs:hidden ss:hidden sm:hidden md:hidden " />
                         all Major tools
