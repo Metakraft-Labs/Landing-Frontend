@@ -70,7 +70,7 @@ function About() {
                         <h4 className="text-[24px] xs:mt-20 mt-10   font-roboto text-[#E6E6EB] font-bold ">
                             Our Solution
                         </h4>
-                        <h1 className="aboutConnectHead font-encodeSans text-[80px] sm:text-[70px]  ss:text-[65px] xs:text-[45px]  bg-clip-text text-transparent bg-gradient-to-r from-white to-[#6C6A6A] font-bold ">
+                        <h1 className="aboutConnectHead font-encodeSans lg:leading-[80px] xl:leading-[80px] text-[80px] sm:text-[70px]  ss:text-[65px] xs:text-[45px]  bg-clip-text text-transparent bg-gradient-to-r from-white to-[#6C6A6A] font-bold ">
                             The Metakraft Method
                         </h1>
 
@@ -162,7 +162,7 @@ function About() {
                                             Lokendra Soni
                                         </h4>
                                         <p className="text-[13px] pt-4 font-roboto font-light">
-                                            Meet Lokhendra, our visionary CTO with 5 years of
+                                            Meet Lokendra, our visionary CTO with 5 years of
                                             experience in web3, gaming, and AI. He drives
                                             innovation, shapes user experiences, and leads our
                                             dynamic team to new heights.

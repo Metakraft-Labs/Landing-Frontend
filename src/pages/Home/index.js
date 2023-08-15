@@ -167,7 +167,7 @@ function Home() {
                         <div className="gra1 z-0 xs:-left-14 "></div>
                         <div className="gra2 z-0 left-[1000px] xs:left-48   sm:left-[500px]"></div>
                     </div>
-                    <div className="home-partner-1 absolute z-[1] mt-9 xs:mb-0 text-[75px] sm:text-[70px] ss:text-[65px] xs:text-[45px] leading-[90px] font-encodeSans">
+                    <div className="home-partner-1 absolute z-[1] mt-9 xs:mb-0 text-[75px] sm:text-[70px] ss:text-[65px] xs:text-[45px] lg:leading-[90px] xl:leading-[90px] font-encodeSans">
                         Ecosystem & <br />
                         Strategic Partners
                     </div>
@@ -225,7 +225,7 @@ function Home() {
                             style={{ paddingTop: "4vw" }}
                             className="basis-[60%] ss:basis-[100%] font-spaceGrotesk lg:text-left xl:text-left text-center"
                         >
-                            <h2 className="home-partner-4-2 font-encodeSans leading-[80px] text-[75px] sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
+                            <h2 className="home-partner-4-2 font-encodeSans  lg:leading-[80px] xl:leading-[80px] text-[75px] sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
                                 Seamless Experience!
                             </h2>
                             <div className="home-partner-4-3 pt-3">
@@ -257,7 +257,7 @@ function Home() {
                             />
                         </div>
                         <div className="basis-[50%] ss:basis-[100%] font-spaceGrotesk xl:mb-24">
-                            <h2 className="home-partner-4-2 font-encodeSans leading-[80px] text-[75px]  lg:text-right xl:text-right text-center sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
+                            <h2 className="home-partner-4-2 font-encodeSans lg:leading-[80px] xl:leading-[80px] text-[75px]  lg:text-right xl:text-right text-center sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
                                 Designed <br className="xs:hidden ss:hidden sm:hidden md:hidden" />{" "}
                                 to Scale
                             </h2>
@@ -767,7 +767,7 @@ function Home() {
                     </div>
 
                     <div className="home-browsing relative ">
-                        <div className="xs:mx-10 ss:mx-14 sm:mx-16 md:mx-20 xs:pt-6 leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] text-transparent bg-clip-text bg-gradient-to-r from-[#6c6a6a] to-[#ffffff] text-[80px]  sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6  font-epilogue">
+                        <div className="xs:mx-10 ss:mx-14 sm:mx-16 md:mx-20 xs:pt-6 leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[50px] text-transparent bg-clip-text bg-gradient-to-r from-[#6c6a6a] to-[#ffffff] text-[80px]  sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6  font-epilogue">
                             Go Beyond Browsing
                         </div>
                         <div className="xs:mx-10 ss:mx-14 home-browsing-2 xs:text-[16px] pt-0 pb-6  xs:py-2 font-sora">
