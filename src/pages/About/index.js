@@ -1,6 +1,5 @@
 import TwitterIcon from "@mui/icons-material/Twitter";
 import React from "react";
-import aboutbg2 from "../../Assets/aboutbg2.mp4";
 import Cube from "../../Assets/cube.82f18a4d.gif";
 import metakraft1 from "../../Assets/metakraft1.png";
 import profile1 from "../../Assets/profile1.png";
@@ -34,7 +33,7 @@ function About() {
                 </div>
                 <div className="  xl:px-44 px-32 sm:px-16 ss:px-14 xs:px-10  ss:mt-96  sm:mt-96 md:mt-80 mt-72  ">
                     <div className="flex flex-col justify-center items-center  ">
-                        <h1 className="  absolute z-[1] mt-16  font-encodeSans  text-[80px] text-white leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] md:text-[70px]  sm:text-[70px] ss:text-[60px] xs:text-[50px] ">
+                        <h1 className=" uppercase text-center  absolute z-[1] mt-16  font-encodeSans  text-[80px] text-white leading-[137px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] md:text-[70px]  sm:text-[70px] ss:text-[60px] xs:text-[50px] ">
                             Imagine
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00D6DB] to-[#008AED] font-black   ">
                                 .<br className="md:hidden lg:hidden xl:hidden" />
@@ -52,7 +51,7 @@ function About() {
 
                     <div className="aboutbg1 relative w-full my-20 mt-72 xs:mt-[500px] ss:mt-[450px] sm:mt-[400px] xs:h-[750px]    h-[478px] rounded-[45px] flex flex-col justify-center items-center ">
                         {/* <img src={aboutbg1} alt="" className="w-full h-full absolute z-0 " /> */}
-                        <div className="text-white absolute z-[1] font-spaceGrotesk text-[24px] backdrop-blur-2xl rounded-[18px] border-[1px] text-center flex flex-col justify-center items-center mx-32 px-12 py-8 xs:mx-6 ss:mx-6 sm:mx-6 md:mx-6  ">
+                        <div className="text-white absolute z-[1] font-spaceGrotesk text-[24px] backdrop-blur-2xl rounded-[18px] border-[1px] border-[#8e8d8d] text-center flex flex-col justify-center items-center mx-32 px-12 py-8 xs:mx-6 ss:mx-6 sm:mx-6 md:mx-6  ">
                             <div>
                                 People spend 80% of their time on internet. We are the tool to
                                 create the Internet&apos;s Immersive layer. Sign Up for Access
@@ -75,15 +74,15 @@ function About() {
                             The Metakraft Method
                         </h1>
 
-                        <div className="aboutbg2 flex  justify-center items-center  rounded-[45px] relative mt-7 mb-20 w-full h-[860px] ss:h-[600px] sm:h-[500px] md:h-[300px] lg:w-[1103px] xl:w-[1103px] lg:h-[478px] xl:h-[478px]">
-                            <video
-                                src={aboutbg2}
+                        <div className=" aboutbg2 flex  justify-center items-center   relative mt-7 mb-20  rounded-[45px] w-full h-[860px] ss:h-[600px] sm:h-[500px] md:h-[300px] lg:w-[1103px] xl:w-[1103px] lg:h-[478px] xl:h-[478px] xl:mx-44 px-32 sm:mx-16 ss:mx-14 xs:mx-10">
+                            {/* <video
+                                src={aboutbg1}
                                 alt=""
-                                className="w-full h-full xs:hidden ss:hidden sm:hidden absolute  rounded-[45px] z-[1] "
+                                className="w-full h-full xs:hidden ss:hidden sm:hidden absolute bg-white  rounded-[45px] z-[1] "
                                 autoPlay
                                 muted
                                 loop
-                            />
+                            /> */}
                             <div className=" text-white absolute z-[1] flex h-full xs:flex-col xs:justify-center ss:flex-col ss:justify-center justify-between items-center xs:px-10 sm:py-24 ss:px-10 md:py-6 py-28 ">
                                 <div className=" bg-black/60 backdrop-blur-xl  border-[1px] rounded-[16px] p-8 mx-4 flex flex-col  h-full xs:my-2 ss:my-2 sm:my-3 md:my-3 xs:w-full ss:w-full sm:w-full md:w-full">
                                     <h5 className="text-[32px] font-bold">No-Code</h5>
@@ -147,15 +146,15 @@ function About() {
                                 whileInView="show"
                                 initial="hidden"
                                 variants={navVariants}
-                                className=" mb-32 mr-2  flex relative flex-col justify-start items-center h-[390px] w-[400px] xs:w-[300px] rounded-[33px] "
+                                className=" mb-32 mr-2  flex relative flex-col justify-start items-center h-[390px] w-[300px] xs:w-[300px] rounded-[33px] "
                             >
                                 <img src={profilebg2} alt="" className="absolute z-0" />
-                                <div className="bg-white text-black absolute z-[1] w-full h-[286px] xs:h-fit top-36 rounded-[33px] ">
+                                <div className="bg-white text-black absolute z-[1] w-full h-[300px] xs:h-fit top-36 rounded-[33px] ">
                                     <div className="relative profile ">
                                         <img
                                             src={profile1}
                                             alt=""
-                                            className="absolute w-[100px] -top-12 translate-x-[150%] xs:translate-x-[99%] "
+                                            className="absolute w-[100px] -top-12 translate-x-[100%] xs:translate-x-[99%] "
                                         />
                                     </div>
                                     <div className="flex flex-col pt-16  p-6 justify-center text-center items-center">
@@ -184,15 +183,15 @@ function About() {
                                 whileInView="show"
                                 initial="hidden"
                                 variants={navVariants}
-                                className="mb-32 mx-2 flex relative flex-col justify-start items-center h-[390px] w-[400px] xs:w-[300px] rounded-[33px] "
+                                className="mb-32 mx-2 flex relative flex-col justify-start items-center h-[390px] w-[300px] xs:w-[300px] rounded-[33px] "
                             >
                                 <img src={profilebg2} alt="" className="absolute z-0" />
-                                <div className="bg-white text-black absolute z-[1] w-full h-[286px] xs:h-fit top-36 rounded-[33px] ">
+                                <div className="bg-white text-black absolute z-[1] w-full h-[300px] xs:h-fit top-36 rounded-[33px] ">
                                     <div className="relative profile ">
                                         <img
                                             src={profile2}
                                             alt=""
-                                            className="absolute w-[100px] -top-12 translate-x-[150%]  xs:translate-x-[99%]"
+                                            className="absolute w-[100px] -top-12 translate-x-[100%]  xs:translate-x-[99%]"
                                         />
                                     </div>
                                     <div className="flex flex-col pt-16  p-6 justify-center text-center items-center">
@@ -221,15 +220,15 @@ function About() {
                                 whileInView="show"
                                 initial="hidden"
                                 variants={navVariants}
-                                className="mb-32 mx-2 flex relative flex-col justify-start items-center h-[390px] w-[400px]  xs:w-[300px] rounded-[33px] "
+                                className="mb-32 mx-2 flex relative flex-col justify-start items-center h-[390px] w-[300px]  xs:w-[300px] rounded-[33px] "
                             >
                                 <img src={profilebg2} alt="" className="absolute z-0" />
-                                <div className="bg-white text-black absolute z-[1] w-full h-[286px] xs:h-fit top-36 rounded-[33px] ">
+                                <div className="bg-white text-black absolute z-[1] w-full h-[300px] xs:h-fit top-36 rounded-[33px] ">
                                     <div className="relative profile ">
                                         <img
                                             src={profile3}
                                             alt=""
-                                            className="absolute w-[100px] -top-12 translate-x-[150%]  xs:translate-x-[99%]"
+                                            className="absolute w-[100px] -top-12 translate-x-[100%]  xs:translate-x-[99%]"
                                         />
                                     </div>
                                     <div className="flex flex-col pt-16  p-6 justify-center text-center items-center">
@@ -258,15 +257,15 @@ function About() {
                                 whileInView="show"
                                 initial="hidden"
                                 variants={navVariants}
-                                className="mb-32 mx-2 flex relative flex-col justify-start items-center h-[390px] w-[400px] xs:w-[300px] rounded-[33px] "
+                                className="mb-32 mx-2 flex relative flex-col justify-start items-center h-[390px] w-[300px] xs:w-[300px] rounded-[33px] "
                             >
                                 <img src={profilebg2} alt="" className="absolute z-0" />
-                                <div className="bg-white text-black absolute z-[1] w-full h-[286px] xs:h-fit top-36 rounded-[33px] ">
+                                <div className="bg-white text-black absolute z-[1] w-full h-[300px] xs:h-fit top-36 rounded-[33px] ">
                                     <div className="relative profile ">
                                         <img
                                             src={profile4}
                                             alt=""
-                                            className="absolute w-[100px] -top-12 translate-x-[150%]  xs:translate-x-[99%]"
+                                            className="absolute w-[100px] -top-12 translate-x-[100%]  xs:translate-x-[99%]"
                                         />
                                     </div>
                                     <div className="flex flex-col pt-16  p-6 justify-center text-center items-center">
@@ -294,15 +293,15 @@ function About() {
                                 whileInView="show"
                                 initial="hidden"
                                 variants={navVariants}
-                                className="mb-32 mx-2 flex relative flex-col justify-start items-center h-[390px] w-[400px]  xs:w-[300px] rounded-[33px] "
+                                className="mb-32 mx-2 flex relative flex-col justify-start items-center h-[390px] w-[300px]  xs:w-[300px] rounded-[33px] "
                             >
                                 <img src={profilebg2} alt="" className="absolute z-0" />
-                                <div className="bg-white text-black absolute z-[1] w-full h-[286px] xs:h-fit top-36 rounded-[33px] ">
+                                <div className="bg-white text-black absolute z-[1] w-full h-[300px] xs:h-fit top-36 rounded-[33px] ">
                                     <div className="relative profile ">
                                         <img
                                             src={profile5}
                                             alt=""
-                                            className="absolute w-[100px] -top-12 translate-x-[150%]  xs:translate-x-[99%]"
+                                            className="absolute w-[100px] -top-12 translate-x-[100%]  xs:translate-x-[99%]"
                                         />
                                     </div>
                                     <div className="flex flex-col pt-16  p-6 justify-center text-center items-center">

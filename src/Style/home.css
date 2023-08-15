@@ -178,12 +178,10 @@
 .home-partner-4 {
     display: flex;
     justify-content: center;
-    /* gap: 4vw; */
 }
 .home-partner-5 {
     display: flex;
     justify-content: center;
-    /* gap: 4vw; */
 }
 .home-partner-4-1 {
     position: relative;
@@ -196,7 +194,7 @@
     line-height: normal;
 }
 .home-partner-4-3 {
-    font-size: 24px;
+    font-size: 20px;
     color: white;
     font-weight: 400;
     line-height: normal;

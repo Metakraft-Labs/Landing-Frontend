@@ -2,15 +2,15 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
-import disney from "../../Assets/feedback/disney.svg";
-import mani from "../../Assets/feedback/mani.svg";
-import nandit from "../../Assets/feedback/nandit.svg";
-import navmeet from "../../Assets/feedback/navmeet.svg";
-import prasanna from "../../Assets/feedback/prasanna.svg";
-import rye from "../../Assets/feedback/rye.svg";
 import Ipad_Mini from "../../Assets/iPad Mini.svg";
 import Ipad_Mini1 from "../../Assets/iPad_Mini.svg";
 import metakraft from "../../Assets/metakraft.png";
+import disney from "../../Assets/profilepic/disney.png";
+import mani from "../../Assets/profilepic/mani.png";
+import nandit from "../../Assets/profilepic/nandit.png";
+import navmeet from "../../Assets/profilepic/navmeet.png";
+import prasanna from "../../Assets/profilepic/prasanna.png";
+import rye from "../../Assets/profilepic/rye.png";
 import Solana from "../../Assets/solana.png";
 import "../../Style/feature.css";
 import "../../Style/home.css";
@@ -167,12 +167,12 @@ function Home() {
                         <div className="gra1 z-0 xs:-left-14 "></div>
                         <div className="gra2 z-0 left-[1000px] xs:left-48   sm:left-[500px]"></div>
                     </div>
-                    <div className="home-partner-1 absolute z-[1] mt-9 xs:mb-0 text-[80px] sm:text-[70px] ss:text-[65px] xs:text-[45px]   font-spaceGrotesk">
+                    <div className="home-partner-1 absolute z-[1] mt-9 xs:mb-0 text-[75px] sm:text-[70px] ss:text-[65px] xs:text-[45px] leading-[90px] font-encodeSans">
                         Ecosystem & <br />
                         Strategic Partners
                     </div>
 
-                    <div className="flex mt-72 xs:mt-56 xl:mx-96 ">
+                    <div className="flex mt-56 xs:mt-56 xl:mx-96 ">
                         <div
                             id="slideshow"
                             className="mt-16 xs:mt-4 ss:mt-3"
@@ -220,15 +220,15 @@ function Home() {
                             Watch Demo
                         </motion.button>
                     </div> */}
-                    <div className="home-partner-4 flex xs:flex-col ss:flex-col sm:flex-col md:justify-between md:flex-col mt-10 px-32  xs:px-10 ss:px-14 sm:px-16 md:px-20 xl:px-44">
+                    <div className="home-partner-4 flex items-center  xs:flex-col ss:flex-col sm:flex-col md:justify-between md:flex-col mt-10 px-32  xs:px-10 ss:px-14 sm:px-16 md:px-20 xl:px-44">
                         <div
                             style={{ paddingTop: "4vw" }}
                             className="basis-[60%] ss:basis-[100%] font-spaceGrotesk lg:text-left xl:text-left text-center"
                         >
-                            <h2 className="home-partner-4-2 font-encodeSans text-[80px] sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
+                            <h2 className="home-partner-4-2 font-encodeSans leading-[80px] text-[75px] sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
                                 Seamless Experience!
                             </h2>
-                            <div className="home-partner-4-3" style={{ marginTop: "2vw" }}>
+                            <div className="home-partner-4-3 pt-3">
                                 Unleash your imagination with an AI-driven, browser-based platform.
                                 Build, customize, and connect in a secure environment, exploring
                                 endless possibilities and redefining the virtual realm effortlessly.
@@ -257,8 +257,9 @@ function Home() {
                             />
                         </div>
                         <div className="basis-[50%] ss:basis-[100%] font-spaceGrotesk xl:mb-24">
-                            <h2 className="home-partner-4-2 font-encodeSans font lg:text-right xl:text-right text-center text-[80px] sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
-                                Designed to Scale with your Need
+                            <h2 className="home-partner-4-2 font-encodeSans leading-[80px] text-[75px]  lg:text-right xl:text-right text-center sm:text-[70px] ss:text-[65px] xs:text-[45px] xs:mb-6 ">
+                                Designed <br className="xs:hidden ss:hidden sm:hidden md:hidden" />{" "}
+                                to Scale
                             </h2>
                             <div
                                 className="home-partner-4-3 lg:text-right xl:text-right text-center"
@@ -597,7 +598,7 @@ function Home() {
                                     variants={navVariants}
                                     className=" home-slide-3-1  box w-[485px] sm:w-[300px] md:w-[400px] xs:flex-col xs:justify-center xs:items-center xs:w-full p-6 pr-16 xs:pr-6 h-[333px] xs:h-fit  sm:h-fit md:h-fit mb-8 flex flex-row justify-center items-start"
                                 >
-                                    <div className="w-[170px] mr-4">
+                                    <div className="w-[170px] xs:w-[100px] mr-4">
                                         <img src={navmeet} className="w-full" alt="" />
                                     </div>
                                     <div className="text-white xs:text-center">
@@ -679,7 +680,7 @@ function Home() {
                                     variants={navVariants}
                                     className=" home-slide-3-1 box w-[485px] sm:w-[300px]  md:w-[400px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[210px] xs:h-fit sm:h-fit md:h-fit  mb-8 xs:mt-8 ss:mt-8 sm:mt-8 md:mt-8  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start"
                                 >
-                                    <div className="w-[140px] mr-4">
+                                    <div className="w-[140px] xs:w-[100px] mr-4">
                                         <img src={mani} className="w-full" alt="" />
                                     </div>
                                     <div className="text-white xs:text-center">
@@ -702,7 +703,7 @@ function Home() {
                                     variants={navVariants}
                                     className=" home-slide-3-1 box w-[485px] sm:w-[300px]  md:w-[400px] xs:flex-col xs:justify-center xs:items-center xs:w-full  h-[333px] xs:h-fit sm:h-fit md:h-fit mb-8  p-6 pr-16 xs:pr-6 flex flex-row justify-center items-start"
                                 >
-                                    <div className="w-[190px] mr-4">
+                                    <div className="w-[190px] xs:w-[100px] mr-4">
                                         <img src={nandit} className="w-full" alt="" />
                                     </div>
                                     <div className="text-white xs:text-center">
@@ -819,9 +820,9 @@ function Home() {
                                     placeholder="Enter Your Email"
                                 />
                             </div> */}
-                                <div className="feature-browsing-6 flex justify-center  items-center w-[300px] h-[60px] ss:w-[400px] ss:h-[70px] sm:w-[434px] sm:h-[80px] md:w-[534px] md:h-[90px]   lg:w-fit lg:h-[90px] xl:w-[730px] xl:h-[90px]">
+                                <div className="feature-browsing-6 flex justify-center  items-center w-[300px] h-[60px] ss:w-[400px] ss:h-[70px] sm:w-[434px] sm:h-[80px] md:w-[534px] md:h-[90px]   lg:w-[400px] lg:h-[60px] xl:w-[400px] xl:h-[60px]">
                                     <div
-                                        className="text-[40px] text-white xs:text-[20px] ss:text-[24px] sm:text-[28px] md:text-[34px]"
+                                        className="text-white lg:ml-20  xl:ml-10 ml-0 xs:text-[20px] ss:text-[24px] sm:text-[28px] md:text-[34px]"
                                         onClick={() => {
                                             subscribe(mail2);
                                         }}

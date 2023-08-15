@@ -61,15 +61,15 @@ function Feature() {
                     <img src={Feature1} alt="image" className="feature-2-1 lg:hidden xl:hidden " />
                 </div>
                 <div className="feature-2-2 flex flex-col justify-center items-center lg:items-end lg:text-end xl:items-end xl:text-end text-center">
-                    <div className=" font-encodeSans  text-[80px]  sm:text-[70px] ss:text-[65px] xs:text-[45px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px]  xs:mb-6 font-bold text-[#E3E3E3]">
+                    <div className=" font-encodeSans  text-[75px]  sm:text-[70px] ss:text-[65px] xs:text-[45px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px]  xs:mb-6 font-bold text-[#E3E3E3]">
                         Get Started for Free
                     </div>
-                    <div className=" font-spaceGrotesk py-2 xs:pt-0 text-[24px]">
+                    <div className=" font-spaceGrotesk pb-2 xs:pt-0 text-[20px]">
                         Build better metaverses effortlessly! For Your Client, Business or{" "}
                         <br className="xs:hidden ss:hidden sm:hidden md:hidden" />
                         Employee Onboarding.
                     </div>
-                    <div className="feature-browsing-6_1 flex justify-between items-center w-[300px] h-[60px] ss:w-[400px] ss:h-[70px] sm:w-[434px] sm:h-[80px] md:w-[534px] md:h-[90px]   lg:w-[534px] lg:h-[90px] xl:w-[534px] xl:h-[90px]">
+                    <div className="feature-browsing-6_1 flex justify-between items-center w-[300px] h-[60px] ss:w-[400px] ss:h-[70px] sm:w-[434px] sm:h-[80px] md:w-[534px] md:h-[90px]   lg:w-[400px] lg:h-[60px] xl:w-[400px] xl:h-[60px]">
                         <div
                             className="feature-browsing-6-1 pl-8 xs:text-[20px] ss:text-[24px] sm:text-[28px] md:text-[34px]"
                             onClick={() => {
@@ -91,12 +91,12 @@ function Feature() {
                 </div>
             </div>
 
-            <div className=" mx-32 xl:mx-44 sm:mx-16 ss:mx-14 xs:mx-10 lg:pt-20 xl:pt-20 ">
-                <div className="feature-3-1 font-encodeSans lg:text-left xl:text-left text-center text-[80px]  sm:text-[70px] ss:text-[65px] xs:text-[45px]  md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] ">
+            <div className=" mx-32 xl:mx-44 sm:mx-16 ss:mx-14 xs:mx-10 lg:pt-44  xl:pt-44 ">
+                <div className="feature-3-1 font-encodeSans lg:text-left xl:text-left text-center text-[75px]  sm:text-[70px] ss:text-[65px] xs:text-[45px]  leading-[80px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px] ">
                     Helping you focus <br className="xs:hidden ss:hidden sm:hidden md:hidden" />
                     What really matters
                 </div>
-                <div className="feature-3-3 font-spaceGrotesk mt-9 mb-16 lg:mb-32 xl:mb-32   lg:text-left xl:text-left text-center">
+                <div className="feature-3-3 font-spaceGrotesk mt-3 mb-16 lg:mb-32 xl:mb-32   lg:text-left xl:text-left text-center">
                     Browser-based platform, we aim to make creators accessible to a wide range of
                     users, regardless of being worried about their device or hardware.
                 </div>
@@ -120,11 +120,11 @@ function Feature() {
                     </motion.button>
                 </div>
                 <div className="flex flex-col justify-end  items-center  text-center lg:items-end lg:text-right lg:mt-24 xl:items-end xl:text-right xl:mt-24 mt-20 ">
-                    <div className="feature-3-6 font-encodeSans text-[80px]  sm:text-[70px] ss:text-[65px] xs:text-[45px] md:leading-[120px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px]">
+                    <div className="feature-3-6 font-encodeSans text-[75px]  sm:text-[70px] ss:text-[65px] xs:text-[45px] leading-[80px] sm:leading-[100px] ss:leading-[85px] xs:leading-[60px]">
                         Compatible with <br className="xs:hidden ss:hidden sm:hidden md:hidden " />
                         all Major tools
                     </div>
-                    <div className="feature-3-8 font-spaceGrotesk">
+                    <div className="feature-3-8 pt-3 font-spaceGrotesk">
                         We supports all most used asset design tools, making it easy to integrate
                         into your workflow. Its{" "}
                         <br className="xs:hidden ss:hidden sm:hidden md:hidden lg:hidden" />
@@ -133,11 +133,10 @@ function Feature() {
                     </div>
                 </div>
             </div>
-
             <progress
                 value="25"
                 max="100"
-                className="feature-3-10"
+                className="feature-3-10 py-10"
                 style={{ visibility: "hidden" }}
             ></progress>
 
@@ -187,9 +186,9 @@ function Feature() {
                         Stay Updated with Latest
                     </div>
                     <div className="feature-browsing-5-2 font-roboto">Get Your Newsletter</div>
-                    <div className="feature-browsing-6 flex justify-center items-center w-[300px] h-[60px] ss:w-[400px] ss:h-[70px] sm:w-[434px] sm:h-[80px] md:w-[534px] md:h-[90px]   lg:w-[534px] lg:h-[90px] xl:w-[534px] xl:h-[90px]">
+                    <div className="feature-browsing-6 flex justify-center items-center w-[300px] h-[60px] ss:w-[400px] ss:h-[70px] sm:w-[434px] sm:h-[80px] md:w-[534px] md:h-[90px]   lg:w-[400px] lg:h-[60px] xl:w-[400px] xl:h-[60px]">
                         <div
-                            className="feature-browsing-6-1 lg:ml-10 xl:ml-10 ml-0 xs:text-[20px] ss:text-[24px] sm:text-[28px] md:text-[34px]"
+                            className="feature-browsing-6-1 text-white lg:ml-20 xl:ml-10 ml-0 xs:text-[20px] ss:text-[24px] sm:text-[28px] md:text-[34px]"
                             onClick={() => {
                                 subscribe(mail2);
                             }}

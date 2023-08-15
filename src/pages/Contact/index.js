@@ -1,17 +1,11 @@
 import React from "react";
 import "../../Style/contact.css";
 // import { Button } from 'react-bootstrap';
-import c1 from "../../Assets/c1.png";
-import c2 from "../../Assets/c2.png";
-import c3 from "../../Assets/c3.png";
-import contact1 from "../../Assets/contact1.png";
-import contact2 from "../../Assets/contact2.png";
-import contact3 from "../../Assets/contact3.png";
-import contact4 from "../../Assets/contact4.png";
-import contact5 from "../../Assets/contact5.png";
-import e1 from "../../Assets/e1.png";
-import e2 from "../../Assets/e2.png";
-import e3 from "../../Assets/e3.png";
+import contact1 from "../../Assets/contact1.svg";
+import contact2 from "../../Assets/contact2.svg";
+import contact3 from "../../Assets/contact3.svg";
+import contact4 from "../../Assets/contact4.svg";
+import contact5 from "../../Assets/contact5.svg";
 
 import Title from "../../shared/Title";
 
@@ -131,116 +125,72 @@ function Contact() {
                     </div>
                 </div>
 
-                <div className="relative xl:my-96 lg:my-96 my-[500px]  md:my-[500px] xs:mt-[1350px]  xs:mb-[600px]  ss:mt-[1140px] sm:mt-[1200px] flex justify-center items-center xl:mx-44 mx-32 sm:mx-16 ss:mx-14 xs:mx-10  ">
+                <div className="relative xl:my-96 lg:my-96 my-[500px]  md:my-[500px] xs:mt-[1100px]  xs:mb-[300px]  ss:mt-[1100px] sm:mt-[1250px] flex justify-center items-center xl:mx-44 mx-32 sm:mx-16 ss:mx-14 xs:mx-10  ">
                     <div className="w-[278px] h-[304px] left-0  absolute z-[0] rotate-[-24deg] bg-[#AB4700] blur-[150px] rounded-[704px] "></div>
                     <div className="w-[440px] h-[278px] -right-96   absolute z-0 rotate-[-24deg] bg-[#2C00D9] blur-[200px] rounded-[300px] "></div>
                     <div className="w-[316px] h-[306px] -right-96 -top-2 absolute z-0 rotate-[27deg] bg-[#0FF] blur-[200px] rounded-[616px] "></div>
                     <div className="w-[529px] h-[306px] -right-96 -top-0 absolute z-0 rotate-[9deg] bg-[#F09] blur-[150px] rounded-[616px] "></div>
-                    <div className="contactbg lg:w-[1126px] xl:w-[1126px] w-full xl:h-[563px] lg:h-[563px] h-[800px] xs:h-[1000px] absolute p-20  md:py-0 rounded-[37px] flex justify-center items-center overflow-hidden ">
+                    <div className="contactbg lg:w-[1126px] xl:w-[1126px] w-full xl:h-[563px] lg:h-[563px] h-[800px] xs:h-[500px] ss:h-[500px] sm:h-[550px] absolute p-20  md:py-0 rounded-[37px] flex justify-center items-center overflow-hidden ">
                         <div className="flex xl:flex-row lg:flex-row flex-col items-center ">
-                            <div className="font-encodeSans xs:absolute md:px-20 sm:px-16 ss:px-14 xs:px-10 xs:top-10  xs:text-center ss:absolute ss:top-20  ss:text-center sm:absolute sm:top-20 xs:p-12 ss:p-12  sm:text-center md:absolute md:top-20  md:text-center  text-[80px] xs:text-[35px] ss:text-[50px] sm:text-[60px] md:text-[70px] font-black text-[#D0DBFF] uppercase  ">
+                            <div className="font-encodeSans pl-6 md:px-20 sm:px-16 ss:px-14 xs:px-10 xs:top-[25%]  xs:z-20 xs:absolute  xs:text-center  ss:z-20 ss:top-[25%] ss:absolute   ss:text-center sm:z-20 sm:top-[30%] sm:absolute  xs:p-12 ss:p-12  sm:text-center md:absolute md:top-20  md:text-center  text-[80px] xs:text-[35px] ss:text-[50px] sm:text-[60px] md:text-[70px] font-black text-[#D0DBFF] uppercase  ">
                                 Join Our Community
                             </div>
-                            <div className="font-encodeSans text-[80px] font-black text-[#D0DBFF] xs:hidden">
-                                <div className="relative xl:-top-52 lg:-top-52 ss:top-0 top-0 -left-64 xs:-left-32 ss:-left-36 w-[100px] scale-105  hover:scale-125 duration-500     ease-in-out   ">
-                                    <img src={c1} alt="" className="absolute z-[1] left-2   " />
-                                    <img
-                                        src={e1}
-                                        alt=""
-                                        className="absolute z-0 left-[75px] -top-4    "
-                                    />
-                                    <img
-                                        src={contact1}
-                                        alt=""
-                                        className="absolute z-[1] left-5  w-[70px] top-[15px]   "
-                                    />
-                                </div>
-                                <div className="relative xl:-top-44 lg:-top-44 ss:-top-6 xs:-top-6 top-0 xl:-left-20 lg:-left-20 ss:-left-20 -left-24  w-[100px] scale-105  hover:scale-125 duration-500 ">
-                                    <img src={c2} alt="" className="absolute z-[1] left-20  " />
-                                    <img
-                                        src={e2}
-                                        alt=""
-                                        className="absolute z-0 left-[150px] -top-3 "
-                                    />
-                                    <img
-                                        src={contact2}
-                                        alt=""
-                                        className="absolute z-[1] left-[104px] top-6   "
-                                    />
-                                </div>
-                                <div className="relative xl:-top-8 lg:-top-8 ss:top-36 xs:top-36  top-44 xl:right-48 ss:right-32 xs:right-32 right-48   w-[100px] scale-105  hover:scale-125 duration-500 ">
-                                    <img src={c3} alt="" className="absolute z-[1] left-12  " />
-                                    <img
-                                        src={e3}
-                                        alt=""
-                                        className="absolute z-0 left-28 -top-3   "
-                                    />
-                                    <img
-                                        src={contact3}
-                                        alt=""
-                                        className="absolute z-[1] left-[70px] top-5  "
-                                    />
-                                </div>
+                            <div className="font-encodeSans text-[80px] font-black text-[#D0DBFF] xs:hidden ss:hidden  sm:hidden  ">
+                                <img
+                                    src={contact1}
+                                    alt=""
+                                    className="absolute ss:w-[14%] z-[1] left-[700px] ss:top-80  ss:left-32 sm:top-80  sm:left-32 md:top-96  md:left-32  top-[35px] scale-105  hover:scale-125 duration-500 "
+                                />
+                                <img
+                                    src={contact2}
+                                    alt=""
+                                    className="absolute ss:w-[14%] z-[1] ss:top-80  ss:left-[280px] sm:top-72 sm:left-[380px] md:top-96 md:left-[380px]  left-[950px] top-[85px] scale-105  hover:scale-125 duration-500 "
+                                />
+                                <img
+                                    src={contact3}
+                                    alt=""
+                                    className="absolute ss:w-[14%] z-[1] ss:top-[350px] ss:left-[400px] sm:top-80 sm:left-[600px] md:top-96 md:left-[600px] left-[810px] top-[220px] scale-105  hover:scale-125 duration-500 "
+                                />
+
                                 <img
                                     src={contact4}
                                     alt=""
-                                    className="absolute z-[1]  xl:top-96 lg:top-96 ss:top-[530px] xs:top-[530px]   top-[560px] right-64 ss:right-36 xs:right-36  xl:right-80 lg:right-80 scale-105  hover:scale-125 duration-500 "
+                                    className="absolute ss:w-[14%] z-[1] top-[400px] right-72 ss:top-[460px] ss:left-[160px]  sm:top-[500px] sm:left-[260px] md:top-[590px] md:left-[270px]   scale-105  hover:scale-125 duration-500 "
                                 />
                                 <img
                                     src={contact5}
                                     alt=""
-                                    className="absolute z-[1]  xl:top-96 lg:top-96 top-[400px] ss:right-20 right-24 xl:right-16 lg:right-16 scale-105  hover:scale-125 duration-500 "
+                                    className="absolute ss:w-[14%]  top-[400px] left-[970px] md:w-[11%] lg:w-[8%] xl:w-[8%] z-[1] ss:top-[460px] ss:left-[340px] sm:top-[520px] sm:left-[450px] md:top-[600px] md:left-[500px] scale-105  hover:scale-125 duration-500 "
                                 />
                             </div>
-                            <div className="ss:hidden sm:hidden md:hidden lg:hidden xl:hidden">
-                                <div className="relative w-[100px] -top-44   scale-105  hover:scale-125 duration-500     ease-in-out   ">
-                                    <img src={c1} alt="" className="absolute z-[1] -top-16   " />
-                                    <img
-                                        src={e1}
-                                        alt=""
-                                        className="absolute z-0 left-[75px] -top-16    "
-                                    />
-                                    <img
-                                        src={contact1}
-                                        alt=""
-                                        className="absolute z-[1] left-4  w-[70px] -top-12   "
-                                    />
-                                </div>
-                                <div className="relative w-[100px] -top-24 -left-20 scale-105  hover:scale-125 duration-500 ">
-                                    <img src={c2} alt="" className="absolute z-[1] left-20  " />
-                                    <img
-                                        src={e2}
-                                        alt=""
-                                        className="absolute z-0 left-[150px] -top-3 "
-                                    />
-                                    <img
-                                        src={contact2}
-                                        alt=""
-                                        className="absolute z-[1] left-[104px] top-6   "
-                                    />
-                                </div>
-                                <div className="relative  w-[100px] top-12 -left-12 scale-105  hover:scale-125 duration-500 ">
-                                    <img src={c3} alt="" className="absolute z-[1] left-12  " />
-                                    <img
-                                        src={e3}
-                                        alt=""
-                                        className="absolute z-0 left-28 -top-3   "
-                                    />
-                                    <img
-                                        src={contact3}
-                                        alt=""
-                                        className="absolute z-[1] left-[70px] top-5  "
-                                    />
-                                </div>
+                            <div className=" md:hidden lg:hidden xl:hidden">
+                                <img
+                                    src={contact1}
+                                    alt=""
+                                    className="absolute z-[1]  w-[75px] sm:w-[95px] left-32 sm:left-48 top-6   scale-105  hover:scale-125 duration-500"
+                                />
+
+                                <img
+                                    src={contact2}
+                                    alt=""
+                                    className="absolute z-[1] right-[40px] top-36 w-[94px] sm:w-[110px] sm:right-[90px]   scale-105  hover:scale-125 duration-500"
+                                />
+
+                                <img
+                                    src={contact3}
+                                    alt=""
+                                    className="absolute z-[1] left-[40px] sm:left-[70px] sm:top-60 top-52  scale-105  hover:scale-125 duration-500"
+                                />
+
                                 <img
                                     src={contact4}
                                     alt=""
-                                    className="absolute z-[1] top-[670px]  scale-105  hover:scale-125 duration-500 "
+                                    className="absolute z-[1] top-96 left-9 sm:left-32 sm:w-[90px] w-[70px] scale-105  hover:scale-125 duration-500 "
                                 />
                                 <img
                                     src={contact5}
                                     alt=""
-                                    className="absolute z-[1] top-[840px] scale-105  hover:scale-125 duration-500 "
+                                    className="absolute z-[1] top-96  w-[90px] scale-105  hover:scale-125 duration-500 "
                                 />
                             </div>
                         </div>
