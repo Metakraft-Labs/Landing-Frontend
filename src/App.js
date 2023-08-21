@@ -1,8 +1,10 @@
+import arcanaAuthModule from "@web3-onboard/arcana-auth";
 import coinbaseWalletModule from "@web3-onboard/coinbase";
 import injectedModule from "@web3-onboard/injected-wallets";
 import { Web3OnboardProvider, init } from "@web3-onboard/react";
 import React, { useCallback, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import PulseLoader from "react-spinners/PulseLoader";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { status } from "./apis/auth";
@@ -10,12 +12,15 @@ import Explore from "./components/explore";
 import Feature from "./components/feature.jsx";
 import Footer from "./components/footer.jsx";
 import Header from "./components/header.jsx";
+import { Config } from "./config";
 import AppStore from "./contexts/AppStore";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 
-import PulseLoader from "react-spinners/PulseLoader";
+const arcanaAuth = arcanaAuthModule({
+    clientID: Config.ARCANA_CLIENT
+})
 
 const coinbaseWalletSdk = coinbaseWalletModule({ darkMode: true });
 const INFURA_KEY = "";
@@ -27,7 +32,7 @@ const ethereumRopsten = {
 };
 
 const chains = [ethereumRopsten];
-const wallets = [injectedModule(), coinbaseWalletSdk];
+const wallets = [injectedModule(), coinbaseWalletSdk, arcanaAuth];
 const web3Onboard = init({
     wallets,
     chains,
