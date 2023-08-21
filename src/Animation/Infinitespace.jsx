@@ -11,10 +11,11 @@ const InfiniteSpace = () => {
     const isInView = useInView(ref, { once: true });
     const canvasRef = useRef(null);
     const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
     const [show1, setShow1] = useState(false);
-    const handleClose1 = () => setShow1(false);
+    const [canvas, setCanvas] = useState("");
 
+    const handleClose1 = () => setShow1(false);
+    const handleClose = () => setShow(false);
     useEffect(() => {
         if (isInView) {
             const scene = new THREE.Scene();
@@ -82,9 +83,19 @@ const InfiniteSpace = () => {
         }
     }, [isInView]);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCanvas(canvasRef?.current?.toDataURL());
+        }, 500);
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
+
     return (
         <>
-            <div className="homeBody" style={{ width: "100%" }}>
+            <div className="homeBody" style={{ width: "100%", display: "none" }}>
                 <canvas
                     ref={canvasRef}
                     style={{
@@ -99,7 +110,10 @@ const InfiniteSpace = () => {
             </div>
 
             <div
-                className={`home-head bg-transparent xl:px-44 px-32 sm:px-16 ss:px-14 xs:px-10 h-[800px] md:h-[780px] xs:h-[600px] ss:h-[650px] flex justify-start items-center`}
+                className={`bg-transparent xl:px-44 px-32 sm:px-16 ss:px-14 xs:px-10 h-[800px] md:h-[780px] xs:h-[600px] ss:h-[650px] flex justify-start items-center`}
+                style={{
+                    background: `url(${canvas})`,
+                }}
             >
                 <div>
                     <div className="mt-5 xs:mt-32">
