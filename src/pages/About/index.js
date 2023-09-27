@@ -1,4 +1,5 @@
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { motion } from "framer-motion";
 import React from "react";
 import Cube from "../../Assets/cube.82f18a4d.gif";
 import metakraft1 from "../../Assets/metakraft1.png";
@@ -11,8 +12,6 @@ import profilebg2 from "../../Assets/profilebg2.png";
 import "../../Style/about.css";
 import Title from "../../shared/Title";
 import { navVariants } from "../../utils/motion";
-
-import { motion } from "framer-motion";
 function About() {
     return (
         <>
