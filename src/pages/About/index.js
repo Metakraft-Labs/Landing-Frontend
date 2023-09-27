@@ -6,8 +6,7 @@ import metakraft1 from "../../Assets/metakraft1.png";
 import profile1 from "../../Assets/profile1.png";
 import profile2 from "../../Assets/profile2.png";
 import profile3 from "../../Assets/profile3.png";
-import profile4 from "../../Assets/profile4.png";
-import profile5 from "../../Assets/profile5.png";
+import profile4 from "../../Assets/profile4.jpg";
 import profilebg2 from "../../Assets/profilebg2.png";
 import "../../Style/about.css";
 import Title from "../../shared/Title";
@@ -269,54 +268,20 @@ function About() {
                                     </div>
                                     <div className="flex flex-col pt-16  p-6 justify-center text-center items-center">
                                         <h4 className="text-[20px] font-bold font-roboto">
-                                            Rajiv L Das
+                                            Srikanth
                                         </h4>
                                         <p className="text-[13px] pt-4 font-roboto font-light">
-                                            Rajiv, our marketing head with 2 years&apos; experience
-                                            as marketing advisor, adept at managing gaming
-                                            communities, driving our strategies to success.
+                                            Srikanth is an entrepreneurial & passionate technologist
+                                            with 2 decades of international experience in Business
+                                            Analytics, 2x startup founder, and endurance athlete.
+                                            Holds MBA from Madras University.
                                         </p>
                                     </div>
                                     <div className="flex justify-between  xs:flex-col  px-6 pt-0 items-center">
                                         <button className="bg-[#084FFF] text-white text-[20px] font-bold font-roboto rounded-[12px] w-[168px] py-2">
-                                            Connect
-                                        </button>
-                                        <button className="bg-[#F0F0F0] text-black text-[20px] font-bold font-roboto rounded-[12px] w-[168px] py-2  xs:my-4">
-                                            <TwitterIcon className="mr-4" />
-                                            Follow
-                                        </button>
-                                    </div>
-                                </div>
-                            </motion.div>
-                            <motion.div
-                                whileInView="show"
-                                initial="hidden"
-                                variants={navVariants}
-                                className="mb-32 mx-2 flex relative flex-col justify-start items-center h-[390px] w-[300px]  xs:w-[300px] rounded-[33px] "
-                            >
-                                <img src={profilebg2} alt="" className="absolute z-0" />
-                                <div className="bg-white text-black absolute z-[1] w-full h-[300px] xs:h-fit top-36 rounded-[33px] ">
-                                    <div className="relative profile ">
-                                        <img
-                                            src={profile5}
-                                            alt=""
-                                            className="absolute w-[100px] -top-12 translate-x-[100%]  xs:translate-x-[99%]"
-                                        />
-                                    </div>
-                                    <div className="flex flex-col pt-16  p-6 justify-center text-center items-center">
-                                        <h4 className="text-[20px] font-bold font-roboto">
-                                            Abhishek Singh
-                                        </h4>
-                                        <p className="text-[13px] pt-4 font-roboto font-light">
-                                            Abhishek Singh, our esteemed Marketing Advisor with 15
-                                            years&apos; experience as a CMO.He scaled multiple
-                                            companies, attracting 15M+ users under his marketing
-                                            leadership.
-                                        </p>
-                                    </div>
-                                    <div className="flex justify-between  xs:flex-col  px-6 pt-0 items-center">
-                                        <button className="bg-[#084FFF] text-white text-[20px] font-bold font-roboto rounded-[12px] w-[168px] py-2">
-                                            Connect
+                                            <a href="https://www.linkedin.com/in/srikanth-kanuri-633380a/">
+                                                Connect
+                                            </a>
                                         </button>
                                         <button className="bg-[#F0F0F0] text-black text-[20px] font-bold font-roboto rounded-[12px] w-[168px] py-2  xs:my-4">
                                             <TwitterIcon className="mr-4" />

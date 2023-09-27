@@ -11,7 +11,7 @@ function Footer() {
     const navigate = useNavigate();
 
     return (
-        <footer className="text-[14px] xs:text-[12px] ">
+        <footer className="text-[16px] xs:text-[12px] ">
             <div className="footer xs:flex-col ss:flex-col sm:flex-col text-[#D0D0D0] font-roboto px-32 xl:px-44 sm:px-16 ss:px-14 xs:px-10">
                 <div className="left xs:flex-wrap justify-center items-start basis-[30%] xs:items-center ss:items-center sm:items-center  p-2">
                     <div>

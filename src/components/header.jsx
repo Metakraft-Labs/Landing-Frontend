@@ -136,7 +136,7 @@ function Header() {
                                     } sidebar  bg-[#111111] border-t-[3px] border-[#0BB6AC]  shadow-sm shadow-[#464545] h-fit py-10 px-20 absolute top-[64px] rounded-[7px]  flex flex-col ease-in duration-500  `}
                                 >
                                     <div className="navButton py-3 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300">
-                                        Peach
+                                        <a href="https://editor.metakraft.live/">Peach</a>
                                     </div>
                                     <div className="navButton py-3 cursor-pointer hover:text-[#88b2db] ease-in-out duration-300">
                                         Lemon(Coming Soon)

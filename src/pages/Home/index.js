@@ -104,7 +104,9 @@ function Home() {
                                 </span>
                             </h1>
                             <p className="home-partner-4-3 font-spaceGrotesk">
-                                3D experiences in a Minute with your community across platforms{" "}
+                                We are Innovating the way, people are experiencing different
+                                contents on Internet for indivisuals & teams to deliver Interactive,
+                                Collaborative & Immersive 3D Spaces.
                             </p>
                         </div>
                         <div
@@ -146,9 +148,9 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="punc1">?</div>
+                {/* <div className="punc1">?</div>
                 <div className="punc2">#</div>
-                <div className="punc3">$</div>
+                <div className="punc3">$</div> */}
 
                 <div className="home-live py-6 flex justify-center items-center">
                     <div className="home-live-gradient ">
@@ -820,9 +822,10 @@ function Home() {
                                     placeholder="Enter Your Email"
                                 />
                             </div> */}
-                                <div className="feature-browsing-6 flex justify-center  items-center w-[300px] h-[60px] ss:w-[400px] ss:h-[70px] sm:w-[434px] sm:h-[80px] md:w-[534px] md:h-[90px]   lg:w-[400px] lg:h-[60px] xl:w-[400px] xl:h-[60px]">
+                                <div className="feature-browsing-6 flex justify-between  items-center w-[300px] h-[60px] ss:w-[400px] ss:h-[70px] sm:w-[434px] sm:h-[80px] md:w-[534px] md:h-[90px]   lg:w-[400px] lg:h-[60px] xl:w-[400px] xl:h-[60px]">
                                     <div
-                                        className="text-white lg:ml-20  xl:ml-10 ml-0 xs:text-[20px] ss:text-[24px] sm:text-[28px] md:text-[34px]"
+                                        className="text-white xs:text-[20px] ss:text-[24px] sm:text-[28px] md:text-[34px]"
+                                        // className="text-white lg:ml-24  xl:ml-10 ml-0 xs:text-[20px] ss:text-[24px] sm:text-[28px] md:text-[34px]"
                                         onClick={() => {
                                             subscribe(mail2);
                                         }}
