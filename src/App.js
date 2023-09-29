@@ -19,8 +19,8 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 
 const arcanaAuth = arcanaAuthModule({
-    clientID: Config.ARCANA_CLIENT
-})
+    clientID: Config.ARCANA_CLIENT,
+});
 
 const coinbaseWalletSdk = coinbaseWalletModule({ darkMode: true });
 const INFURA_KEY = "";
@@ -67,7 +67,6 @@ function App() {
     useState(() => {
         getStatus();
     }, [getStatus]);
-
     useState(() => {
         const params = new URLSearchParams(window.location.search);
         const ref_code = params.get("ref");
