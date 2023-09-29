@@ -97,7 +97,7 @@ function About() {
                                     </div>
                                 </div>
                                 <div className="bg-black/60 backdrop-blur-xl border-[1px] rounded-[16px] p-8 mx-4 flex flex-col  h-full xs:my-2 ss:my-2 sm:my-3 md:my-3 xs:w-full ss:w-full sm:w-full md:w-full">
-                                    <h5 className="text-[32px] font-bold">Spacial Rooms</h5>
+                                    <h5 className="text-[32px] font-bold">Spatial Rooms</h5>
                                     <div className="font-spaceGrotesk text-[16px] mt-2 ">
                                         For Product Showcase, Demo, Education or a Virtual Store.
                                     </div>
@@ -194,7 +194,7 @@ function About() {
                                     </div>
                                     <div className="flex flex-col pt-16  p-6 justify-center text-center items-center">
                                         <h4 className="text-[20px] font-bold font-roboto">
-                                            Abhishek Roushn
+                                            Abhishek Roushan
                                         </h4>
                                         <p className="text-[13px] pt-4 font-roboto font-light">
                                             Abhishek, our visionary CEO with 3 years&apos; expertise
@@ -263,7 +263,7 @@ function About() {
                                         <img
                                             src={profile4}
                                             alt=""
-                                            className="absolute w-[100px] -top-12 translate-x-[100%]  xs:translate-x-[99%]"
+                                            className="absolute w-[100px] -top-12 translate-x-[100%]  xs:translate-x-[99%] rounded-full"
                                         />
                                     </div>
                                     <div className="flex flex-col pt-16  p-6 justify-center text-center items-center">
