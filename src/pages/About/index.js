@@ -263,7 +263,7 @@ function About() {
                                         <img
                                             src={profile4}
                                             alt=""
-                                            className="absolute w-[100px] -top-12 translate-x-[100%]  xs:translate-x-[99%]"
+                                            className="absolute w-[100px] -top-12 rounded-full translate-x-[100%]  xs:translate-x-[99%]"
                                         />
                                     </div>
                                     <div className="flex flex-col pt-16  p-6 justify-center text-center items-center">

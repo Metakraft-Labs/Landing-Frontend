@@ -105,8 +105,9 @@ function Home() {
                             </h1>
                             <p className="home-partner-4-3 font-spaceGrotesk">
                                 We are Innovating the way, people are experiencing different
-                                contents on Internet for indivisuals & teams to deliver Interactive,
-                                Collaborative & Immersive 3D Spaces.
+                                contents on Internet for{" "}
+                                <br className="xs:hidden ss:hidden sm:hidden" /> indivisuals & teams
+                                to deliver Interactive, Collaborative & Immersive 3D Spaces.
                             </p>
                         </div>
                         <div
